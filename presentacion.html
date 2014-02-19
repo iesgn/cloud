@@ -1,21 +1,153 @@
 ---
 layout: presentacion
-title: Proyecto Cloud Computing IES Gonzalo Nazareno
-tema: sky
+title: OpenStack en el IES Gonzalo Nazareno
+tema: solarized
 ---
 
-<section data-markdown>
+<section>
     <script type="text/template">
-        ## OpenStack
-
-        Este es la página [enlace](http://hakim.se).
-        
-        ![sss](http://upload.wikimedia.org/wikipedia/en/4/4c/OpenStack.png)
+        <h1>OpenStack en el IES Gonzalo Nazareno</h1>
     </script>
 </section>
-<section data-markdown>
-    <script type="text/template">
-        ## Esto es un ejemplo
-        A paragraph with some text and a [link](http://hakim.se).
-    </script>
+<section>
+  <section>
+        <h2>¿Qué es el Cloud Computing?</h2>
+	<ul>
+	  <li>El cloud computing o computación en la nube es un nuevo paradigma
+            en las tecnologías de la información, centrado en ofrecer servicios
+            disponibles de manera automática en la red en modalidad de pago por
+            uso.</li>
+	  <li>Tradicionalmente se definen varias capas en función del servicio
+	    que se ofrezca:
+	    <ul>
+	      <li>Software as a Service (SaaS)</li>
+	      <li>Platform as a Service (PaaS)</li>
+	      <li>Infrastructure as a Service (IaaS)</li>
+	    </ul>
+	</ul>
+  </section>
+  <section>
+    <h3>Software as a Service (SaaS)</h3>
+    <p>Aplicación como servicio en la nube</p>
+    <ul>
+      <li>Utilizado por cualquier usuario</li>
+      <li>Ampliamente implantado</li>
+      <li>Ejemplos: Servicios de Google, Office365</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Platform as a Service (PaaS)</h3>
+    <p>Plataforma de desarrollo web en la nube</p>
+    <ul>
+      <li>Utilizado por desarrolladores de software</li>
+      <li>Se proporciona toda la plataforma de desarrollo y despliegue
+	de una aplicación al desarrollador</li>
+      <li>Ejemplos: Google App Engine, Windows Azure, Heroku,
+	Openshift, CloudFoundry
+    </ul>
+  </section>
+  <section>
+    <h3>Infrastructure as a Service (IaaS)</h3>
+    <p>Capacidades de cómputo y almacenamiento como servicio en la
+      nube</p>
+    <ul>
+      <li>Utilizado principalmente por administradores de
+	sistemas</li>
+      <li>Se proporciona principalmente capacidad de cómputo y
+	diversos modos de almacenamiento</li>
+      <li>Ejemplos: Amazon Web Services, Joyent, Windows Azure, Rackspace Cloud
+	Servers, Google Compute Engine</li>
+  </section>
+  <section>
+    <a href="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"><img src="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png" alt="iaas-paas-saas"/></a>
+    <p>Fuente: <a href="http://ad-hoc.net/blogs/2010/12/la-nube-iaas-paas-saas-itaa-un-breve-repaso-de-conceptos/">ad-hoc.net/blogs</a></p>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>OpenStack</h2>
+    <blockquote>&ldquo;Plataforma de cloud computing hecha con software libre para
+      desplegar nubes públicas y privadas, desarrollada con la idea de
+      ser sencilla de implementar, masivamente escalable y con muchas
+      prestaciones&rdquo;</blockquote>
+  </section>
+  <section>
+    <h3>Respaldo de grandes empresas</h3>
+    <img src="img/openstack_industry_support.png"
+	 alt="openstack_industry_support"/>
+    <p>
+      <small>Fuente: <a href="http://www.slideshare.net/randybias/state-of-the-stack-april-2013">cloudscaling</a></small></p>
+    <p><a href="http://www.openstack.org/foundation/companies/">Empresas
+	partipantes en la OpenStack Foundation</a></p>
+  </section>
+	  <section>
+	    <h2>¿Por qué OpenStack?</h2>
+	    <ul>
+	      <li>Porque es libre y abierto</li>
+	      <li>Por el respaldo que tiene el proyecto</li>
+	      <li>Porque incluye gran cantidad de funcionalidades</li>
+	      <li>Porque es extensible y adaptable</li>
+	      <li>Porque si aún no es la plataforma de cloud más completa, todo indica que lo será muy pronto</li>
+	      <li>Porque facilita utilizar otras muchas tecnologías punteras: Ceph, SDN, Hadoop</li>
+	      <li>Porque comienza a haber demanda
+	      laboral: <a href="http://www.indeed.com/jobtrends?q=openstack%2C+vcloud&l=">Indeed
+	      trends</a></li>
+	  </section>
+	  <section>
+	    <h2>Me gusta, ¿por dónde empiezo?</h2>
+	    <ul>
+	      <li>Vente al IES Gonzalo Nazareno ;)</li>
+	      <li><a href="http://devstack.org/">devstack</a>: Versión de desarrollo</li>
+	      <li><a href="http://trystack.org/">TryStack</a>: Cloud público de
+	      pruebas</li>
+	      <li>Configuración automática:
+		<ul>
+		  <li><a href="https://forge.puppetlabs.com/puppetlabs/openstack">Puppet</a></li>
+		  <li><a href="http://docs.opscode.com/openstack.html">Chef</a></li>
+		  <li><a href="https://github.com/ansible/ansible-redhat-openstack">Ansible
+		  for Redhat</a></li>
+		  <li><a href="https://github.com/lorin/openstack-ansible">Ansible
+		  on Vagrant</a></li>
+		  <li><a href="https://github.com/EntropyWorks/salt-openstack">Salt
+		  OpenStack</a></li>
+		</ul>
+	    </ul>
+	  </section>
+<section>
+        <h2>¿Qué empresas pueden estar interesadas?</h2>
+	<ul>
+	  <li>En 
+	<ul>
+	  <li>Como centro público de formación, uno de nuestros objetivos es
+	  colaborar en la 
+	  <li>Pensamos que es fundamental que esta experiencia y este
+	  conocimiento se transmita a las empresas del sector
+	  <li>Buscamos empresas interesadas en estas tecnologías para
+	  asesorarlas establecer
+	  futuras colaboraciones
+	</ul>
+</section>
+<section>
+        <h2>Difusión de la experiencia</h2>
+	<ul>
+	  <li>Como centro público de formación, uno de nuestros objetivos es
+	  colaborar en la 
+	  <li>Pensamos que es fundamental que esta experiencia y este
+	  conocimiento se transmita a las empresas del sector
+	  <li>Buscamos empresas interesadas en estas tecnologías para
+	  asesorarlas establecer
+	  futuras colaboraciones
+	</ul>
+</section>
+
+<section>
+        <h2>Datos de contacto</h2>
+	<ul>
+	  <li>Personas de contacto:
+	    <ul>
+	      <li>Alberto Molina Coballes</li>
+	      <li>José Domingo Muñoz Rodríguez</li>
+	    </ul>
+	  <li><a href="mailto:informatica@gonzalonazareno.org">informatica@gonzalonazareno.org</a></li>
+	</ul>
 </section>
