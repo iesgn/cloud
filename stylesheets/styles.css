@@ -38,7 +38,7 @@ line-height: 1.8em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#232323;
+  color:#ffffff;
   margin:36px 0 10px;
 }
 
@@ -217,7 +217,7 @@ background-color: #171717;
 color: #FDFDFB;
   width:170px;
   float:left;
-  position:fixed;
+  /*position:fixed;*/
 border: 1px solid #000;
 -webkit-border-top-right-radius: 4px;
 -webkit-border-bottom-right-radius: 4px;
@@ -236,7 +236,7 @@ font-size: 16px;
 
 h1.header {
 font-family: Arvo, sans-serif;
-font-size: 30px;
+font-size: 24px;
 font-weight: 300;
 line-height: 1.3em;
 border-bottom: none;
@@ -328,7 +328,7 @@ section {
 footer {
   width:170px;
   float:left;
-  position:fixed;
+/*  position:fixed;*/
   bottom:10px;
 padding-left: 50px;
 }
