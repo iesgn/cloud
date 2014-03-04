@@ -21,7 +21,7 @@
 
          {% for m in site.data.menu %}
 
-            <h2>{{m.nombre}}</h2>
+            <h3 class="header">{{m.nombre}}</h3>
             <ul class="otherlinks clearfix">
 	      {% for me in m.items %}
               <li><a title="" href="{{me.url}}" rel="external">{{me.name}}</a></li>
