@@ -38,7 +38,7 @@ line-height: 1.8em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#ffffff;
+  color:#232323;
   margin:36px 0 10px;
 }
 
@@ -244,7 +244,7 @@ margin-top: 0;
 }
 
 
-h1.header, a.header, a.name, header a{
+h1.header, h2.header,h3.header,a.header, a.name, header a{
 color: #fff;
 }
 
