@@ -20,13 +20,14 @@
         <p class="header"></p>
 
          {% for m in site.data.menu %}
-
+	    {% if page.menu contains {{m.nombre}} %}
             <h3 class="header">{{m.nombre}}</h3>
             <ul class="otherlinks clearfix">
 	      {% for me in m.items %}
               <li><a title="" href="{{me.url}}" rel="external">{{me.name}}</a></li>
 	      {% endfor %}
             </ul>
+             {% endif %}
 	 {% endfor %}
 
 
