@@ -1,5 +1,7 @@
 - nombre: Unidades
   items:
+   - name: Inicio
+     url: http://iesgn.github.io/cloud
    - name: Unidad 1
      url: http://iesgn.github.io/cloud/curso/u1
    - name: Unidad 2
@@ -10,3 +12,12 @@
      url: https://www.openstack.org/
    - name: OpenShift
      url: https://www.openshift.com/
+- nombre: u1
+  items:
+   - name: Cloud Computing. Openstack
+     url: http://iesgn.github.io/cloud/curso/u1
+   - name: Vagrant
+     url: http://iesgn.github.io/cloud/curso/u1/vagrant
+   - name: Ansible
+     url: http://iesgn.github.io/cloud/curso/u1/ansible
+
