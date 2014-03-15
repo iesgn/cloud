@@ -83,22 +83,88 @@ vagrant box add {title} {url}
 	     </section>
 	    <section>
 	      <h2>Vagrant. Vagrantfile</h2>
-	      
-	      <a href="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"><img src="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"
-	      alt="iaas-paas-saas"/></a>
-	      <p>Fuente: <a href="http://ad-hoc.net/blogs/2010/12/la-nube-iaas-paas-saas-itaa-un-breve-repaso-de-conceptos/">ad-hoc.net/blogs</a></p>
+	      <ul>
+		<li>Un fichero de nombre Vagrantfile describe una o varias instancias para crear un entorno vagrant en el directorio en el que se encuentre.</li>
+		<li>Se pueden tener varios entornos vagrant independientes, ubicando ficheros Vagranfile en diferentes directorios.</li>
+		<li>Ejemplo de Vagrantfile:</li>
+	      </ul>
+	       <pre>	
+	       <code data-trim contenteditable>
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+   config.vm.box = "precise32"
+   config.vm.network :private_network, ip: "10.1.1.2"
+end
+	       </code>
+	       </pre>
+	       <ul>
+		 <li>Se puede crear un Vagrantfile mínimo con:</li>
+   	       </ul>
+	       <pre>	
+	       <code data-trim contenteditable>
+vagrant init
+	       </code>
+	       </pre>
+    
 	      </section>
+	   <section>
+	     <h2>Vagrant. Utilización básica</h2>
+	     <p>Todas las instrucciones se aplican sobre el Vagrantfile del directorio en el que se ejecuten</p>
+	     <ul>
+	       <li>Levantar el entorno</li>
+	        <pre>	
+	       <code data-trim contenteditable>
+vagrant up
+	       </code>
+	       </pre>
+	       <li>Recargar el entorno (reinicia las máquinas y aplica los cambios):</li>
+	        <pre>	
+	       <code data-trim contenteditable>
+vagrant reload
+	       </code>
+	       </pre>
+	       <li>Acceder a la instancia:</li>
+	        <pre>	
+	       <code data-trim contenteditable>
+vagrant ssh [nombre_instancia]
+	      </code>
+	      </pre>
+	       <li>Suspender, apagar o destruir:</li>
+   	       <pre>	
+	       <code data-trim contenteditable> 
+vagrant suspend
+vagrant halt
+vagrant destroy
+	       </code>
+	       </pre>
+           </ul>
+	   </section>
+
 	  </section>
 	  <section>
 	    <section>
-	      <h2>IaaS público</h2>
-		<p>Una empresa proporciona este servicio a terceros</p>
-	    </section>
-	  <section>
-	    <h3>Principales ventajas</h3>
-	    <ul>
-	      <li>Reducción de costes</li>
-	      <li>Elasticidad</li>
+	      <h2>Ansible. Introducción</h2>
+	       <ul>
+		 <li>En ciencia ficción: Dispositivo que permite comunicarse a mayor velocidad que la luz</li>
+		 <li>Ansible es una aplicación libre de orquestación escrita en python</li>
+		 <li>La primera versión se desarrolló en febrero de 2012 (!)
+		 <li>Ventajas frente a otro software de automatizaci ́n (puppet o chef):</li>
+		 <ul>
+		   <li>Muy fácil instalación</li>
+		   <li>Comunidad de desarrolladores muy activa</li>
+		   <li>Muy pocas dependencias</li>
+		   <li>Muy pequeño</li>
+		   <li>Ideal para entornos pequeños y homogéneos</li>
+		   <li>No es necesario configurar nada en los clientes</li>
+		 </ul>
+		 <li>Inconvenientes:</li>
+		 <ul>
+		   <li>Más complejo en entornos muy heterogéneos</li>
+		   <li>Menos recetas desarrolladas previamente al ser muy nuevo</li>
+		 </ul>
+
+	       </ul>
 	  </section>
 	  <section>
 	    <h3>Principales inconvenientes</h3>
