@@ -84,10 +84,16 @@ vagrant box add {title} {url}
 	      <ul>
 		<li>Un fichero de nombre Vagrantfile describe una o varias instancias para crear un entorno vagrant en el directorio en el que se encuentre.</li>
 		<li>Se pueden tener varios entornos vagrant independientes, ubicando ficheros Vagranfile en diferentes directorios.</li>
+	        <li>Se puede crear un Vagrantfile mínimo con:</li>
+	        <pre>
+		<code>
+vagrant init
+		</code>
+		</pre>
 		<li>Ejemplo de Vagrantfile:</li>
 	      </ul>
 	       <pre>	
-	       <code data-trim contenteditable>
+	       <code data-trim>
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
@@ -96,15 +102,7 @@ Vagrant.configure("2") do |config|
 end
 	       </code>
 	       </pre>
-	       <ul>
-		 <li>Se puede crear un Vagrantfile mínimo con:</li>
-   	       </ul>
-	       <pre>	
-	       <code data-trim contenteditable>
-vagrant init
-	       </code>
-	       </pre>
-    
+	       </ul>
 	      </section>
 	   <section>
 	     <h2>Vagrant. Utilización básica</h2>
