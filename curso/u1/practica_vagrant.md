@@ -115,7 +115,7 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
             end
         end
 
-Como podemos ver al nodo1 le hemos modifcado el tamño de lamemoria RAM y en el nodo2 hemos añadido undisco duro de 1Gb.
+Como podemos ver al nodo1 le hemos modifcado el tamaño de lamemoria RAM y en el nodo2 hemos añadido undisco duro de 1Gb.
 
 Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Para más información accede a [http://docs.vagrantup.com/v2/](http://docs.vagrantup.com/v2/)
 
