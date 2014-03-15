@@ -51,14 +51,37 @@ menu:
         usuario@maquina:~/vagrant$ vagrant halt
         usuario@maquina:~/vagrant$ vagrant destroy
     	       
-
-
+     
         
+###Práctica 2: Creación de varias máquinas virtuales
 
+1) En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:
+
+        # -*- mode: ruby -*-
+        # vi: set ft=ruby :
         
+        Vagrant.configure("2") do |config|
         
-###Práctica 2: Creación de varias máuinas virtuales
+          config.vm.define :nodo1 do |nodo1|
+            nodo1.vm.box = "precise64"
+            nodo1.vm.hostname = "nodo1"
+            nodo1.vm.network :private_network, ip: "10.1.1.101"
+          end
+          config.vm.define :nodo2 do |nodo2|
+            nodo2.vm.box = "precise64"
+            nodo2.vm.hostname = "nodo2"
+            nodo2.vm.network :public_network,:bridge=>"eth0"
+            nodo2.vm.network :private_network, ip: "10.1.1.102"
+          end
+        end
 
-###Práctica 3: Añadir un dico duro adicional a una máuina virtual
+Cuando iniciemos el escenario veremos que hemos creado dos máuinas virtuales: nodo1 y nodo2. 
+nodo1 tendrá una red interna con ip 10.0.1.1.101, y nodo2 tendrá una interfaz de red "modo puente" y una interfaz de red del tipo red interna con ip 10.1.1.102.
 
+Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
+
+
+###Práctica 3: Añadir un dico duro adicional y modificar la RAM a una máquina virtual
+
+Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Para más información accede a [http://docs.vagrantup.com/v2/](http://docs.vagrantup.com/v2/)
 
