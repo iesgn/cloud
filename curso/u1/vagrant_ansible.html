@@ -4,7 +4,7 @@ title: Vagrant y ansible. Una combinación explosiva
 tema: solarized
 ---
 
-<section data-background="http://www.openstack.org/assets/openstack-logo/openstack-cloud-software-vertical-large.png">
+<section>
 	    <h1>Vagrant y ansible</h1>
 	    <h3>Una combinación explosiva</h3>
 	    <p>
@@ -34,24 +34,32 @@ tema: solarized
 	  </section>
 	  <section>
 	    <section>
-	      <h2>... as a Service</h2>
-	      <h3>Software as a Service (SaaS)</h3>
-	      <p>Aplicación como servicio en la nube</p>
+	      <h2>Vagrant. Introducción</h2>
+	      
 	      <ul>
-		<li>Utilizado por cualquier usuario</li>
-		<li>Ampliamente implantado</li>
-		<li>Ejemplos: Servicios de Google, Office365</li>
+		<li>Aplicación libre desarrollada en ruby para crear de forma sencilla un entorno de trabajo complejo</li>
+		<li>El objetivo principal es aproximar los entornos de desarrollo y producción.</li>
+		<li>Utiliza un entorno de máquinas virtuales (Virtualbox por defecto)</li>
+		<li>Herramienta imprescindible para devops</li>
+		<li>Potente uso didáctico</li>
+		<li>Su lema:</li>
 	      </ul>
+	      <p><em>Development environments made easy: Create and configure lightweight, reproducible, and portable development environments.</em></p>
+
 	    </section>
 	    <section>
-	      <h3>Platform as a Service (PaaS)</h3>
-	      <p>Plataforma de desarrollo web en la nube</p>
+	      <h2>Vagrant. Instalación</h2>
 	      <ul>
-		<li>Utilizado por desarrolladores de software</li>
-		<li>Se proporciona toda la plataforma de desarrollo y despliegue
-		de una aplicación al desarrollador</li>
-		<li>Ejemplos: Google App Engine, Windows Azure, Heroku,
-		Openshift, CloudFoundry
+		<li>Instalar virtualbox</li>
+		<li>Instalar vagrant (descargar de <a href="http://vagrantup.com">http://vagrantup.com</a></li>
+		<li>Notas:</li>
+		<ul>
+		  <li>Es posible utilizar otros proveedores, pero el mejor documentado es virtualbox.</li>
+		  <li>Existen versiones de vagrant para GNU/Linux, Apple OS X y Ms windows</li>
+		  <li>Vagrant tiene un fuerte desarrollo, por lo que hay bastantes diferencias entre versiones</li>
+		  <li>En Debian Wheezy se incluye vagrant 1.0.3, mientras que la ultima versión disponible (Marzo 2014) es 1.5.1</li>
+		  <li>Si empiezas ahora es recomendable utilizar vagrant ≥ 1.2.0 porque se ha modificado la API a la versión 2</li>
+		</ul>
 	      </ul>
 	    </section>
 	    <section>
