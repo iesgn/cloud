@@ -51,7 +51,7 @@ tema: solarized
 	      <h2>Vagrant. Instalación</h2>
 	      <ul>
 		<li>Instalar virtualbox</li>
-		<li>Instalar vagrant (descargar de <a href="http://vagrantup.com">http://vagrantup.com</a></li>
+		<li>Instalar vagrant (descargar de <a href="http://vagrantup.com">http://vagrantup.com)</a></li>
 		<li>Notas:</li>
 		<ul>
 		  <li>Es posible utilizar otros proveedores, pero el mejor documentado es virtualbox.</li>
@@ -63,18 +63,27 @@ tema: solarized
 	      </ul>
 	    </section>
 	    <section>
-	      <h3>Infrastructure as a Service (IaaS)</h3>
-	      <p>Capacidades de cómputo y almacenamiento como servicio en la
-	      nube</p>
+	      <h2>Vagrant. Vagrantbox</h2>
+	      
 	      <ul>
-		<li>Utilizado principalmente por administradores de
-		sistemas</li>
-		<li>Se proporciona principalmente capacidad de cómputo y
-		diversos modos de almacenamiento</li>
-		<li>Ejemplos: Amazon Web Services, Joyent, Windows Azure, Rackspace Cloud
-		Servers, Google Compute Engine</li>
-	    </section>
+		<li>Un box es una máquina virtual empaquetada.</li>
+		<li>Vagrant proporciona algunos boxes oficiales, con idéntica clave ssh por lo que no son válidos para entornos en producción</li>
+		<li>Listado incompleto y no oficial de boxes <a href="http://www.vagrantbox.es/">http://www.vagrantbox.es</a></li>
+		<li>Siempre es posible hacerse un box a medida, aunque en la mayor de los casos no es necesario</li>
+		<li>Para poder utilizar un box es necesario agregarlo al equipo:</li>
+	      </ul>
+	       <pre>
+		<code data-trim contenteditable>
+		  vagrant box add {title} {url}
+		  </code>
+		</pre>
+	       <ul>
+		 <li>En el caso de sistemas UNIX, esto hace que se descargue y descomprima el <strong>box</strong> en  ~/.vagrant.d/boxes/</li>
+		 </ul>
+	     </section>
 	    <section>
+	      <h2>Vagrant. Vagrantfile</h2>
+	      
 	      <a href="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"><img src="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"
 	      alt="iaas-paas-saas"/></a>
 	      <p>Fuente: <a href="http://ad-hoc.net/blogs/2010/12/la-nube-iaas-paas-saas-itaa-un-breve-repaso-de-conceptos/">ad-hoc.net/blogs</a></p>
