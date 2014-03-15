@@ -170,6 +170,7 @@ vagrant destroy
 	    <h2>Ansible. Instalación</h2>
 	    <p>Para utilizar la última versión:</p>
 	    <pre>
+
 # apt-get install python-pip
 # pip install ansible
 	    </pre>
@@ -194,7 +195,7 @@ vagrant destroy
       owner=root
       mode=644
   - name: Ensure apache is installed (after updating)
-      apt: pkg=apache2 update_cache=yes
+    apt: pkg=apache2 update_cache=yes
 	       </code>
 	     </pre>
 	  </section>
