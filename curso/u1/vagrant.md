@@ -22,9 +22,12 @@ El objetivo principal de vagrant es aproximar los entornos de desarrollo y produ
 
 ###Prácticas
 
+[Prácticas con Vagrant](practica_vagrant)
+
 ###Enlaces interesantes
 
 * [Página oficial de Vagrant](http://www.vagrantup.com)
+* [Vagrantbox.es: A list of base boxes for Vagrant](http://www.vagrantbox.es/)
 * [Gestionando máquinas virtuales con Vagrant](http://www.josedomingo.org/pledin/2013/09/gestionando-maquinas-virtuales-con-vagrant/)
 
 
