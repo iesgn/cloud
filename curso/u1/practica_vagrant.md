@@ -99,13 +99,14 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
 			end
 
           end
-		  disco = '.vagrant/midisco.vdi'
+          
+          disco = '.vagrant/midisco.vdi'
           config.vm.define :nodo2 do |nodo2|
             nodo2.vm.box = "precise64"
             nodo2.vm.hostname = "nodo2"
             nodo2.vm.network :public_network,:bridge=>"eth0"
             nodo2.vm.network :private_network, ip: "10.1.1.102"
-            node2.vm.provider :virtualbox do |v|
+            nodo2.vm.provider :virtualbox do |v|
 				v.customize ["createhd", "--filename", disco, "--size", 1024]
 				v.customize ["storageattach", :id, "--storagectl", "SATA Controller",
                              "--port", 1, "--device", 0, "--type", "hdd",
