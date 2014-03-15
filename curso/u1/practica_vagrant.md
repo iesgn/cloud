@@ -11,7 +11,7 @@ menu:
 
 1) Instalar virtualbox y vagrant
 
-        root@maquina:~$ apt-get install visrtualbox
+		root@maquina:~$ apt-get install visrtualbox
 		root@maquina:~$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.1_x86_64.deb
 		root@maquina:~$ dpkg -i vagrant_1.5.1_x86_64.deb
 
@@ -40,6 +40,21 @@ menu:
 6) Iniciamos la máquina:
 
         usuario@maquina:~/vagrant$ vagrant up
+        
+7) Para acceder a la instancia:
+   	
+        usuario@maquina:~/vagrant$ vagrant ssh default
+    	      
+8) Suspender, apagar o destruir:
+    	
+        usuario@maquina:~/vagrant$ vagrant suspend
+        usuario@maquina:~/vagrant$ vagrant halt
+        usuario@maquina:~/vagrant$ vagrant destroy
+    	       
+
+
+        
+
         
         
 ###Práctica 2: Creación de varias máuinas virtuales
