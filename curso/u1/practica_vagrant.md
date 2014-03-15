@@ -108,8 +108,8 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
             node2.vm.provider :virtualbox do |v|
 				v.customize ["createhd", "--filename", disco, "--size", 1024]
 				v.customize ["storageattach", :id, "--storagectl", "SATA Controller",
-                   "--port", 1, "--device", 0, "--type", "hdd",
-                   "--medium", disco]
+                             "--port", 1, "--device", 0, "--type", "hdd",
+                             "--medium", disco]
 				end
             end
         end
