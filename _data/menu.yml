@@ -8,6 +8,12 @@
      url: http://iesgn.github.io/cloud/curso/u1/vagrant
    - name: Ansible
      url: http://iesgn.github.io/cloud/curso/u1/ansible
+- nombre: Unidad 2
+  items:
+   - name: Proyecto IESGN
+     url: http://iesgn.github.io/cloud/curso/u2
+   - name: Horizon
+     url: http://iesgn.github.io/cloud/curso/u2/horizon
 - nombre: Unidades
   items:
    - name: Inicio
@@ -15,7 +21,9 @@
    - name: Unidad 1
      url: http://iesgn.github.io/cloud/curso/u1
    - name: Unidad 2
-     url: #
+     url: http://iesgn.github.io/cloud/curso/u2
+   - name: Unidad 3
+     url: http://iesgn.github.io/cloud/curso/u3
 - nombre: Enlaces
   items:
    - name: OpenStack
