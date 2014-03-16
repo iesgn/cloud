@@ -28,14 +28,68 @@ tema: solarized
 		   <p>Puedes encontrar una guía más completa en el artículo <a href="http://www.josedomingo.org/pledin/2014/02/instalando-openstack-en-mi-portatil/">Instalando OpenStack en mi portátil</a></p>
 	  </section>
 	  <section>
-		<h2>¿Qué necesito para realizar la instalación?</h2>
+		<h3>¿Qué necesito para realizar la instalación?</h3>
 		<ul>
 			<li>Euipo necesario: RAM 4Gb y procesador VT-x/AMD-v</li>
 			<li>Git instaldo</li>
 			<li>Virtualbox instalado (versión de debian wheezy 4.1.18) </li>
 			<li>apt-get install python-netaddr</li>
-			<li>Vagrant instalado</li>
+			<li>Vagrant instalado (1.5.1)</li>
 			<li>Box precise64</li>
 			<li>Andible instalado</li>
+		</ul>
+	  </section>
+	  <section>
+		<h2>realizando la instalación</h2>
+		<pre><code>
+		</code>
+git clone https://github.com/openstack-ansible/openstack-ansible
+cd openstack-ansible
+git submodule update --init
+		</pre>
+		<pre><code>
+openstack-ansible# make
+		</code></pre>
+	  </section>
+	  <section>
+		<h3>Durante la instalación...</h3>
+		<p>Los pasos que se desarrollan durante la instalación están definidos en el fichero Makefile:</p>
+		<ul>
+			<li>Se crean las máquinas virtuales (vagrant up en <strong>testcase/standard</strong></li>
+			<li> Se instalan los servicios necesarios en cada una de las máquinas que hemos arrancado.</li>
+			<ul>
+				<li>Receta ansible <strong>openstack-ansible/openstack.yaml</strong> </li>
+				<li>Fichero de hosts en <strong> openstack-ansible/testcases/standard/ansible_hosts</strong></li>
+				<li>Una receta para cada servicio:keystone, swift, glance, neutron, cinder, nova, horizon, heat y ceilometer.</li>
+			</ul>
+			<li> Se levanta una instancia de prueba (receta ansible <strong>openstack-ansible/demo.yaml</strong>)</li>
+		</ul>
+	  </section>
+	  <section>
+		<h3>Esquema de máuinas virtuales</h3>
+		<img src="img/InstalandoOpenStackEnMiPortatil.jpg"/>
+	  </section>
+	  <section>
+		<h2>Accediendo a OpenStack</h2>
+		<ul>
+			<li>http://10.1.0.2/horizon</li>
+			<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>secret</strong>. En el nodo controlador, credenciales: demo.openrc</li>
+			<li>Usuario <strong>admin</strong>.En el nodo controlador, credenciales: admin.openrc</li>
+		</ul>
+	  </section>
+	  <section>
+		<h3>Para terminar...</h3>
+		<ul>
+			<li>El modo de compuntación tiene asignada poca memoria RAM. Solución:</li>
+			<ul>
+				<li>Crear un nuevo sabor (flavor) con 256 Mb (m1.enano)</li>
+				<li>Modificcar la configuración en Vagranfile y asignarle más memoria.</li>
+			</ul>
+			<li>Instancia cirros: usuario <strong>cirros</strong>, y la contraseña <strong>cubswin:)</strong></li>
+			<li>Para acceder a cuarquier nodo por ssh:</li>
+			<ul>
+				<li>Usuario: <strong>vagrant</strong>, contraseña: <strong>vagrant</strong></li>
+				<li>Clave privada <strong>ssh vagrant_private_key</strong></li>
+			</ul>
 		</ul>
 	  </section>
