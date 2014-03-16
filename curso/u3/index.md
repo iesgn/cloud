@@ -17,7 +17,7 @@ menu:
 
 ###Contenidos
 
-Durante esta sesión vamos a instalar eOpenStack a partir del repositorio GitHub [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible).
+Durante esta sesión vamos a instalar OpenStack a partir del repositorio GitHub [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible).
 La infraestructura estará compuesta por 4 máquinas virtuales creadas con vagrant y la configuración de cada una de ellas realizada por medio de ansible.
 Es esquema de máquinas que se levantan son las siguientes y la los podemos representar usando el siguiente esquema:
 
