@@ -11,9 +11,9 @@ menu:
 
 1) Instalar virtualbox y vagrant
 
-		root@maquina:~$ apt-get install visrtualbox
-		root@maquina:~$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.1_x86_64.deb
-		root@maquina:~$ dpkg -i vagrant_1.5.1_x86_64.deb
+        root@maquina:~$ apt-get install visrtualbox
+        root@maquina:~$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.1_x86_64.deb
+        root@maquina:~$ dpkg -i vagrant_1.5.1_x86_64.deb
 
 2) Nos descargamos el box de Ubuntu 12.04 de 64 bits, esto lo hacemos un usuario sin privilegios:
 
