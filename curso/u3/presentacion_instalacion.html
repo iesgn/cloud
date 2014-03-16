@@ -4,7 +4,7 @@ title: Instalando OpenStack en mi portatil
 tema: solarized
 ---
 
-<section>
+	<section>
 	    <h2>Instalando OpenStack en mi portatil</h2>
 	    <h3>Implantación de la infraestructura de prueba OpenStack</h3>
 	    
@@ -22,80 +22,20 @@ tema: solarized
 	  </section>
 
 	  <section>
-	    <section>
-	      <h2>Objetivo</h2>
+ 	      <h2>Objetivo</h2>
 	       <p>El objetivo de esta presentación es presentar los pasos más importantes para realizar la instalación de OpenStack a partir del repositorio GitHub <a href="https://github.com/openstack-ansible/openstack-ansible">https://github.com/openstack-ansible/openstack-ansible</a>.</p>
 		   <p>La infraestructura estará compuesta por 4 máquinas virtuales creadas con vagrant y la configuración de cada una de ellas realizada por medio de ansible.</p>
 		   <p>Puedes encontrar una guía más completa en el artículo <a href="http://www.josedomingo.org/pledin/2014/02/instalando-openstack-en-mi-portatil/">Instalando OpenStack en mi portátil</a></p>
-	    </section>
-	    <section>
-	      <h2>Ansible. Introducción (2)</h2>
-	      <ul>
-		 <li>Ventajas frente a otro software de automatizaci ́n (puppet o chef):</li>
-		 <ul>
-		   <li>Muy fácil instalación</li>
-		   <li>Comunidad de desarrolladores muy activa</li>
-		   <li>Muy pocas dependencias</li>
-		   <li>Muy pequeño</li>
-		   <li>Ideal para entornos pequeños y homogéneos</li>
-		   <li>No es necesario configurar nada en los clientes</li>
-		 </ul>
-		 <li>Inconvenientes:</li>
-		 <ul>
-		   <li>Más complejo en entornos muy heterogéneos</li>
-		   <li>Menos recetas desarrolladas previamente al ser muy nuevo</li>
-		 </ul>
-
-	       </ul>
 	  </section>
 	  <section>
-	    <h2>Ansible. Instalación</h2>
-	    <p>Para utilizar la última versión:</p>
-	    <pre>
-
-# apt-get install python-pip
-# pip install ansible
-	    </pre>
-	    <p><strong>Voila!</strong></p>
-	    
+		<h2>¿Qué necesito para realizar la instalación?</h2>
+		<ul>
+			<li>Euipo necesario: RAM 4Gb y procesador VT-x/AMD-v</li>
+			<li>Git instaldo</li>
+			<li>Virtualbox instalado (versión de debian wheezy 4.1.18) </li>
+			<li>apt-get install python-netaddr</li>
+			<li>Vagrant instalado</li>
+			<li>Box precise64</li>
+			<li>Andible instalado</li>
+		</ul>
 	  </section>
-	  <section>
-	    <h2>Ansible. Playbooks</h2>
-	    <p>Las tareas a realizar por ansible se describen en formato yaml en ficheros denominados “playbooks”, que pueden incluir una o varias jugadas, por ejemplo:</p>
-	    
-	     <pre>	
-	       <code data-trim>
----
-- name: Apache installation
-  hosts: all
-  sudo: True
-  tasks:
-  - name: Set proper sources.list
-    copy: >
-      src=files/etc/apt/sources.list
-      dest=/etc/apt/sources.list
-      owner=root
-      mode=644
-  - name: Ensure apache is installed (after updating)
-    apt: pkg=apache2 update_cache=yes
-	       </code>
-	     </pre>
-	  </section>
-	  </section>
-	  <section>
-	    <h2>Vagrant + Ansible</h2>
-	    <p>Imagina que la siguiente situación para una determinada configuración de máquinas virtuales se pudiera hacer automáticamente:</p>
-	    <ul>
-	      <li>Levantar las máquinas virtuales</li>
-	      <li>Configurar la red</li>
-	      <li>Realizar las actualizaciones de software</li>
-	      <li>Instalar los paquetes del software que se va a utilizar></li>
-	      <li>Copiar los ficheros de configuraci ́n de plantillas previamente creadas</li>
-	      <li>Levantar o parar los servicios que se determinen</li>
-	      <li>Ejecutar cualquier tarea en cada una de las máquinas virtuales</li>
-	      <li>Dejar el entorno completamente operativo</li>
-	    </ul>
-	    <p>No es ningún sueño: Eso es vagrant + ansible :-)</p>
-
-	  </section>
-</section>
