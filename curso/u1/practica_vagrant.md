@@ -11,7 +11,7 @@ menu:
 
 1) Instalar virtualbox y vagrant
 
-        root@maquina:~$ apt-get install visrtualbox
+        root@maquina:~$ apt-get install virtualbox
         root@maquina:~$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.1_x86_64.deb
         root@maquina:~$ dpkg -i vagrant_1.5.1_x86_64.deb
 
