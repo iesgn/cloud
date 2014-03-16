@@ -2,6 +2,8 @@
   items:
    - name: Cloud Computing
      url: http://iesgn.github.io/cloud/curso/u1
+   - name: OpenStack
+     url: http://iesgn.github.io/cloud/curso/u1/openstack
    - name: Vagrant
      url: http://iesgn.github.io/cloud/curso/u1/vagrant
    - name: Ansible

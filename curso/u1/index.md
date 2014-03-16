@@ -11,16 +11,21 @@ menu:
 * Conocer las principales características del cloud computing.
 * Conocer las capas principales: capa de infraestructura (IaaS) y plataforma (PaaS)
 * Conocer los distintos tipos de Cloud Computing: públicos, privados, hibridos
-* Intoducción a OpenStack: software libre para implantar un sistema de cloud computing
 * Utilidades del Cloud Computing 
+* conocer las opciones de PaaS e IaaS públicos más conocidos
 
 ###Contenidos
 
+Tendría que ser una presentación decloud Computin, openstack lo hemos puesto en otra página
 [Presentación: ¿Por qué OpenStack? Software Libre para la nube](presentacion)
 
 ###Enlaces interesantes
 
-* [¿Qué es eso de OpenStack y por qué debería conocerlo?](http://albertomolina.wordpress.com/2013/11/25/que-es-eso-de-openstack-y-por-que-deberia-conocerlo/)
-* [En pocas palabras: ¿Cómo funciona OpenStack?](http://vmartinezdelacruz.com/en-pocas-palabras-como-funciona-openstack/)
-
+* [Amazon Web Service](http://aws.amazon.com/es/)
+* [Windows Azure](http://www.windowsazure.com/)
+* [RackSpace Cloud](http://www.rackspace.com/cloud/)
+* [HP Cloud Services](https://www.hpcloud.com/)
+* [Google App Engine](https://developers.google.com/appengine/)
+* [Red Hat OpenShift](https://www.openshift.com/)
+* [Heroku](http://www.heroku.com/)
 
