@@ -1,0 +1,14 @@
+$ORIGIN .
+$TTL 86400      ; 1 day
+1.1.10.in-addr.arpa    IN SOA dns.1.1.10.in-addr.arpa. postmaster.example.com. (
+                                1          ; serial
+                                21600      ; refresh (6 hours)
+                                3600       ; retry (1 hour)
+                                604800     ; expire (1 week)
+                                21600      ; minimum (6 hours)
+                                )
+                        NS      dns.example.com.
+$ORIGIN 1.1.10.in-addr.arpa.
+101                     PTR     nodo1.example.com.
+102                     PTR     nodo2.example.com.
+103                     PTR     dns.example.com.

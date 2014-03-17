@@ -1,0 +1,36 @@
+---
+- name: Bind9 installation and configuration
+  hosts: dns
+  sudo: True
+  tasks:
+  - name: Ensure bind9 is installed
+    apt: pkg=bind9
+
+  - name: Configure properly named.conf.local
+    copy: >
+      src=files/etc/bind/named.conf.local
+      dest=/etc/bind/named.conf.local
+    notify:
+      - restart bind
+  - name: Set zone file example.com
+    copy: >
+      src=files/var/cache/bind/db.example.com
+      dest=/var/cache/bind/db.example.com
+      mode=644
+      owner=bind
+      group=bind
+    notify:
+      - restart bind
+  - name: Set zone file 10.1.1.0/24
+    copy: >
+      src=files/var/cache/bind/db.10.1.1
+      dest=/var/cache/bind/db.10.1.1
+      mode=644
+      owner=bind
+      group=bind
+    notify:
+      - restart bind
+      
+  handlers:
+    - name: restart bind
+      service: name=bind9 state=restarted

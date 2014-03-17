@@ -1,0 +1,3 @@
+- include: playbooks/common.yaml
+- include: playbooks/webservers.yaml
+- include: playbooks/bind.yaml

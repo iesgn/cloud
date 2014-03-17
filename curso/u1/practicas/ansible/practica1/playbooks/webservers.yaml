@@ -1,0 +1,15 @@
+---
+- name: Apache installation
+  hosts: webservers
+  sudo: True
+  tasks:
+  - name: Ensure apache is installed
+    apt: pkg=apache2
+
+  - name: Set index.html with hostname
+    template: >
+      src=templates/var/www/index.j2
+      dest=/var/www/index.html
+      mode=644
+      owner=www-data
+      group=www-data
