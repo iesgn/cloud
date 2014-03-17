@@ -20,6 +20,8 @@ Ansible es un sistema de orquestación escrito en Python, que nos permite automa
 
 ###Prácticas
 
+[Prácticas con Ansible](practica_ansible)
+
 ###Enlaces interesantes
 
 * [Página oficial de Ansible](http://www.ansible.com/home)
