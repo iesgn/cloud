@@ -1,0 +1,293 @@
+---
+layout: presentacion
+title: Introducción a OpenStack
+tema: solarized
+---
+<section>
+	    <h2>Introducción a OpenStack</h2>
+	    <p>
+	      <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	      Coballes</a> / <a
+	      href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+	      href="http://josedomingo.org">José Domingo Muñoz
+	      Rodríguez</a> / <a
+	      href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+	    </p>
+	    <p><small>
+		<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+		width="100px" border="0"/></a></small></p>
+	  </section>
+	    <section>
+	      <h2>OpenStack</h2>
+	      <blockquote>&ldquo;Plataforma de cloud computing hecha con software libre para
+	      desplegar nubes públicas y privadas, desarrollada con la idea de
+	      ser sencilla de implementar, masivamente escalable y con muchas
+	      prestaciones&rdquo;</blockquote>
+	    </section>
+	    <section>
+	    <h3>Principios fundacionales</h3>
+	    <ul>
+	      <li>Licencia Apache 2.0, no existe versión "enterprise"</li>
+	      <li>Proceso de diseño abierto</li>
+	      <li>Repositorios públicos de código fuente</li>
+	      <li>Todos los procesos de desarrollo deben estar documentados y
+		ser transparentes</li>
+	      <li>Orientado para adoptar estándares abiertos</li>
+	      <li>Diseño modular que permite flexibilidad mediante el uso de
+	      APIs</li>
+	      </ul>
+	    </section>
+	    <section>
+	      <h3>Respaldo de grandes empresas</h3>
+	      <img src="img/openstack_industry_support.png"
+	      alt="openstack_industry_support"/>
+	      <p>
+		<small>Fuente: <a href="http://www.slideshare.net/randybias/state-of-the-stack-april-2013">cloudscaling</a></small></p>
+		<p><a href="http://www.openstack.org/foundation/companies/">Empresas
+		partipantes en la OpenStack Foundation</a></p>
+	    </section>
+	  <section>
+	    <h3>Componentes principales de OpenStack</h3>
+	    <table>
+	      <tbody>
+		<tr>
+		  <th style="text-align:center;">Nombre</th>
+		  <th style="text-align:center;">Equivalente en Amazon WS</th>
+		  <th style="text-align:center;">Función</th>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Horizon</td>
+		  <td style="text-align:center;">Console</td>
+		  <td style="text-align:center;">Panel web de gestión</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Nova</td>
+		  <td style="text-align:center;">EC2</td>
+		  <td style="text-align:center;">Gestión de instancias</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Cinder</td>
+		  <td style="text-align:center;">EBS</td>
+		  <td style="text-align:center;">Almacenamiento de volúmenes</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Keystone</td>
+		  <td style="text-align:center;">-</td>
+		  <td style="text-align:center;">Autenticación y autorización</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Swift</td>
+		  <td style="text-align:center;">S3</td>
+		  <td style="text-align:center;">Almacenamiento de objetos</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Glance</td>
+		  <td style="text-align:center;">VM Import/Export</td>
+		  <td style="text-align:center;">Gestión de imágenes para las instancias</td>
+		</tr>
+		<tr>
+		  <td style="text-align:center;">Neutron</td>
+		  <td style="text-align:center;">VPC</td>
+		  <td style="text-align:center;">Redes virtuales</td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </section>
+	  </section>
+	  <section data-background="#007777">
+	    <section>
+	    <h2>Demo 1: OpenStack Horizon</h2>
+	    </section>
+	    <section>
+	      <h3>Conceptos</h3>
+	      <ul>
+		<li>Imagen: Imagen de sistema preconfigurado que se utiliza como
+		base para crear instancias. Dentro del cloud podemos encontrar
+		diferentes imágenes para cada tipo de instacia que se quiera
+		utilizar.</li>
+		<li>Instancia: Clon de una imagen que se crea a demanda del
+		  usuario en uno de los  nodos del cloud.</li>
+		<li>Un sabor (flavor) define para una instancia el número de
+		  CPUs virtuales, la RAM, si dispone o no de discos efímeros,
+		  etc.</li>
+	      </ul>
+	    </section>
+	    <section>
+	      <h3>Conceptos</h3>
+	      <ul>
+		<li>IP fija: Dirección IP con la que se crean las instancias
+		y que se utiliza para comunicación interna.</li> 
+		<li>IP flotante: Dirección IP que puede asociarse a
+		  diferentes instancias con el fin de acceder a ellas desde
+		  fuera.</li>
+		<li>Grupo de seguridad: Reglas de cortafuegos (iptables) que
+		  controlan el acceso a las instancias mediante la dirección IP
+		  flotante.</li>
+	      </ul>
+	    </section>
+	    <section>
+	      <h3>Utilización de una instancia</h3>
+	    </section>
+	    <section>
+	      <h3>Creación de una instancia</h3>
+	      <ul>
+		<li>Elegir la imagen que vamos a instanciar.</li>
+		<li>Elegir el sabor que va a tener la instancia.</li>
+		<li>Asignar el grupo de seguridad con el que va a trabajar la
+		  instancia.</li>
+		<li>Elegir la clave RSA que nos va a posibilitar el acceso a la
+		  instancia.</li>
+		<li>Elegir la red interna (o redes) a la que va a estar
+		conectada la instancia.</li>
+		<li>Asignar una IP flotante</li>
+		</ul>
+	    </section>
+	  </section>
+	  <section data-background="#8c4738">
+	  <!-- <section data-background="#11AA05"> -->
+	  <section>
+	    <h2>Demo 2: OpenStack CLI</h2>
+	  </section>
+	  <section>
+	    <h3>Lanzar una instancia</h3>
+	    <pre>
+<code data-trim contenteditable>
+#!/bin/bash
+
+echo "Reservamos una ip flotante que posteriormente asignaremos a la \
+instancia para acceder"
+nova floating-ip-create ext_net
+
+echo "Veamos la lista de imágenes"
+nova image-list
+
+echo "Veamos la lista de sabores"
+nova flavor-list
+
+echo "Las redes que tenemos definidas"
+nova net-list
+
+echo "Creamos una instancia desde la imágen Debian 7.2, con claves ssh \
+(openwebinars), conectada a la red interna y que se llama prueba_bash"
+nova boot --flavor 1 \
+          --image 9715a365-3b56-40b0-a30a-0ba030347cf5 \
+          --key-name openwebinars \
+          --nic net-id=d8d4d80e-923f-47fc-ac88-b9079328080b \
+          prueba_bash
+
+echo "Asignamos la IP flotante que habiamos reservado a la instancia creada"
+echo "nova add-floating-ip 'id_instancia' 'ip_flotante'"
+</code>
+	      </pre>
+	  </section>
+	  </section>
+	  <section data-background="#550699">
+	    <section>
+	      <h2>Demo 3: OpenStack Python library</h2>
+	    </section>
+	    <section>
+	      <pre>
+		<code data-trim contenteditable>
+ #!/usr/bin/python
+ # -*- coding: utf-8 -*-
+import time
+from novaclient.v1_1 import client
+from credentials import get_nova_creds
+creds = get_nova_creds()
+nova = client.Client(**creds)
+
+print "Reservamos una IP flotante"
+floating_ip = nova.floating_ips.create(nova.floating_ip_pools.list()[0].name)
+print floating_ip.ip
+
+print "Elegimos la imagen de Debian Wheezy"
+image = nova.images.find(name="Debian 7.2 (Wheezy)")
+
+print "Elegimos el sabor m1.tiny"
+flavor = nova.flavors.find(name="m1.tiny")
+
+print "Seleccionamos la red"
+network = nova.networks.find(label="red interna de openwebinars")
+
+print "Creamos una instancia con los parámetros anteriores"
+server = nova.servers.create(name = "prueba_python",
+                             image = image.id,
+                             flavor = flavor.id,
+                             network = network.id,
+                             key_name = "openwebinars")
+
+while server.status != 'ACTIVE':
+    time.sleep(0.5)
+    server = nova.servers.get(server.id)
+
+print "Asociamos la IP flotante a la instancia"
+server.add_floating_ip(floating_ip)
+		</code>
+	    </section>
+	  </section>
+	  <section>
+	    <h2>¿Qué más podemos hacer?</h2>
+	    <ul>
+	      <li>Crear instantáneas de las instancias</li>
+	      <li>Añadir volúmenes (dispositivos de bloques) a las instancias</li>
+	      <li>Utilizar almacenamiento de objetos</li>
+	      <li>Redimensionar las instancias</li>
+	      <li>Configurar redes complejas</li>
+	      <li>Registrar la utilización</li>
+	      <li>Automatizar la creación y configuración de instancias</li>
+	      <li>...</li>
+	  </section>
+
+	  <section>
+	    <h2>Aviso a navegantes</h2>
+	    <p>Utilizar esto implica algo más que cambiar de herramientas</p>
+	    <p>Esto va más de devops que de sysadmins</p>
+	  </section>
+	  <section>
+	    <h2>¿Por qué OpenStack?</h2>
+	    <ul>
+	      <li>Porque es libre y abierto</li>
+	      <li>Por el respaldo que tiene el proyecto</li>
+	      <li>Porque incluye gran cantidad de funcionalidades</li>
+	      <li>Porque es extensible y adaptable</li>
+	      <li>Porque si aún no es la plataforma de cloud más completa, todo indica que lo será muy pronto</li>
+	      <li>Porque facilita utilizar otras muchas tecnologías punteras: Ceph, SDN, Hadoop</li>
+	      <li>Porque comienza a haber demanda
+	      laboral: <a href="http://www.indeed.com/jobtrends?q=openstack%2C+vcloud&l=">Indeed
+	      trends</a></li>
+	  </section>
+	  <section>
+	    <h2>Me gusta, ¿por dónde empiezo?</h2>
+	    <ul>
+	      <li>Vente al IES Gonzalo Nazareno ;)</li>
+	      <li><a href="http://devstack.org/">devstack</a>: Versión de desarrollo</li>
+	      <li><a href="http://trystack.org/">TryStack</a>: Cloud público de
+	      pruebas</li>
+	      <li>Configuración automática:
+		<ul>
+		  <li><a href="https://forge.puppetlabs.com/puppetlabs/openstack">Puppet</a></li>
+		  <li><a href="http://docs.opscode.com/openstack.html">Chef</a></li>
+		  <li><a href="https://github.com/ansible/ansible-redhat-openstack">Ansible
+		  for Redhat</a></li>
+		  <li><a href="https://github.com/lorin/openstack-ansible">Ansible
+		  on Vagrant</a></li>
+		  <li><a href="https://github.com/EntropyWorks/salt-openstack">Salt
+		  OpenStack</a></li>
+		</ul>
+	    </ul>
+	  </section>
+	  <section data-background="http://www.openstack.org/assets/openstack-logo/openstack-cloud-software-vertical-large.png">
+	    <h1>¿Por qué OpenStack?</h1>
+	    <h3>Software libre para la nube</h3>
+	    <p>
+	      <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	      Coballes</a> / <a
+	      href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+	      href="http://josedomingo.org">José Domingo Muñoz
+	      Rodríguez</a> / <a
+	      href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+	    </p>
+	    <p><small>
+		<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="img/cc_by_sa.png"
+		width="100px" border="0"/></a></small></p>
+	  </section>

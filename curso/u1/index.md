@@ -16,8 +16,7 @@ menu:
 
 ###Contenidos
 
-Tendría que ser una presentación decloud Computin, openstack lo hemos puesto en otra página
-[Presentación: ¿Por qué OpenStack? Software Libre para la nube](presentacion)
+[Presentación: Introducción al Cloud Computing](presentacion)
 
 ###Enlaces interesantes
 
