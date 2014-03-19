@@ -12,8 +12,10 @@
   items:
    - name: Proyecto IESGN
      url: http://iesgn.github.io/cloud/curso/u2
-   - name: Horizon
-     url: http://iesgn.github.io/cloud/curso/u2/horizon
+   - name: Pr. Linux
+     url: http://iesgn.github.io/cloud/curso/u2/linux
+   - name: Pr. Windows
+     url: http://iesgn.github.io/cloud/curso/u2/windows
 - nombre: Unidad 3
   items:
    - name: Instalación
