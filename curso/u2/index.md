@@ -34,6 +34,9 @@ La forma más fácil de trabajar con OpenStack es a través de la palicación we
 
 ###Prácticas
 
+* [Práctica: Trabajr con instancias Linux](practica_linux)
+* [Práctica: Trabajr con instancias Windows](practica_windows)
+
 ###Enlaces interesantes
 
 * [Seminario impartido en eMadrid net](http://www.emadridnet.org/seminario-emadrid-aprender-software-libre-experiencias-todos-niveles/cloud-privado-iaas-fines-educativos-software-libre)

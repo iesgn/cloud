@@ -12,10 +12,10 @@
   items:
    - name: Proyecto IESGN
      url: http://iesgn.github.io/cloud/curso/u2
-   - name: Pr. Linux
-     url: http://iesgn.github.io/cloud/curso/u2/linux
-   - name: Pr. Windows
-     url: http://iesgn.github.io/cloud/curso/u2/windows
+   - name: Práctica Linux
+     url: http://iesgn.github.io/cloud/curso/u2/practica_linux
+   - name: Práctica Windows
+     url: http://iesgn.github.io/cloud/curso/u2/practica_windows
 - nombre: Unidad 3
   items:
    - name: Instalación
