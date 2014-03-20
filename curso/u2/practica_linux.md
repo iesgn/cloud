@@ -10,7 +10,7 @@ menu:
 El objetivo de esta práctica es realizar todo el proceso para crear una instancia con una distribución Linux, y acceder a ella utilizando claves SSH.
 Trabajar con imágenes que tengan definida la contraseña del root no es conveniente ya que, si no tenemos la precaución de modificarla, cualquiera puede acceder a la instancia. Es por lo que lo normal es acceder a las intancias utilizando un par de claves ssh (privada/pública). En este caso la clave pública que vamos a generar la podemos inyectar en la instancia a la hora de crearla.
 
-**Imagen**: Imagen de sistema preconfigurado que se utiliza como base para crear instancias. Dentro del cloud podemos encontrar diferentes imágenes para cada tipo de instacia que se quiera utilizar.
+> **Imagen**: Imagen de sistema preconfigurado que se utiliza como base para crear instancias. Dentro del cloud podemos encontrar diferentes imágenes para cada tipo de instacia que se quiera utilizar.
 
 Los pasos que tenemos que realizar son los siguientes:
 
@@ -22,7 +22,7 @@ Los pasos que tenemos que realizar son los siguientes:
 
 **Par de claves ssh**: Utilizadas para acceder por ssh a las instancias desde fuera del cloud.
 
-4) Antés de crear la instancia vamos a crear nuestra par de claves, desde la sección **"Acceso y Seguidad"** -> **"Par de claves** -> **"Crear par de claves": creaa un par de claves y guárdalo en tu ordenador y asígnale los permisos adecuado (chmod 600).
+4) Antés de crear la instancia vamos a crear nuestra par de claves, desde la sección **"Acceso y Seguidad"** -> **"Par de claves"** -> **"Crear par de claves"**: creaa un par de claves y guárdalo en tu ordenador y asígnale los permisos adecuado (chmod 600).
 
 **Instancia**: Clon de una imagen que se crea a demanda del usuario en uno de los nodos del cloud.
 **Un sabor (flavor)**: Define para una instancia el número de CPUs virtuales, la RAM, si dispone o no de discos efímeros, etc.
