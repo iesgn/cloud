@@ -18,9 +18,6 @@ Los pasos que tenemos que realizar son los siguientes:
 
 2) Comprueba el proyecto al que perteneces.
 
-|Recuerda...|		  |	
-|:---------:|---------|
-|**Imagen**|Imagen de sistema preconfigurado que se utiliza como base para crear instancias. Dentro del cloud podemos encontrar diferentes imágenes para cada tipo de instacia que se quiera utilizar.|
 
 3) Comprueba las imágenes que tenemos a nuestra disposición en el apartado **"Imágenes e instanteneas"**.
 
