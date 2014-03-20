@@ -20,12 +20,12 @@ Los pasos que tenemos que realizar son los siguientes:
 
 3) Comprueba las imágenes que tenemos a nuestra disposición en el apartado **"Imágenes e instanteneas"**.
 
-**Par de claves ssh**: Utilizadas para acceder por ssh a las instancias desde fuera del cloud.
+> **Par de claves ssh**: Utilizadas para acceder por ssh a las instancias desde fuera del cloud.
 
 4) Antés de crear la instancia vamos a crear nuestra par de claves, desde la sección **"Acceso y Seguidad"** -> **"Par de claves"** -> **"Crear par de claves"**: creaa un par de claves y guárdalo en tu ordenador y asígnale los permisos adecuado (chmod 600).
 
-**Instancia**: Clon de una imagen que se crea a demanda del usuario en uno de los nodos del cloud.
-**Un sabor (flavor)**: Define para una instancia el número de CPUs virtuales, la RAM, si dispone o no de discos efímeros, etc.
+> **Instancia**: Clon de una imagen que se crea a demanda del usuario en uno de los nodos del cloud.
+> **Un sabor (flavor)**: Define para una instancia el número de CPUs virtuales, la RAM, si dispone o no de discos efímeros, etc.
 
 5) Crea una instancia de la imagen (**"Instancias"** -> **"Lanzar Instancia"**).
 
@@ -41,14 +41,14 @@ Los datos necesarios para crear la instancia son los siguientes:
 
 Accede a ella utilizando la consola VNC, para ello pulsa sobre el nombre de la instancia (desde el apartado **"Instancias"**) y a la pestaña **"Consola"**.
 
-**IP fija**: Dirección IP con la que se crean las instancias y que se utiliza para comunicación interna.
-**IP flotante**: Dirección IP que puede asociarse a diferentes instancias con el fin de acceder a ellas desde fuera.
+> **IP fija**: Dirección IP con la que se crean las instancias y que se utiliza para comunicación interna.
+> **IP flotante**: Dirección IP que puede asociarse a diferentes instancias con el fin de acceder a ellas desde fuera.
 
 6) Cuando se crea, la instancia ha tomada una ip fija de la red a la que está conectada.
 
 7)  Para poder acceder a nuestra instancia desde el exterior tenemos que asignarle a la instancia una IP flotante, para ello desde el apartado **"Acceso y Seguridad"**->**"IP Flotante"** solicita una nueva IP flotante (**Asignar IP al proyecto**) y asígnala a la instancia que has creado.
 
-**Grupo de seguridad**: Reglas de cortafuegos (iptables) que controlan el acceso a las instancias mediante la dirección IP flotante.
+> **Grupo de seguridad**: Reglas de cortafuegos (iptables) que controlan el acceso a las instancias mediante la dirección IP flotante.
 
 8) También es necesario abrir el puerto 22 en el Grupo de seguridad default (**"Acceso y Seguridad"**->**"Grupos de Seguridad"**). Edita las reglas y añade una nueva en la que permitas el acceso por el puero 22 desde la IP de tu ordenador.
 
