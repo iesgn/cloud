@@ -38,7 +38,7 @@ Los datos necesarios para crear la instancia son los siguientes:
 * El **sabor** de la máquina que vamos a crear.
 * Número de instancia, por defecto 1.
 * El par de **claves SSH** con el que vamos a acceder a la instancia.
-* La red a la que está conectada nuestra instancia.
+* La **red** a la que está conectada nuestra instancia.
 
 Accede a ella utilizando la consola VNC, para ello pulsa sobre el nombre de la instancia (desde el apartado **"Instancias"**) y a la pestaña **"Consola"**.
 
