@@ -7,27 +7,27 @@ menu:
 ###Objetivos
 
 * Implantar la infraestructura de openstack que vamos a usar durante el curso.
-* Conocer los pasos que se van a producir durante la instlación de OpenStack.
-* Conocer la estructuras de máuinas virtuales que se van a crear con vagrant.
+* Conocer los pasos que se van a producir durante la instalación de OpenStack.
+* Conocer la estructuras de máquinas virtuales que se van a crear con vagrant.
 * Conocer las configuraciones básicas que se van a desplegar en los distintos nodos.
 * Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
 
 ###Contenidos
 
-Durante esta sesión vamos a instalar OpenStack a partir del repositorio GitHub [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible).
-La infraestructura estará compuesta por 4 máquinas virtuales creadas con vagrant y la configuración de cada una de ellas realizada por medio de ansible.
-Es esquema de máquinas que se levantan son las siguientes y la los podemos representar usando el siguiente esquema:
+Vamos a presentar diferentes formas de instalar OpenStack en un entorno de pruebas en nuestro ordenador. Tendremos que discutir las ventajas e incovenientes de cada opción y decidir cúal puede ser la más válida para el curso. Finalmente vamos a explicar la configuración de VPN para que se puedan realizar las prácticas en el OpenStack del IES Gonzalo Nazareno.
 
-* 10.1.0.2, nodo controlador.
-* 10.1.0.3, nodo de computación.
-* 10.1.0.4, nodo de red (neutron).
-* 10.1.0.5, nodo de almacenamiento.
+Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, veamos en resumen algunas de ellas:
 
-![esquema máquinas](img/InstalandoOpenStackEnMiPortatil.jpg "Esquema máquinas virtuales")
+|     |DevStack|RDO|OpenStack-ansible|
+|:---:|--------|---|-----------------|
+|Instalación|En máquina física o en máquina virtual|En máquina física|En 4 máquinas virtuales|
+|Versión OpenStack|Grizzly o Havana|Havana|Havana|
+|Servicios Openstack|Configuración básica (nova, cinder, glance, keystone, swift, horizon); Configuración completa(se añaden los servicios de quantum, heat y ceilometer)|Todos|Todos|
+|Vagrant - Ansible|Se puede utilizar el siguiente [repositorio GitHub](https://github.com/xiaohanyu/vagrant-ansible-devstack) o se puede instalar manualmente|No|Si|
+|Ventajas|Utilizando el repositorio github, la instalación es muy sencilla. Se puede instalar grizzly o havana, y se puede hacer una configuración básica o una completa|Fácil de instalar y creo que muy depurado. Buen rendimiento. Puede ser perfecto para un entorno de pruebas|Entorno de pruebas muy cercano al real, con nodo de red, nodo de almacenamiento, etc. Es muy adecuado para luego pasarlo a entorno real|
+|Incovenientes|No es totalmente real porque el controlador tiene todos los componentes. La instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal instalarlo sobre una máquina física|No es totalmente real porque el controlador tiene todos los componentes (incluso compute). No sé lo difícil que puede ser modificarlo para un entorno real|Al utilizarse sobre MVs tiene peor rendimiento y es más exigente en cuanto a requisitos de Hardware|
 
-* [Presentación: Instalando OpenStack en mi portatil](presentacion_instalacion)
-* [Instalando OpenStack en mi portatil](http://www.josedomingo.org/pledin/2014/02/instalando-openstack-en-mi-portatil/)
+* [Devstav](devstack)
+* [RDO](rdo)
+* [OpenStack-anssible](openstack-ansible)
 
-###Enlaces interesantes
-
-* [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible)

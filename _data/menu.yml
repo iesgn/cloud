@@ -22,8 +22,14 @@
      url: http://iesgn.github.io/cloud
 - nombre: Unidad 3
   items:
-   - name: Instalación
+   - name: Entornos de prueba
      url: http://iesgn.github.io/cloud/curso/u3
+   - name: DevStack
+     url: http://iesgn.github.io/cloud/curso/devstack
+   - name: RDO
+     url: http://iesgn.github.io/cloud/curso/rdo
+   - name: OpenStack-ansible
+     url: http://iesgn.github.io/cloud/curso/openstack-ansible
    - name: Volver
      url: http://iesgn.github.io/cloud
 - nombre: Unidad 4
