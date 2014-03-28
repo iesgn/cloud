@@ -15,17 +15,17 @@ menu:
 
 ### Contenidos
 
-OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que se denomina [OpenShift Online](https://www.openshift.com/), o bien instalando directamente en un cloud privado el software [OpenShift Origin](http://openshift.github.io/) disponible en [GitHub](https://github.com/openshift).
+OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que se denomina [OpenShift Online](https://www.openshift.com/), mediante un producto de pago [OpenShift Enterprise](https://www.openshift.com/products/enterprise) o bien instalando directamente en un cloud privado el software [OpenShift Origin](http://openshift.github.io/) disponible en [GitHub](https://github.com/openshift).
 
 En resumen tenemos a nuestras disposición diferentes versiones:
 
 |     |OpenShift Online|OpenShift Enterprise|OpenShift Origin|
 |:---:|----------------|--------------------|----------------|
-|¿Qué es?|Servico PaaS en la web|PaaS privado|Proyecto PaaS de código abierto|
-|Funciones|Desarrolo rápido de aplicaciones escalables y alojadas en un cloud público|Acelera los servicios TIC y agiliza el desarrollo de aplicaciones|Usar un PaaS de código abierto y libre o ayudar a desarrollar OpenShift|
-|¿Cuál es el precio?|Free Plan o Premium Plan|Suscripción anual|Gratis|
-|Soporte|Free Plan -> Comunidad;Premium Plan - > Red Hat|Red Hat|La comunidad|
-|¿Dónde puedes ejecutarlo?|En el cloud público|	En tus propios servidores o en tu cloud privado|En tu ordenador, en tu servidores o en cloud privada o pública|
-|¿Para quién esta pensado?|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
+|**¿Qué es?**|Servico PaaS en la web|PaaS privado|Proyecto PaaS de código abierto|
+|**Funciones**|Desarrolo rápido de aplicaciones escalables y alojadas en un cloud público|Acelera los servicios TIC y agiliza el desarrollo de aplicaciones|Usar un PaaS de código abierto y libre o ayudar a desarrollar OpenShift|
+|**¿Cuál es el precio?**|Free Plan o Premium Plan|Suscripción anual|Gratis|
+|**Soporte**|La Comunidad(Free Plan);Red Hat(Premium Plan)|Red Hat|La comunidad|
+|**¿Dónde puedes ejecutarlo?**|En el cloud público|	En tus propios servidores o en tu cloud privado|En tu ordenador, en tu servidores o en cloud privada o pública|
+|**¿Para quién esta pensado?**|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
 
 
