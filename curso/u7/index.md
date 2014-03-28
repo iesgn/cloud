@@ -41,12 +41,5 @@ En resumen tenemos a nuestras disposición diferentes versiones:
 * [Microsoft Windows Azure](http://www.windowsazure.com/)
 * [Cloud Foundry](http://cloudfoundry.org/index.html)
 
-### Prácticas
 
-### Enlaces de otros PaaS
-
-* [Google App Engine](https://developers.google.com/appengine/)
-* [Heroku](http://www.heroku.com/)
-* [Microsoft Windows Azure](http://www.windowsazure.com/)
-* [Cloud Foundry](http://cloudfoundry.org/index.html)
 
