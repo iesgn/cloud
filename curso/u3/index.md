@@ -5,8 +5,6 @@ menu:
   - Unidad 3
   - Unidades
 ---
-## Implantación de la infraestructura de prueba OpenStack
-
 ###Objetivos
 
 * Implantar la infraestructura de openstack que vamos a usar durante el curso.
