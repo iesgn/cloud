@@ -3,7 +3,6 @@ layout: blog
 tittle: Utilización de OpenStack en el IES Gonzalo Nazareno.  
 menu:
   - Unidad 2
-  - Unidades
 ---
 ## Práctica: Trabajar con instancias Windows
 
