@@ -4,6 +4,7 @@ tittle: Introducción a PaaS: OpenShift
 menu:
   - Unidad 7
 ---
+
 ###Objetivos
 
 * Identificar las características de la capa PaaS dentro de la tecnología de Cloud Computing
