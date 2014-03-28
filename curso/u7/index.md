@@ -22,11 +22,35 @@ En resumen tenemos a nuestras disposición diferentes versiones:
 |     |OpenShift Online|OpenShift Enterprise|OpenShift Origin|
 |:---:|----------------|--------------------|----------------|
 |**¿Qué es?**|Servico PaaS en la web|PaaS privado|Proyecto PaaS de código abierto|
-|Funciones|Desarrolo rápido de aplicaciones escalables y alojadas en un cloud público|Acelera los servicios TIC y agiliza el desarrollo de aplicaciones|Usar un PaaS de código abierto y libre o ayudar a desarrollar OpenShift|
-|¿Cuál es el precio?|Free Plan o Premium Plan|Suscripción anual|Gratis|
-|Soporte|La Comunidad(Free Plan);Red Hat(Premium Plan)|Red Hat|La comunidad|
-|¿Dónde puedes ejecutarlo?|En el cloud público|	En tus propios servidores o en tu cloud privado|En tu ordenador, en tu servidores o en cloud privada o pública|
-|¿Para quién esta pensado?|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
+|**Funciones**|Desarrolo rápido de aplicaciones escalables y alojadas en un cloud público|Acelera los servicios TIC y agiliza el desarrollo de aplicaciones|Usar un PaaS de código abierto y libre o ayudar a desarrollar OpenShift|
+|**¿Cuál es el precio?**|Free Plan o Premium Plan|Suscripción anual|Gratis|
+|**Soporte**|La Comunidad(Free Plan);Red Hat(Premium Plan)|Red Hat|La comunidad|
+|**¿Dónde puedes ejecutarlo?**|En el cloud público|	En tus propios servidores o en tu cloud privado|En tu ordenador, en tu servidores o en cloud privada o pública|
+|**¿Para quién esta pensado?**|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
 
+### Video
 
+<iframe width="560" height="315" src="//www.youtube.com/embed/rbFIHgHDRgo" frameborder="0" allowfullscreen></iframe>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&rbFIHgHDRgo
+" target="_blank"><img src="http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+### Prácticas
+
+### Enlaces de otros PaaS
+
+* [Google App Engine](https://developers.google.com/appengine/)
+* [Heroku](http://www.heroku.com/)
+* [Microsoft Windows Azure](http://www.windowsazure.com/)
+* [Cloud Foundry](http://cloudfoundry.org/index.html)
+
+### Prácticas
+
+### Enlaces de otros PaaS
+
+* [Google App Engine](https://developers.google.com/appengine/)
+* [Heroku](http://www.heroku.com/)
+* [Microsoft Windows Azure](http://www.windowsazure.com/)
+* [Cloud Foundry](http://cloudfoundry.org/index.html)
 
