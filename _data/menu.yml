@@ -63,10 +63,4 @@
      url: http://iesgn.github.io/cloud/curso/u7
    - name: Unidad 8
      url: http://iesgn.github.io/cloud/curso/u8
-- nombre: Enlaces
-  items:
-   - name: OpenStack
-     url: https://www.openstack.org/
-   - name: OpenShift
-     url: https://www.openshift.com/
 
