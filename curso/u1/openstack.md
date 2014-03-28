@@ -2,7 +2,6 @@
 layout: blog
 tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
 menu:
-  - Unidades
   - Unidad 1
 ---
 ## Introducción a OpenStack
