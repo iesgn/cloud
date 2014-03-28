@@ -29,5 +29,5 @@ Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, ve
 
 * [Devstav](devstack)
 * [RDO](rdo)
-* [OpenStack-anssible](openstack-ansible)
+* [OpenStack-ansible](openstack-ansible)
 
