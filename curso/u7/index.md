@@ -14,6 +14,12 @@ menu:
 * Estudiar las posibilidades de montar un PaaS privado dentro de nuestra infraestructura.
 
 ### Contenidos
-OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que se denomina [OpenShift](https://www.openshift.com/), o bien instalando directamente en un cloud privado el software [OpenShift Origin](http://openshift.github.io/) disponible en [GitHub](https://github.com/openshift).
 
+OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que se denomina [OpenShift Online](https://www.openshift.com/), o bien instalando directamente en un cloud privado el software [OpenShift Origin](http://openshift.github.io/) disponible en [GitHub](https://github.com/openshift).
+
+En resumen tenemos a nuestras disposición diferentes versiones:
+
+|     |OpenShift Online|OpenShift Enterprise|OpenShift Origin|
+|:---:|----------------|--------------------|----------------|
+|¿Qué es?|Servico PaaS en la web|PaaS privado|Proyecto PaaS de código abierto|
 
