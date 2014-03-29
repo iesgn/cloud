@@ -16,7 +16,7 @@ Es esquema de máquinas que se levantan son las siguientes y la los podemos repr
 
 ![esquema máquinas](img/InstalandoOpenStackEnMiPortatil.jpg "Esquema máquinas virtuales")
 
-* [Presentación: Instalando OpenStack en mi portatil](presentacion_os_ansible)
+* [Presentación: Implantación de la infraestructura de prueba OpenStack. OpenStack-ansible](presentacion_os_ansible)
 * [Instalando OpenStack en mi portatil](http://www.josedomingo.org/pledin/2014/02/instalando-openstack-en-mi-portatil/)
 
 ###Enlaces interesantes
