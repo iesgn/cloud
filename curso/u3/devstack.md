@@ -14,7 +14,7 @@ La instlación se realiza en un único nodo, y se puede seleccionar la versión 
 Además podemos decidir hacer una instlación básica (nova, cinder, glance, swift, keystone y horizon) o completa (se añaden los componentes neutron, heat y ceilometer).
 
 * [Presentación: Implantación de la infraestructura de prueba OpenStack. DevStack](presentacion_devstack)
-* [Instalando OpenStack en mi portátil (2ª parte): DevStack]()
+* [Instalando OpenStack en mi portátil (2ª parte): DevStack](http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/)
 
 ###Enlaces interesantes
 

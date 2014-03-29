@@ -1,0 +1,81 @@
+---
+layout: presentacion
+title: Implantación de la infraestructura de prueba OpenStack. Devstack
+tema: solarized
+---
+
+	<section>
+	    <h2>Implantación de la infraestructura de prueba OpenStack</h2>
+	    <h3>Devstack</h3>
+	    
+	    <p>
+	      <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	      Coballes</a> / <a
+	      href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+	      href="http://josedomingo.org">José Domingo Muñoz
+	      Rodríguez</a> / <a
+	      href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+	    </p>
+	    <p><small>
+		<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+		width="100px" border="0"/></a></small></p>
+	  </section>
+
+	  <section>
+ 	      <h2>Objetivo</h2>
+	       <p>DevStack es un conjunto de script bash que nos permiten instalar OpenStack de forma automática. Tenemos varias formas de realizar la instalación:</p>
+	       <ul>
+			<li>En una máquina física</li>
+			<li>En una máquina virtual</li>
+	       </ul>
+	       
+		   <p>Para una MV podemos utilizar el <a href="https://github.com/xiaohanyu/vagrant-ansible-devstack">repositorio GitHub</a>.  que nos crea una máquina virtual con Ubuntu 12.04 utilizando Vagrant y posteriormente una receta ansible nos ejecuta el script de DevStack sobre la máquina virtual.</p>
+		   <p>Puedes encontrar una guía más completa en el artículo <a href="http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/">Instalando OpenStack en mi portátil (2ª parte): DevStack</a></p>
+	  </section>
+	  <section>
+		<h3>¿Qué necesito para realizar la instalación?</h3>
+		<ul>
+			<li>Equipo necesario: RAM 2Gb y procesador VT-x/AMD-v</li>
+			<li>Git instaldo</li>
+			<li>Virtualbox instalado (versión de debian wheezy 4.1.18) </li>
+			<li>Vagrant instalado (1.5.1)</li>
+			<li>Box precise64</li>
+			<li>Andible instalado</li>
+		</ul>
+	  </section>
+	  <section>
+		<h2>Realizando la instalación</h2>
+		<pre><code>
+git clone https://github.com/xiaohanyu/vagrant-ansible-devstack.git
+	    </code>
+		</pre>
+		<p>	Configuramos la instalación (devstack/devstack.yml):</p>
+		<ul>
+		<li>Versión de Openstack</li>
+			<ul>
+			<li>branch: master</li>
+			<li>branch: stable/grizzly</li>
+			<li>branch: stable/havana</li>
+			</ul>
+		<li>Componentes de OpenStack</li>
+			<ul>
+				<li>localrc.basic: nova, cinder, glance, swift, keystone y horizon</li>
+				<li>localrc.full: + neutron, heat y ceilometer</li>
+			</ul>
+		</ul>
+		<pre><code>
+vagrant up
+	    </code>
+		</pre>
+	  </section>
+	  
+	  <section>
+		<h2>Accediendo a OpenStack</h2>
+		<ul>
+			<li>http://192.168.27.100</li>
+			<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
+			<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
+			<li>Credenciales en la máquina virtual: openrc</li>
+		</ul>
+	  </section>
+	 
