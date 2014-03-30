@@ -60,7 +60,7 @@ Instancia**).
        primera opción.
    * **Imagen**: Podemos elegir de la lista de imágenes disponibles. Vamos a
        hacer
-   * **una instancia a partir de la imagen **Debian 7.2 (Wheezy)**.
+   * Una instancia a partir de la imagen **Debian 7.2 (Wheezy)**.
    * **Nombre** de la instancia
    * El **sabor** de la máquina que vamos a crear.
    * Número de instancias, por defecto 1.
