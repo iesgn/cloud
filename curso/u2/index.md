@@ -40,7 +40,7 @@ Horizon:
 
 ###Prácticas
 
-* [Práctica: Trabajar con instancias Linux](practica_linux)
+* [Práctica: Trabajar con instancias GNU/Linux](practica_linux)
 * [Práctica: Trabajar con instancias Windows](practica_windows)
 
 ###Enlaces interesantes
