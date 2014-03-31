@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Utilización de OpenStack en el IES Gonzalo Nazareno.  
+tittle: Introducción a OpenStack. Uso básico de horizon.
 menu:
   - Unidad 3
 ---
