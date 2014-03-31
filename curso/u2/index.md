@@ -1,50 +1,33 @@
 ---
 layout: blog
-tittle: Utilización de OpenStack en el IES Gonzalo Nazareno. 
+tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
-  - Unidad 2
+  - Unidad 3
 ---
-
 ###Objetivos
 
-* Conocer el origen del proyecto que ha permitido el despliegue de la infraestructura de cloud computing en el IES Gonzalo Nazareno.
-* Conocer las principales características de la infraestructura de Cloud Computing montada en el IES Gonzalo Nazareno
-* Visitar las instalaciones donde tenemos alojados los servidores
-* Conocer las especificaciones técnicas del hardware de los servidores
-* Introducir los conceptos fundamentales para utilizar OpenStack.
-* Utilizar el cloud computing del IES Gonzalo Nazareno
+* Implantar la infraestructura de openstack que vamos a usar durante el curso.
+* Conocer los pasos que se van a producir durante la instalación de OpenStack.
+* Conocer la estructuras de máquinas virtuales que se van a crear con vagrant.
+* Conocer las configuraciones básicas que se van a desplegar en los distintos nodos.
+* Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
 
 ###Contenidos
 
-En el año 2011 el IES Gonzalo Nazareno, junto a otros tres institutos desarrollan el proyecto de innovación aplicada y transferencia del conocimiento en la formación profesional del sistema educativo, con el título: **Implantación y puesta a punto de la infraestructura de un cloud computing privado para el despliegue de servicios en la nube**.
-El objetivo general de este proyecto es la inclusión de las tecnologías de cloud computing (IaaS) en el currículo de los ciclos formativos de la Familia Profesional de Informática y Comunicaciones. 
+Vamos a presentar diferentes formas de instalar OpenStack en un entorno de pruebas en nuestro ordenador. Tendremos que discutir las ventajas e incovenientes de cada opción y decidir cúal puede ser la más válida para el curso. Finalmente vamos a explicar la configuración de VPN para que se puedan realizar las prácticas en el OpenStack del IES Gonzalo Nazareno.
 
-Sitio web con todos los resultados del proyecto:
-[Cloud Computing con OpenStack en educación](http://www.gonzalonazareno.org/cloud/)
+Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, veamos en resumen algunas de ellas:
 
-El proyecto nos permitió obtener los recursos para la adquisición de los equipos necesarios para el montaje de la infraestructura de cloud computing.
-Podemos ver las características de los distintos equipos en el siguiente documento:
+|     |DevStack|RDO|OpenStack-ansible|
+|:---:|--------|---|-----------------|
+|Instalación|En máquina física o en máquina virtual|En máquina física|En 4 máquinas virtuales|
+|Versión OpenStack|Grizzly o Havana|Havana|Havana|
+|Servicios Openstack|Configuración básica (nova, cinder, glance, keystone, swift, horizon); Configuración completa(se añaden los servicios de quantum, heat y ceilometer)|Todos|Todos|
+|Vagrant - Ansible|Se puede utilizar el siguiente [repositorio GitHub](https://github.com/xiaohanyu/vagrant-ansible-devstack) o se puede instalar manualmente|No|Si|
+|Ventajas|Utilizando el repositorio github, la instalación es muy sencilla. Se puede instalar grizzly o havana, y se puede hacer una configuración básica o una completa|Fácil de instalar y creo que muy depurado. Buen rendimiento. Puede ser perfecto para un entorno de pruebas|Entorno de pruebas muy cercano al real, con nodo de red, nodo de almacenamiento, etc. Es muy adecuado para luego pasarlo a entorno real|
+|Incovenientes|No es totalmente real porque el controlador tiene todos los componentes. La instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal instalarlo sobre una máquina física|No es totalmente real porque el controlador tiene todos los componentes (incluso compute). No sé lo difícil que puede ser modificarlo para un entorno real|Al utilizarse sobre MVs tiene peor rendimiento y es más exigente en cuanto a requisitos de Hardware|
 
-[Infraestructura para el cloud](http://www.gonzalonazareno.org/cloud/material/infraestructura.pdf)
+* [Devstav](devstack)
+* [RDO](rdo)
+* [OpenStack-ansible](openstack-ansible)
 
-El software que elegido para la gestión del cloud fue OpenStack. La primera
-versión del software que se instaló fue OpenStack Essex (2012.1) sobre Debian
-Wheezy utilizando los paquetes oficiales. Posteriormente realizamos una
-actualización a OpenStack Grizzly (2013.1) utilizando los paquetes no oficiales
-de [GPLHost](http://www.gplhost.com/software-openstack.html).
-
-La forma más sencilla de trabajar con OpenStack es a través de la aplicación web
-Horizon:
-
-[Presentación: Introducción a OpenStack Horizon (Grizzly)](presentacion)
-
-###Prácticas
-
-* [Práctica: Trabajar con instancias GNU/Linux](practica_linux)
-* [Práctica: Trabajar con instancias Windows](practica_windows)
-
-###Enlaces interesantes
-
-* [Seminario impartido en eMadrid net](http://www.emadridnet.org/seminario-emadrid-aprender-software-libre-experiencias-todos-niveles/cloud-privado-iaas-fines-educativos-software-libre)
-* [Jornadas sobre Cloud Computing](http://www.josedomingo.org/web/course/view.php?id=70)
-* [Seminario online impartido en OpenWebinars.net](http://openwebinars.net/openwebinar-por-que-openstack-software-libre-para-la-nube/)
