@@ -3,6 +3,7 @@ layout: blog
 tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
 menu:
   - Unidad 2
+  - Aplicaciones
 ---
 ## Prácticas con Ansible
 

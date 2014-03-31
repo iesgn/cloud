@@ -3,6 +3,7 @@ layout: blog
 tittle: Implantación de la infraestructura de prueba OpenStack. OpenStack-ansible
 menu:
   - Unidad 2
+  - Aplicaciones
 ---
 
 Vamos a instalar OpenStack a partir del repositorio GitHub [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible).

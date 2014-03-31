@@ -3,6 +3,7 @@ layout: blog
 tittle: Implantación de la infraestructura de prueba OpenStack. DevStack
 menu:
   - Unidad 2
+  - Aplicaciones
 ---
 
 DevStack es un conjunto de script bash que nos permiten instalar OpenStack de forma automática. Tenemos varias formas de realizar la instalación:

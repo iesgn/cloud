@@ -8,10 +8,6 @@
      url: http://iesgn.github.io/cloud/curso/u1/openshift  
 - nombre: Unidad 2
   items:
-   - name: Vagrant
-     url: http://iesgn.github.io/cloud/curso/u2/vagrant
-   - name: Ansible
-     url: http://iesgn.github.io/cloud/curso/u2/ansible
    - name: Entornos de prueba
      url: http://iesgn.github.io/cloud/curso/u2
    - name: DevStack
@@ -22,6 +18,12 @@
      url: http://iesgn.github.io/cloud/curso/u2/openstack-ansible
    - name: VPN
      url: http://iesgn.github.io/cloud/curso/u2/vpn
+- nombre: Aplicaciones
+  items:
+   - name: Vagrant
+     url: http://iesgn.github.io/cloud/curso/u2/vagrant
+   - name: Ansible
+     url: http://iesgn.github.io/cloud/curso/u2/ansible
 - nombre: Unidad 3
   items:
    - name: OpenStack Grizzly
