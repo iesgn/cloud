@@ -5,10 +5,9 @@
    - name: OpenStack
      url: http://iesgn.github.io/cloud/curso/u1/openstack
    - name: OpenShift
-     url: http://iesgn.github.io/cloud/curso/u1/openshift
-   
- - nombre: Unidad 2
-   items:
+     url: http://iesgn.github.io/cloud/curso/u1/openshift  
+- nombre: Unidad 2
+  items:
    - name: Proyecto IESGN
      url: http://iesgn.github.io/cloud/curso/u2
    - name: Práctica Linux
