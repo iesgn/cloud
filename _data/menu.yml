@@ -20,6 +20,8 @@
      url: http://iesgn.github.io/cloud/curso/u2/rdo
    - name: OpenStack-ansible
      url: http://iesgn.github.io/cloud/curso/u2/openstack-ansible
+   - name: VPN
+     url: http://iesgn.github.io/cloud/curso/u2/vpn
 - nombre: Unidad 3
   items:
    - name: OpenStack Grizzly
