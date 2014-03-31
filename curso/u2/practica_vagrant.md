@@ -7,7 +7,7 @@ menu:
 ---
 ## Prácticas con Vagrant
 
-Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u1/practicas/vagrant/).
+Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/vagrant/).
 
 ###Práctica 1: Creación de una máquina virtual
 

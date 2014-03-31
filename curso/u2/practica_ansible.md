@@ -9,7 +9,7 @@ menu:
 
 ###Práctica 1: Instalación de un servidor web apache en una máquina virtual
 
-Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u1/practicas/ansible/practica1).
+Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica1).
 
 1) Instalar ansible
 
