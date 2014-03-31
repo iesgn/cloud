@@ -1,16 +1,11 @@
 ---
 layout: blog
-tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
+tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
   - Unidad 2
   - Aplicaciones
 ---
 ## Introducción a Ansible
-###Objetivos
-
-* Conocer los principios del conepto DevOps
-* Conocer la herramienta Ansible
-* Realizar ejercicios para automatizar la creación y configuración de máquinas virtuales
 
 ###Contenidos
 

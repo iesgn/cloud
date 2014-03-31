@@ -1,16 +1,11 @@
 ---
 layout: blog
-tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
+tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
   - Unidad 2
   - Aplicaciones
 ---
 ## Introducción a Vagrant
-
-###Objetivos
-* Conocer los principios del conepto DevOps
-* Conocer la herramienta Vagrant
-* Realizar ejercicios para familiarizarse con el uso de Vagrant
 
 ###Contenidos
 

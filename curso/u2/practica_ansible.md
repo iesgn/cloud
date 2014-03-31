@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
+tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
   - Unidad 2
   - Aplicaciones
