@@ -8,49 +8,37 @@
      url: http://iesgn.github.io/cloud/curso/u1/openshift  
 - nombre: Unidad 2
   items:
-   - name: Proyecto IESGN
-     url: http://iesgn.github.io/cloud/curso/u2
-   - name: Práctica Linux
-     url: http://iesgn.github.io/cloud/curso/u2/practica_linux
-   - name: Práctica Windows
-     url: http://iesgn.github.io/cloud/curso/u2/practica_windows
    - name: Vagrant
      url: http://iesgn.github.io/cloud/curso/u2/vagrant
    - name: Ansible
      url: http://iesgn.github.io/cloud/curso/u2/ansible
+   - name: Entornos de prueba
+     url: http://iesgn.github.io/cloud/curso/u2
+   - name: DevStack
+     url: http://iesgn.github.io/cloud/curso/u2/devstack
+   - name: RDO
+     url: http://iesgn.github.io/cloud/curso/u2/rdo
+   - name: OpenStack-ansible
+     url: http://iesgn.github.io/cloud/curso/u2/openstack-ansible
 - nombre: Unidad 3
   items:
-   - name: Entornos de prueba
+   - name: OpenStack Grizzly
      url: http://iesgn.github.io/cloud/curso/u3
-   - name: DevStack
-     url: http://iesgn.github.io/cloud/curso/u3/devstack
-   - name: RDO
-     url: http://iesgn.github.io/cloud/curso/u3/rdo
-   - name: OpenStack-ansible
-     url: http://iesgn.github.io/cloud/curso/u3/openstack-ansible
-   - name: Volver
-     url: http://iesgn.github.io/cloud
+   - name: Práctica Linux
+     url: http://iesgn.github.io/cloud/curso/u3/practica_linux
+   - name: Práctica Windows
+     url: http://iesgn.github.io/cloud/curso/u3/practica_windows
 - nombre: Unidad 4
   items:
-   - name: Volver
-     url: http://iesgn.github.io/cloud
 - nombre: Unidad 5
   items:
-   - name: Volver
-     url: http://iesgn.github.io/cloud
 - nombre: Unidad 6
   items:
-   - name: Volver
-     url: http://iesgn.github.io/cloud
 - nombre: Unidad 7
   items:
-   - name: Volver
-     url: http://iesgn.github.io/cloud
 - nombre: Unidad 8
   items:
-   - name: Volver
-     url: http://iesgn.github.io/cloud
- 
+
 - nombre: Unidades
   items:
    - name: Inicio
