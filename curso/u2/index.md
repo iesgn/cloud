@@ -2,7 +2,7 @@
 layout: blog
 tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
-  - Unidad 3
+  - Unidad 2
 ---
 ###Objetivos
 
