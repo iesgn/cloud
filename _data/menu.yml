@@ -20,6 +20,8 @@
      url: http://iesgn.github.io/cloud/curso/u2/vpn
 - nombre: Aplicaciones
   items:
+   - name: Git
+     url: http://iesgn.github.io/cloud/curso/u2/git
    - name: Vagrant
      url: http://iesgn.github.io/cloud/curso/u2/vagrant
    - name: Ansible

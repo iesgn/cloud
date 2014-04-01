@@ -21,8 +21,9 @@ Vamos a presentar diferentes formas de instalar OpenStack en un entorno de prueb
 * [RDO](rdo)
 * [OpenStack-ansible](openstack-ansible)
 
-Algunas de las opciones de instalación se hacen sobre máquinas virtuales que posteriormente se configuran de forma automática para ayudarnos a realizar estas tareas vamos a utilizar las siguientes aplicaciones:
+Algunas de las opciones de instalación se hacen sobre máquinas virtuales que posteriormente se configuran de forma automática, para ayudarnos a realizar estas tareas vamos a utilizar las siguientes aplicaciones:
 
+* [Git](git)
 * [Vagrant](vagrant)
 * [Ansible](ansible)
 
