@@ -55,11 +55,11 @@ tema: solarized
 	      <p>Aplicación como servicio en la nube</p>
 	      <ul>
 		<li>El usuario utiliza una aplicación a través de la web en
-		lugar de tenerla instalada en el propio equipo. Aviso: No todas
-		las aplicaciones web son SaaS, deben cumplir con las
-		características.</li>
+		lugar de tenerla instalada en el propio equipo.
+		  Aviso: No todas las aplicaciones web son SaaS, deben cumplir
+		con las características.</li>
 		<li>Utilizado por cualquier usuario</li>
-		<li>Ampliamente implantado</li>
+		<li>Ampliamente implantado hoy en día</li>
 		<li>Ejemplos: Servicios de Google, Office365</li>
 	      </ul>
 	    </section>
@@ -76,15 +76,14 @@ tema: solarized
 	    </section>
 	    <section>
 	      <h3>Infrastructure as a Service (IaaS)</h3>
-	      <p>Capacidades de cómputo, redes y almacenamiento como servicio en
-	      la nube</p>
+	      <p>Infraestructura como servicio en la nube</p>
 	      <ul>
 		<li>Utilizado principalmente por administradores de
 		sistemas</li>
 		<li>Se proporciona principalmente capacidad de cómputo, redes y
 		diversos modos de almacenamiento</li>
-		<li>Ejemplos: Amazon Web Services, Joyent, Windows Azure, Rackspace Cloud
-		Servers, Google Compute Engine</li>
+		<li>Ejemplos: Amazon Web Services, Joyent, Windows Azure,
+		Rackspace Cloud Servers, Google Compute Engine</li>
 	    </section>
 	    <section>
 	      <a href="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"><img src="http://ad-hoc.net/blogs/wp-content/uploads/2010/12/IaaS-PaaS-SaaS.png"
@@ -107,25 +106,76 @@ tema: solarized
 	    </ul>
 	  </section>
 	  <section>
-	    <section>
-	      <h2>IaaS público</h2>
-		<p>Una empresa proporciona este servicio a terceros</p>
-	    </section>
 	  <section>
-	    <h3>Principales ventajas</h3>
+	    <h2>PaaS Público</h2>
+	    <p>Una empresa ofrece este servicio a terceros, proporcionando:</p>
 	    <ul>
-	      <li>Reducción de costes</li>
 	      <li>Elasticidad</li>
-	  </section>
-	  <section>
-	    <h3>Principales inconvenientes</h3>
-	    <ul>
-	      <li>La seguridad, confidencialidad de los datos y disponibilidad
-	      de los servicios dependen de una empresa externa</li>
-	      <li>Usuario cautivo del proveedor (<em>Vendor lock-in</em>)
+	      <li>Pago por uso</li>
+	      <li>Sencillez de mantenimiento ya que se encarga de la
+	      instalación, configuración y actualización de la plataforma</li>
+	      <li>El desarrollador solo se preocupa de su aplicación</li>
+	      <li>Limitado por el software del proveedor. Por ejemplo: Google
+	      App Engine solo tiene soporte para Python y Java</li>
+	      <li>En algunos casos es necesario hacer adaptaciones de código
+	      para la plataforma</li>
 	    </ul>
 	  </section>
 	  <section>
+	    <h2>¿Para qué usar PaaS?</h2>
+	    <ul>
+	      <li>La tecnología de PaaS viene a competir fuertemente con el
+	      hosting tradicional, frente al que tiene importantes
+	      ventajas.</li>
+	      <li>El usuario típico de PaaS es un desarrollador o pequeña
+	      empresa que desea tener una aplicación web escalable y en pago por
+	      uso y además no tiene los conocimientos técnicos de sistemas para
+	      hacerlo por su cuenta.</li>
+	      <li>Es muy adecuado para aplicaciones web que utilicen servidores
+	      de aplicaciones y middleware muy extendidos (Python+Django+MySQL o
+	      Java+Struts+Oracle, etc.), pero no suele valer para cosas que se
+	      salgan de la norma.</li>
+	  </section>
+	  <section>
+	    <h2>Algunos ejemplos</h2>
+	    <ul>
+	      <li><a href="https://www.blossom.io/">Blossom</a> en Google App
+	      Engine</li>
+	      <li><a href="https://www.thelevelup.com/">LevelUp</a> en
+	      Heroku</li>
+	    </ul>
+	  </section>
+	  </section>
+	  <section>
+	    <section>
+	      <h2>IaaS público</h2>
+		<p>Una empresa ofrece este servicio a terceros,
+		proporcionando:</p>
+		<ul>
+		  <li>Reducción de costes</li>
+		  <li>Elasticidad</li>
+		  <li>Control completo sobre la instancia, pudiendo instalar
+		  cualquier componente</li>
+		  <li>Pero la seguridad, confidencialidad de los datos y
+		    disponibilidad de los servicios dependen de una empresa
+		    externa</li>
+		  <li>Usuario puede quedar cautivo del proveedor (<em>Vendor
+		      lock-in</em>)</li>		  
+		</ul>
+	    </section>
+	    <section>
+	      <h2>¿Para qué usar IaaS?</h2>
+	      <ul>
+		<li>Viene a competir fuertemente con servidores dedicados,
+		virtuales o físicos</li>
+		<li>También es una tecnología a considerar en clustering</li>
+		<li>Típicamente usada por cualquier empresa con departamento de
+		sistemas para gestionar sus propios servidores a medida
+		<li>Además se han incluído nuevas tecnologías de
+		  almacenamiento y redes</li>
+	      </ul>
+	    </section>
+	    <section>
 	    <h2>Amazon Web Services</h2>
 	    <ul>
 	      <li>Pionero y gran dominador en IaaS pública</li>
@@ -147,7 +197,6 @@ tema: solarized
 	      <li>Lleva la iniciativa en IaaS</li>
 	    </ul>
 	  </section>
-	  </section>
 	  <section>
 	    <h2>Ejemplo de servicio en IaaS público</h2>
 	    <h3>Servicio web de vídeo bajo demanda</h3>
@@ -165,6 +214,7 @@ tema: solarized
 	      sobren.</li>
 	    </ul>
 	    <br/>
+	  </section>
 	  </section>
 	  <section>
 	    <h2>Más allá del cloud público</h2>
