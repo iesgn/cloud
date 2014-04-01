@@ -9,13 +9,13 @@ menu:
 
 ###Contenidos
 
-[**Git**](http://git-scm.com/) es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. 
+[Git](http://git-scm.com/) es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. 
 
-[**GitHub**](https://github.com/) es una forja para alojar proyectos utilizando el sistema de control de versiones Git.
+[GitHub](https://github.com/) es una forja para alojar proyectos utilizando el sistema de control de versiones Git.
 
 Muchos de los scripts que vamos a usar para implantar la infraestructura de prueba de OpenStack están almacenado en **repositorios** en GitHub, por lo tanto tendremos que clonar dichos repositorios para bajarlos a nuestros equipos.
 
-Por último, otro concepto importante son las **ramas (branchs)** de un proyecto git. Podemos entender una rama como una versión del proyecto Git, que por ejemplo ofrece otras funcionalidades. Por defecto la rama principal se llama *mmaster.
+Por último, otro concepto importante son las **ramas (branchs)** de un proyecto git. Podemos entender una rama como una versión del proyecto Git, que por ejemplo ofrece otras funcionalidades. Por defecto la rama principal se llama *master*.
 
 ###Prácticas
 
