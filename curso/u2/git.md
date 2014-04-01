@@ -23,11 +23,11 @@ Por último, otro concepto importante son las **ramas (branchs)** de un proyecto
 
         # apt-get install git
 
-2) Nuestro curso esta almacenado en un repositorio en GitHub, si quieres bajarlo sólo tienes que clonarlo:
+2. Nuestro curso esta almacenado en un repositorio en GitHub, si quieres bajarlo sólo tienes que clonarlo:
 
         # git clone https://github.com/iesgn/cloud.git
         
-3) Si queremos actualizar nuestro repositorio local con los cambios del repositorio remoto
+3. Si queremos actualizar nuestro repositorio local con los cambios del repositorio remoto
 
         # cd cloud
         # git pull
