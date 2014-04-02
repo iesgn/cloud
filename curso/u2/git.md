@@ -32,6 +32,12 @@ Por último, otro concepto importante son las **ramas (branchs)** de un proyecto
         # cd cloud
         # git pull
 
+4. Cuando trabajaemos con OpenShift necesitaremos hacer cambios en el repositorio remoto a partir de nuestro repositorio local, para ello tenemos que ejecutar tres instrucciones:
+
+		# git add *<filename>*
+		# git commit -m "Mensaje del commit"
+		# git push
+
 ###Enlaces interesantes
 
 * [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
