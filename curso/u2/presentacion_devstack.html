@@ -79,3 +79,20 @@ vagrant up
 		</ul>
 	  </section>
 	 
+	  <section>
+		<h2>¿Qué hacemos cuando hemos terminado?</h2>
+		<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
+			<pre><code>
+vagrant ssh
+# cd devstack
+# ./unstack.sh
+	    </code>
+		</pre>
+		<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
+		<pre><code>
+vagrant ssh
+# cd devstack
+# ./rejoin-stack.sh
+	    </code>
+		</pre>
+	  </section>
