@@ -238,6 +238,105 @@ tema: solarized
 	  <!--     </tbody> -->
 	  <!--   </table> -->
 	  <!-- </section> -->
-	  <section data-background="img/openstack-software-diagram.png"/>
-	  <section data-background="img/logical-dia-openstack.jpg"/>
-	  
+	  <section>
+	    <img src="img/openstack-software-diagram.png"/
+	    alt="openstack-diagram"/>
+	  </section>
+	  <section>
+	    <img src="img/logical-dia-openstack.jpg" alt="logical diagram"/>
+	  </section>
+	  <section>
+	    <h2>Componentes de OpenStack</h2>
+	    <p>OpenStack es un proyecto muy grande y modular, pero estos módulos
+	    tienen muchas características comunes para poder integrarse
+	    fácilmente.</p>
+	    <ul>
+	      <li>Escritos en Python</li>
+	      <li>Utilizan AMQP para la comunicación de mensajes entre
+	      componentes</li>
+	      <li>Incluyen una API RESTful para la comunicación entre
+	      componentes o externa (p. ej. clientes)</li>
+	      <li>Autenticación basada en tokens gestionada a través del
+	      componente Keystone</li>
+	      <li>Base de datos propia e independiente</li>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>Conceptos previos</h2>
+	    <ul>
+	      <li>Token de autenticación: Cadena aleatoria que se obtiene tras
+	      autenticarse en un sistema y que permite al usuario utilizar
+	      recursos de forma segura sin volver a introducir usuario y
+	      contraseña.</li>
+	      <li>Imagen: Imagen de sistema precongurado que se utiliza como
+		base para crear instancias. Dentro del cloud habra diferentes
+		imagenes para cada tipo de instacia que se quiera utilizar.</li>
+	      <li>Instancia: Clon de una imagen que se crea a demanda del
+		usuario en uno de los nodos del cloud.</li>
+	      <li>IP privada: Direccion IP con la que se crean las instancias y
+		que se utiliza para comunicacion interna.</li>
+	      <li>IP flotante: Direccion IP asociada a una instancia en un
+		momento dado para poder acceder a ella desde fuera.</li>
+	      <li>Grupo de seguridad: Reglas de cortafuegos (iptables) que
+		controlan el acceso a las instancias.</li>
+	      <li>Par de claves ssh: Utilizadas para acceder por ssh a las
+		instancias desde fuera del cloud.</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Identity Service (Keystone)</h2>
+	    <ul>
+	      <li>Directorio centralizado que almacena información de:
+		<ul>
+		  <li>Usuarios</li>
+		  <li>Proyectos (tenants)</li>
+		  <li>Roles</li>
+		  <li>Servicios y sus endpoints</li>
+		</ul>
+	      <li>Información almacenada en SGBDR o LDAP</li>
+	      <li>Primer componente a instalar</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Image Service (Glance)</h2>
+	    <ul>
+	      <li>Gestiona las plantillas de imágenes de los sistemas</li>
+	      <li>Gestiona las instantáneas de las instancias</li>
+	      <li>Puede utilizar diversos formatos:
+		<ul>
+		  <li>raw</li>
+		  <li>qcow2 (Qemu/KVM)</li>
+		  <li>vhd (Hyper-V)</li>
+		  <li>ami (Amazon)</li>
+		  <li>vdi (VirtualBox)</li>
+		  <li>vmdk (VMware)</li>
+		</ul>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>OpenStack Compute (Nova)</h2>
+	    <ul>
+	      <li>Componente principal de OpenStack</li>
+	      <li>Gestiona la creación de máquinas, 
+	  </section>
+	  <section>
+	    <h2>OpenStack Object Storage (Swift)</h2>
+	  </section>
+	  <section>
+	    <h2>OpenStack Block Storage (Cinder)</h2>
+	  </section>
+	  <section>
+	    <h2>OpenStack Networking (Neutron)</h2>
+	  </section>
+	  <section>
+	    <h2>OpenStack Dashboard (Horizon)</h2>
+	  </section>
+	  <section>
+	    <h2>Ejemplo de uso (levantar una instancia)</h2>
+	    <ul>
+	      <li>El usuario se autentica en Keystone y obtiene un token de
+	      sesión y la lista de los endpoints de los servicios</li>
+	      <li>Solicita a glance las imágenes disponibles</li>
+	      <li>Solicita a neutron las redes disponibles</li>
+	      <li>Solicita a nova que arranque una instancia de una de las
+	      imágenes disponibles en una de las redes</li>
+	    </ul>
+	  </section>
