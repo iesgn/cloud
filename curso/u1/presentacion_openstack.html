@@ -4,8 +4,8 @@ title: Introducción a OpenStack
 tema: solarized
 ---
 <section>
-	    <h1>Introducción a OpenStack</h1>
-	    <p>
+  <h1>Introducción a OpenStack</h1>
+  <p>
 	      <small><a href="http://albertomolina.wordpress.com">Alberto Molina
 	      Coballes</a> / <a
 	      href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
@@ -16,6 +16,11 @@ tema: solarized
 	    <p><small>
 		<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
 		width="100px" border="0"/></a></small></p>
+	    <p><small>
+		Theme
+		by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+	      </small>
+	    </p>
 	  </section>
 	    <section>
 	      <h2>OpenStack</h2>
@@ -247,18 +252,20 @@ tema: solarized
 	  </section>
 	  <section>
 	    <h2>Componentes de OpenStack</h2>
-	    <p>OpenStack es un proyecto muy grande y modular, pero estos módulos
-	    tienen muchas características comunes para poder integrarse
-	    fácilmente.</p>
 	    <ul>
-	      <li>Escritos en Python</li>
-	      <li>Utilizan AMQP para la comunicación de mensajes entre
-	      componentes</li>
-	      <li>Incluyen una API RESTful para la comunicación entre
-	      componentes o externa (p. ej. clientes)</li>
-	      <li>Autenticación basada en tokens gestionada a través del
-	      componente Keystone</li>
-	      <li>Base de datos propia e independiente</li>
+	      <li>Proyecto grande y modular</li>
+	      <li>Los módulos tienen muchas características comunes para poder
+	    integrarse fácilmente.
+		<ul>
+		  <li>Escritos en Python</li>
+		  <li>Utilizan AMQP para la comunicación de mensajes entre
+		    componentes</li>
+		  <li>Incluyen una API RESTful para la comunicación entre
+		    componentes o externa (p. ej. clientes)</li>
+		  <li>Autenticación basada en tokens gestionada a través del
+		    componente Keystone</li>
+		  <li>Base de datos propia e independiente</li>
+		</ul>
 	    </ul>
 	  </section>
 	  <section>
@@ -268,17 +275,17 @@ tema: solarized
 	      autenticarse en un sistema y que permite al usuario utilizar
 	      recursos de forma segura sin volver a introducir usuario y
 	      contraseña.</li>
-	      <li>Imagen: Imagen de sistema precongurado que se utiliza como
-		base para crear instancias. Dentro del cloud habra diferentes
+	      <li>Imagen: Imagen de sistema preconfigurado que se utiliza como
+		base para crear instancias. Dentro del cloud habrá diferentes
 		imagenes para cada tipo de instacia que se quiera utilizar.</li>
 	      <li>Instancia: Clon de una imagen que se crea a demanda del
 		usuario en uno de los nodos del cloud.</li>
-	      <li>IP privada: Direccion IP con la que se crean las instancias y
+	      <li>IP fija: Direccion IP con la que se crean las instancias y
 		que se utiliza para comunicacion interna.</li>
 	      <li>IP flotante: Direccion IP asociada a una instancia en un
 		momento dado para poder acceder a ella desde fuera.</li>
-	      <li>Grupo de seguridad: Reglas de cortafuegos (iptables) que
-		controlan el acceso a las instancias.</li>
+	      <li>Grupo de seguridad: Reglas de cortafuegos que controlan el
+	      acceso a las instancias.</li>
 	      <li>Par de claves ssh: Utilizadas para acceder por ssh a las
 		instancias desde fuera del cloud.</li>
 	  </section>
@@ -315,7 +322,20 @@ tema: solarized
 	    <h2>OpenStack Compute (Nova)</h2>
 	    <ul>
 	      <li>Componente principal de OpenStack</li>
-	      <li>Gestiona la creación de máquinas, 
+	      <li>Gestiona la creación de instancias y el acceso mediante
+	      consola</li>
+	      <li><a href="https://wiki.openstack.org/wiki/HypervisorSupportMatrix">
+	      Soporta diferentes hipervisores</a> (recomendados KVM o Xen): 
+	      <ul>
+		<li>KVM/QEMU</li>
+		<li>Xen</li>
+		<li>Hyper-V</li>
+		<li>VMware ESXi</li>
+		<li>LXC</li>
+		<li>Docker</li>
+	      </ul>
+	      <li>Permite incluso el aprovisionamiento de máquinas físicas
+	      mediante Baremetal/Ironic</li>
 	  </section>
 	  <section>
 	    <h2>OpenStack Object Storage (Swift)</h2>
@@ -330,13 +350,19 @@ tema: solarized
 	    <h2>OpenStack Dashboard (Horizon)</h2>
 	  </section>
 	  <section>
-	    <h2>Ejemplo de uso (levantar una instancia)</h2>
+	    <h2>Ejemplo de uso</h2>
+	    <p>Creación y acceso a una instancia</p>
 	    <ul>
 	      <li>El usuario se autentica en Keystone y obtiene un token de
 	      sesión y la lista de los endpoints de los servicios</li>
 	      <li>Solicita a glance las imágenes disponibles</li>
 	      <li>Solicita a neutron las redes disponibles</li>
 	      <li>Solicita a nova que arranque una instancia de una de las
-	      imágenes disponibles en una de las redes</li>
+	      imágenes disponibles, en una de las redes y que inyecte
+	      posteriormente su clave ssh pública.</li>
+	      <li>Solicita una IP flotante a neutron y la asocia a la IP fija de
+	      la instancia creada</li>
+	      <li>Accede por ssh a la instancia utilizando la clave privada
+	      correspondiente</li>
 	    </ul>
 	  </section>
