@@ -25,6 +25,37 @@ tema: solarized
 	      prestaciones&rdquo;</blockquote>
 	    </section>
 	    <section>
+	      <h2>¿Por qué OpenStack?</h2>
+	      <ul>
+		<li>Porque queremos instalar nuestro propio software para
+		proporcionar IaaS</li>
+		<li>Porque es software libre</li>
+		<li>Porque es un proyecto estable, con muchos apoyos y muy
+		buenas perspectivas de futuro</li>
+		<li>Porque tiene muchas funcionalidades</li>
+		<li>Porque podemos utilizar hardware convencional</li>
+		<li>Porque es fácil de instalar (ejem!)</li>
+	    </section>
+	    <section>
+	      <h2>Otras alternativas</h2>
+	      <ul>
+		<li>OpenNebula, CloudStack y Eucalyptus
+		  <ul>
+		    <li>Software libre</li>
+		    <li>Más compatibles con AWS</li>
+		    <li>Más sencillas de instalar</li>
+		    <li>Algunos componentes más maduros</li>
+		    <li>Proyectos más pequeños</li>
+		  </ul></li>
+		<li>VMware Vcloud
+		  <ul>
+		    <li>Software privativo</li>
+		    <li>Optimizado para vSphere</li>
+		    <li>No compite en IaaS pública</li>
+		  </ul>
+	      </ul>
+	    </section>
+	    <section>
 	      <h2>Inicios de OpenStack</h2>
 	      <table>
 		<col style="width: 35%" />
@@ -86,9 +117,9 @@ tema: solarized
 	      <h2>Versiones de OpenStack</h2>
 	      <p>Proyecto muy nuevo, pero con un fuerte ritmo de desarrollo:</p>
 	      <table>
-		<col style="width: 20%" />
-		<col style="width: 35%" />
-		<col style="width: 45%" />
+		<col style="width: 18%" />
+		<col style="width: 32%" />
+		<col style="width: 50%" />
 		<tr>
 		  <th>Versión</th>
 		  <th>Fecha</th>
@@ -143,8 +174,7 @@ tema: solarized
 	      <ul>
 		<li>Hasta ahora cada versión incluye importantes modificaciones
 		respecto a la anterior</li>
-		<li>Essex se considera la primera versión para poner en
-		producción</li>
+		<li>Essex se considera realmente la primera versión</li>
 	      </ul>
 	    </section>
 	    <section>
@@ -161,52 +191,53 @@ tema: solarized
 		partipantes en la OpenStack Foundation</a></p>
 	    </section>
 	    
-	  <section>
-	    <h3>Componentes principales de OpenStack</h3>
-	    <table>
-	      <tbody>
-		<tr>
-		  <th style="text-align:center;">Nombre</th>
-		  <th style="text-align:center;">Equivalente en Amazon WS</th>
-		  <th style="text-align:center;">Función</th>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Horizon</td>
-		  <td style="text-align:center;">Console</td>
-		  <td style="text-align:center;">Panel web de gestión</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Nova</td>
-		  <td style="text-align:center;">EC2</td>
-		  <td style="text-align:center;">Gestión de instancias</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Cinder</td>
-		  <td style="text-align:center;">EBS</td>
-		  <td style="text-align:center;">Almacenamiento de volúmenes</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Keystone</td>
-		  <td style="text-align:center;">-</td>
-		  <td style="text-align:center;">Autenticación y autorización</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Swift</td>
-		  <td style="text-align:center;">S3</td>
-		  <td style="text-align:center;">Almacenamiento de objetos</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Glance</td>
-		  <td style="text-align:center;">VM Import/Export</td>
-		  <td style="text-align:center;">Gestión de imágenes para las instancias</td>
-		</tr>
-		<tr>
-		  <td style="text-align:center;">Neutron</td>
-		  <td style="text-align:center;">VPC</td>
-		  <td style="text-align:center;">Redes virtuales</td>
-		</tr>
-	      </tbody>
-	    </table>
-	  </section>
-	  </section>
+	  <!-- <section> -->
+	  <!--   <h3>Componentes principales de OpenStack</h3> -->
+	  <!--   <table> -->
+	  <!--     <tbody> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <th style="text-align:center;">Nombre</th> -->
+	  <!-- 	  <th style="text-align:center;">Equivalente en Amazon WS</th> -->
+	  <!-- 	  <th style="text-align:center;">Función</th> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Horizon</td> -->
+	  <!-- 	  <td style="text-align:center;">Console</td> -->
+	  <!-- 	  <td style="text-align:center;">Panel web de gestión</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Nova</td> -->
+	  <!-- 	  <td style="text-align:center;">EC2</td> -->
+	  <!-- 	  <td style="text-align:center;">Gestión de instancias</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Cinder</td> -->
+	  <!-- 	  <td style="text-align:center;">EBS</td> -->
+	  <!-- 	  <td style="text-align:center;">Almacenamiento de volúmenes</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Keystone</td> -->
+	  <!-- 	  <td style="text-align:center;">-</td> -->
+	  <!-- 	  <td style="text-align:center;">Autenticación y autorización</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Swift</td> -->
+	  <!-- 	  <td style="text-align:center;">S3</td> -->
+	  <!-- 	  <td style="text-align:center;">Almacenamiento de objetos</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Glance</td> -->
+	  <!-- 	  <td style="text-align:center;">VM Import/Export</td> -->
+	  <!-- 	  <td style="text-align:center;">Gestión de imágenes para las instancias</td> -->
+	  <!-- 	</tr> -->
+	  <!-- 	<tr> -->
+	  <!-- 	  <td style="text-align:center;">Neutron</td> -->
+	  <!-- 	  <td style="text-align:center;">VPC</td> -->
+	  <!-- 	  <td style="text-align:center;">Redes virtuales</td> -->
+	  <!-- 	</tr> -->
+	  <!--     </tbody> -->
+	  <!--   </table> -->
+	  <!-- </section> -->
+	  <section data-background="openstack-software-diagram.png"/>
+	  <section data-background="logical-dia-openstack.jpg"/>
 	  
