@@ -13,12 +13,12 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
 
 1) Instalar ansible
 
-   root@maquina:~$ apt-get install python-pip python-dev
-   root@maquina:~$ pip install ansible
+   	    root@maquina:~$ apt-get install python-pip python-dev
+	    root@maquina:~$ pip install ansible
  
 2) Creamos con vagrant la máquina virtual
 
-   usuario@maquina:~/practica1$ vagrant up
+   	   usuario@maquina:~/practica1$ vagrant up
         
 3) Veamos algunos ficheros importantes en nuestro escenario:
 

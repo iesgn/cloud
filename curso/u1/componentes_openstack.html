@@ -1,0 +1,144 @@
+---
+layout: presentacion
+title: Componentes de OpenStack
+tema: solarized
+---
+	  <section>
+	    <h2>Componentes de OpenStack</h2>
+	    <ul>
+	      <li>Proyecto grande y modular</li>
+	      <li>Los módulos tienen muchas características comunes para poder
+	    integrarse fácilmente.
+		<ul>
+		  <li>Escritos en Python</li>
+		  <li>Utilizan AMQP para la comunicación de mensajes entre
+		    componentes</li>
+		  <li>Incluyen una API RESTful para la comunicación entre
+		    componentes o externa (p. ej. clientes)</li>
+		  <li>Autenticación basada en tokens gestionada a través del
+		    componente Keystone</li>
+		  <li>Base de datos propia e independiente</li>
+		</ul>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>Conceptos previos (I)</h2>
+	    <ul>
+	      <li>Token de autenticación: OpenStack
+		utiliza <a href="http://stackoverflow.com/questions/1592534/what-is-token-based-authentication">
+		Autenticación basada en tokens. Un token es una adena aleatoria
+		que se obtiene tras autenticarse en un sistema (con nombre de
+		usuario y contraseña, p. ej.) y que permite al usuario utilizar 
+	      recursos de forma segura sin volver a autenticarse.</li>
+	      <li>Imagen: Imagen de sistema operativo preconfigurado que se
+		utiliza como base para crear instancias. Dentro del cloud habrá
+		diferentes imágenes para cada tipo de instacia que se quiera
+		utilizar. Los usuarios no utilizan directamente estas imágenes,
+		sino instancias de ellas.</li>
+	      <li>Instancia: Instancia de una imagen que se crea a demanda del
+		usuario en uno de los nodos del cloud.</li>
+	    </ul>
+	  </section>
+	  <section>
+	    <ul>
+	      <li>IP fija: Direccion IP con la que se crean una instancia en una
+		red y que se utiliza para comunicacion interna. La dirección IP
+		fija no cambia durante la vida de la instancia.</li>
+	      <li>IP flotante: Direccion IP asociada a una instancia en un
+		momento dado para poder acceder a ella desde fuera. Una IP
+		flotante puede asignarse a otra instancia diferente cuando se
+		estime oportuno.</li>
+	      <li>Grupo de seguridad: Reglas de cortafuegos que controlan el
+	      acceso a las instancias.</li>
+	      <li>Par de claves ssh: Par de claves RSA pública/privada
+		utilizadas para acceder por ssh a las instancias desde fuera del 
+		cloud.</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Identity Service (Keystone)</h2>
+	    <ul>
+	      <li>Directorio centralizado que almacena información de:
+		<ul>
+		  <li>Usuarios</li>
+		  <li>Proyectos (tenants)</li>
+		  <li>Roles</li>
+		  <li>Servicios y sus endpoints</li>
+		</ul>
+	      <li>Información almacenada en SGBDR o LDAP</li>
+	      <li>Primer componente a instalar</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Image Service (Glance)</h2>
+	    <ul>
+	      <li>Gestiona las plantillas de imágenes de los sistemas</li>
+	      <li>Gestiona las instantáneas de las instancias</li>
+	      <li>Puede utilizar diversos formatos:
+		<ul>
+		  <li>raw</li>
+		  <li>qcow2 (Qemu/KVM)</li>
+		  <li>vhd (Hyper-V)</li>
+		  <li>ami (Amazon)</li>
+		  <li>vdi (VirtualBox)</li>
+		  <li>vmdk (VMware)</li>
+		</ul>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>OpenStack Compute (Nova)</h2>
+	    <ul>
+	      <li>Componente principal de OpenStack</li>
+	      <li>Gestiona la creación de instancias y el acceso mediante
+	      consola</li>
+	      <li><a href="https://wiki.openstack.org/wiki/HypervisorSupportMatrix">
+	      Soporta diferentes hipervisores</a> (recomendados KVM o Xen): 
+	      <ul>
+		<li>KVM/QEMU</li>
+		<li>Xen</li>
+		<li>Hyper-V</li>
+		<li>VMware ESXi</li>
+		<li>LXC</li>
+		<li>Docker</li>
+	      </ul>
+	      <li>Permite incluso el aprovisionamiento de máquinas físicas
+	      mediante Baremetal/Ironic</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Object Storage (Swift)</h2>
+	    <ul>
+	      <li>Componente importante de OpenStack, pero independiente del
+	      resto</li>
+	      <li>Sistema de almacenamiento redundante y escalable</li>
+	      <li>El almacenamiento de objetos permite el almacenamiento masivo
+	      de datos no estructurados de forma bastante económica</li>
+	      <li>Hoy en día ampliamente utilizado por aplicaciones web</li>
+	      <li>Swift incluye su propia API y otra compatible con Amazon
+	      S3</li>
+	      <li>Normalmente es utilizado por Glance para almacenar
+	      imágenes</li>
+	  </section>
+	  <section>
+	    <h2>OpenStack Block Storage (Cinder)</h2>
+	  </section>
+	  <section>
+	    <h2>OpenStack Networking (Neutron)</h2>
+	  </section>
+	  <section>
+	    <h2>OpenStack Dashboard (Horizon)</h2>
+	  </section>
+	  <section>
+	    <h2>Ejemplo de uso</h2>
+	    <p>Creación y acceso a una instancia</p>
+	    <ul>
+	      <li>El usuario se autentica en Keystone y obtiene un token de
+	      sesión y la lista de los endpoints de los servicios</li>
+	      <li>Solicita a glance las imágenes disponibles</li>
+	      <li>Solicita a neutron las redes disponibles</li>
+	      <li>Solicita a nova que arranque una instancia de una de las
+	      imágenes disponibles, en una de las redes y que inyecte
+	      posteriormente su clave ssh pública.</li>
+	      <li>Solicita una IP flotante a neutron y la asocia a la IP fija de
+	      la instancia creada</li>
+	      <li>Accede por ssh a la instancia utilizando la clave privada
+	      correspondiente</li>
+	    </ul>
+	  </section>
