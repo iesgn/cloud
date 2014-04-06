@@ -12,7 +12,7 @@ tema: solarized
 		<ul>
 		  <li>Escritos en Python</li>
 		  <li>Algunos de ellos utilizan
-		  <a href="http://www.youtube.com/watch?v=9tIF8AsS6vg"AMQP</a>
+		  <a href="http://www.youtube.com/watch?v=9tIF8AsS6vg">AMQP</a>
 		  para el intercambio de mensajes</li>
 		  <li>Incluyen una API RESTful para la comunicación entre
 		    componentes o externa (p. ej. clientes)</li>
@@ -94,8 +94,8 @@ tema: solarized
 	    <h2>OpenStack Compute (Nova)</h2>
 	    <ul>
 	      <li>Componente principal de OpenStack</li>
-	      <li>Gestiona las instancias de instancias y el acceso mediante
-	      consola</li>
+	      <li>Gestiona las instancias de imágenes, dónde deben ejecutarse y
+	      el acceso mediante consola</li>
 	      <li><a href="https://wiki.openstack.org/wiki/HypervisorSupportMatrix">
 	      Soporta diferentes hipervisores</a> (recomendados KVM o Xen): 
 	      <ul>
@@ -188,3 +188,16 @@ tema: solarized
 	    </ul>
 	  </section>
 
+	  <section>
+	    <h2>Tipos de nodos</h2>
+	    <ul>
+	      <li>Un cloud de OpenStack se compone de varios equipos (nodos) con
+	      diferentes funciones dependiendo de los componentes de OpenStack
+	      que tenga instalados</li>
+	      <li>Nodo controlador (<em>Controller node</em>): Nodo encargado de
+	      la gestión de las instancias con nova y de la orquestación del
+	      resto de componentes</li>
+	      <li>Nodo de computación (<em>Compute node</em>): Nodo encargado de
+	      la ejecución de las instancias como máquinas virtuales sobre un
+	      hipervisor.</li>
+	      <li>Nodo de red (<em>Network node</em>): 
