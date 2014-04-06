@@ -17,6 +17,7 @@ menu:
 OpenStack: "Plataforma de cloud computing hecha con software libre para desplegar nubes públicas y privadas, desarrollada con la idea de ser sencilla de implementar, masivamente escalable y con muchas prestaciones"
 
 [Presentación: Introducción a OpenStack](presentacion_openstack)
+[Presentación: Componentes de OpenStack](componentes_openstack)
 
 ###Enlaces interesantes
 

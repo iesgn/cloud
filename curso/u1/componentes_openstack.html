@@ -11,8 +11,9 @@ tema: solarized
 	    integrarse fácilmente.
 		<ul>
 		  <li>Escritos en Python</li>
-		  <li>Utilizan AMQP para la comunicación de mensajes entre
-		    componentes</li>
+		  <li>Algunos de ellos utilizan
+		  <a href="http://www.youtube.com/watch?v=9tIF8AsS6vg"AMQP</a>
+		  para el intercambio de mensajes</li>
 		  <li>Incluyen una API RESTful para la comunicación entre
 		    componentes o externa (p. ej. clientes)</li>
 		  <li>Autenticación basada en tokens gestionada a través del
@@ -25,11 +26,11 @@ tema: solarized
 	    <h2>Conceptos previos (I)</h2>
 	    <ul>
 	      <li>Token de autenticación: OpenStack
-		utiliza <a href="http://stackoverflow.com/questions/1592534/what-is-token-based-authentication">
-		Autenticación basada en tokens. Un token es una adena aleatoria
-		que se obtiene tras autenticarse en un sistema (con nombre de
-		usuario y contraseña, p. ej.) y que permite al usuario utilizar 
-	      recursos de forma segura sin volver a autenticarse.</li>
+		utiliza <a href="http://stackoverflow.com/questions/1592534/what-is-token-based-authentication">Autenticación
+		basada en tokens</a>. Un token es una adena aleatoria que se
+		obtiene tras autenticarse en un sistema (con nombre de usuario y
+		contraseña, p. ej.) y que permite al usuario utilizar recursos
+		de forma segura sin volver a autenticarse.</li>
 	      <li>Imagen: Imagen de sistema operativo preconfigurado que se
 		utiliza como base para crear instancias. Dentro del cloud habrá
 		diferentes imágenes para cada tipo de instacia que se quiera
@@ -40,6 +41,7 @@ tema: solarized
 	    </ul>
 	  </section>
 	  <section>
+	    <h2>Conceptos previos (II)</h2>
 	    <ul>
 	      <li>IP fija: Direccion IP con la que se crean una instancia en una
 		red y que se utiliza para comunicacion interna. La dirección IP
@@ -53,6 +55,10 @@ tema: solarized
 	      <li>Par de claves ssh: Par de claves RSA pública/privada
 		utilizadas para acceder por ssh a las instancias desde fuera del 
 		cloud.</li>
+	      <li>Endpoint: URL completa para la utilización de una determinada
+	      API. Pueden definirse URLs diferentes para las API pública,
+	      interna y de administración.</li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>OpenStack Identity Service (Keystone)</h2>
@@ -66,13 +72,14 @@ tema: solarized
 		</ul>
 	      <li>Información almacenada en SGBDR o LDAP</li>
 	      <li>Primer componente a instalar</li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>OpenStack Image Service (Glance)</h2>
 	    <ul>
 	      <li>Gestiona las plantillas de imágenes de los sistemas</li>
 	      <li>Gestiona las instantáneas de las instancias</li>
-	      <li>Puede utilizar diversos formatos:
+	      <li>Puede utilizar <a href="http://docs.openstack.org/developer/glance/formats.html">diversos formatos</a>:
 		<ul>
 		  <li>raw</li>
 		  <li>qcow2 (Qemu/KVM)</li>
@@ -87,7 +94,7 @@ tema: solarized
 	    <h2>OpenStack Compute (Nova)</h2>
 	    <ul>
 	      <li>Componente principal de OpenStack</li>
-	      <li>Gestiona la creación de instancias y el acceso mediante
+	      <li>Gestiona las instancias de instancias y el acceso mediante
 	      consola</li>
 	      <li><a href="https://wiki.openstack.org/wiki/HypervisorSupportMatrix">
 	      Soporta diferentes hipervisores</a> (recomendados KVM o Xen): 
@@ -111,19 +118,57 @@ tema: solarized
 	      <li>El almacenamiento de objetos permite el almacenamiento masivo
 	      de datos no estructurados de forma bastante económica</li>
 	      <li>Hoy en día ampliamente utilizado por aplicaciones web</li>
-	      <li>Swift incluye su propia API y otra compatible con Amazon
-	      S3</li>
+	      <li>Swift incluye su propia <a href="http://docs.openstack.org/api/openstack-object-storage/1.0/content/">API</a> y otra compatible
+	      con <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html">Amazon S3</a></li>
 	      <li>Normalmente es utilizado por Glance para almacenar
 	      imágenes</li>
 	  </section>
 	  <section>
 	    <h2>OpenStack Block Storage (Cinder)</h2>
+	    <ul>
+	      <li>Los volúmenes son dispositivos de bloques que se crean de
+	      forma independiente de la instancia y pueden asociarse y
+	      desasociarse de ella cuando se precise</li>
+	      <li>Cinder es equivalente al componente <a href="http://aws.amazon.com/es/ebs/">Amazon EBS</a></li>
+	      <li>Los volúmenes se crean en el nodo de almacenamiento (por
+	      defecto con LVM) y se
+	      conectan a la instancia que se desee mediante algún protocolo de
+	      redes de almacenamiento (iSCSI es el más utilizado)</li>
+	      <li>Cinder incluye <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">controladores</a> para gran cantidad de
+	      dispositivos de almacenamiento del mercado</li>
+	      <li>Cuando nova termina una instancia borra todo el almacenamiento
+	      local asociado a ella, pero no los volúmenes, por lo que estos
+	      reciben el nombre de almacenamiento permanente.</li>
+	      <li>Podemos pensar en los volúmenes como discos externos que se
+	      conectan o desconectan de las instancias, aunque se trate de un
+	      mecanismo completamente diferente</li>
 	  </section>
 	  <section>
 	    <h2>OpenStack Networking (Neutron)</h2>
+	    <ul>
+	      <li>Componente encargado de la configuración de redes
+	      virtuales</li>
+	      <li>El nombre original de neutron era quantum, pero se tuvo que
+	      cambiar por problemas de copyright</li>
+	      <li>Neutron incluye un buen número
+	      de <a href="https://wiki.openstack.org/wiki/Neutron#Using_Neutron">complementos</a>:
+	      OpenvSwitch, Cisco, Nicira, etc.</li>
+	      <li>Neutron gestiona múltiples redes de forma independiente
+	      gracias al uso
+	      de <a href="http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/">linux
+	      network namespaces</a> que permite que múltiples routers virtuales
+	      compartan un dispositivo de red físico</li>
+	      <li>Neutron también se encarga de la gestión de los grupos de
+	      seguridad y de las IPs flotantes</li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>OpenStack Dashboard (Horizon)</h2>
+	    <ul>
+	      <li>Panel de control web de OpenStack desarrollado en Django</li>
+	      <li>No incluye toda la funcionalidad de la API de cada componente,
+	      pero sí los métodos más utilizados</li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>Ejemplo de uso</h2>
@@ -142,3 +187,4 @@ tema: solarized
 	      correspondiente</li>
 	    </ul>
 	  </section>
+
