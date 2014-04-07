@@ -20,3 +20,6 @@ la empresa Red Hat para proporcionar PaaS tanto en clouds públicos como privado
 
 * [Find your Platform as a Service!](http://www.paasify.it/vendors)
 
+### Videos
+
+* [![Video](http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg)](http://www.youtube.com/watch?v=rbFIHgHDRgo)

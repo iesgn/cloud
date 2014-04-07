@@ -28,9 +28,6 @@ En resumen tenemos a nuestras disposición diferentes versiones:
 |**¿Dónde puedes ejecutarlo?**|En el cloud público|	En tus propios servidores o en tu cloud privado|En tu ordenador, en tus servidores o en cloud privada o pública|
 |**¿Para quién esta pensado?**|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
 
-### Video
-
-[![Video](http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg)](http://www.youtube.com/watch?v=rbFIHgHDRgo)
 
 ### Prácticas
 
