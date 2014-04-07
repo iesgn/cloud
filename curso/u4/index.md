@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: En construcción
+tittle: OpenStack. Instancias.
 menu:
   - Unidad 4
 ---

@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: En construcción
+tittle: OpenStack. Redes.
 menu:
   - Unidad 6
 ---
