@@ -8,9 +8,9 @@ menu:
 
 ###Objetivos
 
-* Intoducción a OpenStack: software libre para implantar un sistema de cloud computing
-* Conocer las características principales de OpenStack
-* Conocer los distintos componenetes que forman OpenStack
+* Conocer el proyecto de software libre OpenStack. Importante proyecto para
+proporcionar IaaS tanto en clouds públicos como privados.
+* Conocer las características principales de OpenStack.
 
 ###Contenidos
 
