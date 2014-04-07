@@ -1,10 +1,13 @@
 ---
 layout: blog
-tittle: Implantación de la infraestructura de prueba OpenStack. OpenStack-ansible
+tittle: Implantación de la infraestructura de prueba OpenStack. 
 menu:
   - Unidad 2
   - Aplicaciones
 ---
+## OpenStack-ansible
+
+### Contenidos
 
 Vamos a instalar OpenStack a partir del repositorio GitHub [https://github.com/openstack-ansible/openstack-ansible](https://github.com/openstack-ansible/openstack-ansible).
 La infraestructura estará compuesta por 4 máquinas virtuales creadas con vagrant y la configuración de cada una de ellas realizada por medio de ansible.
