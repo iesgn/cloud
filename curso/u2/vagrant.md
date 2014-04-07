@@ -13,11 +13,11 @@ Vagrant es una aplicación libre desarrollada en ruby que nos permite crear y pe
 
 El objetivo principal de vagrant es aproximar los entornos de desarrollo y producción, de esta manera el desarrollador tiene a su disposición una manera  muy sencilla de desplegar una infraestructura similar a la que se va a tener en entornos de producción. A los administradores de sistemas les facilita la creación de infraestrucutras de prueba y desarrollo.
 
-[Presentación: Vagrant y ansible. Una combinación explosiva (1ª parte)](presentacion_vagrant)
+* [Presentación: Vagrant y ansible. Una combinación explosiva (1ª parte)](presentacion_vagrant)
 
 ###Prácticas
 
-[Prácticas con Vagrant](practica_vagrant)
+* [Prácticas con Vagrant](practica_vagrant)
 
 ###Enlaces interesantes
 

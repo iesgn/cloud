@@ -11,11 +11,11 @@ menu:
 
 Ansible es un sistema de orquestación escrito en Python, que nos permite automatizar la configuración de una máquina.
 
-[Presentación: Vagrant y ansible. Una combinación explosiva (2ª parte)](presentacion_ansible)
+* [Presentación: Vagrant y ansible. Una combinación explosiva (2ª parte)](presentacion_ansible)
 
 ###Prácticas
 
-[Prácticas con Ansible](practica_ansible)
+* [Prácticas con Ansible](practica_ansible)
 
 ###Enlaces interesantes
 
