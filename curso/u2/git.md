@@ -15,7 +15,10 @@ menu:
 
 Muchos de los scripts que vamos a usar para implantar la infraestructura de prueba de OpenStack están almacenado en **repositorios** en GitHub, por lo tanto tendremos que clonar dichos repositorios para bajarlos a nuestros equipos.
 
-Por último, otro concepto importante son las **ramas (branchs)** de un proyecto git. Podemos entender una rama como una versión del proyecto Git, que por ejemplo ofrece otras funcionalidades. Por defecto la rama principal se llama *master*.
+Cuando se desarrolla utilizando git, lo habitual es ir creando **ramas
+(branchs)** independientes para cada funcionalidad. La rama por defecto se
+denomina *master* y de ella suelen salir el resto de las ramas en un momento
+determinado y se fusionan (*merge*) cuando se termina.
 
 ###Prácticas
 
@@ -25,20 +28,20 @@ Por último, otro concepto importante son las **ramas (branchs)** de un proyecto
 
 2. Nuestro curso esta almacenado en un repositorio en GitHub, si quieres bajarlo sólo tienes que clonarlo:
 
-        # git clone https://github.com/iesgn/cloud.git
+        $ git clone https://github.com/iesgn/cloud.git
         
 3. Si queremos actualizar nuestro repositorio local con los cambios del repositorio remoto
 
-        # cd cloud
-        # git pull
+        $ cd cloud
+        $ git pull
 
-4. Cuando trabajaemos con OpenShift necesitaremos hacer cambios en el repositorio remoto a partir de nuestro repositorio local, para ello tenemos que ejecutar tres instrucciones:
+4. Cuando trabajemos con OpenShift necesitaremos hacer cambios en el repositorio remoto a partir de nuestro repositorio local, para ello tenemos que ejecutar tres instrucciones:
 
-		# git add <filename>
-		# git commit -m "Mensaje del commit"
-		# git push
+	$ git add <filename>
+	$ git commit -m "Mensaje del commit"
+	$ git push
 
 ###Enlaces interesantes
 
 * [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
-
+* [Pro Git - Libro de referencia](http://git-scm.com/book)
