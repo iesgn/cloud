@@ -22,9 +22,9 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
         
 3. Veamos algunos ficheros importantes en nuestro escenario:
 
-* ansible.cfg: Configuramos los parámetros (clave ssh y usuario) para acceder a las máquinas.
-* ansible_hosts: Definimos las máuinas de nuestro escenario.
-* escenario.yaml: receta principal, donde se indican las distintas recetas que encontramos en el directorio playbooks.
+  * ansible.cfg: Configuramos los parámetros (clave ssh y usuario) para acceder a las máquinas.
+  * ansible_hosts: Definimos las máuinas de nuestro escenario.
+  * escenario.yaml: receta principal, donde se indican las distintas recetas que encontramos en el directorio playbooks.
 
 4. Ejecutamos la receta principal:
 
@@ -33,9 +33,9 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
         
 Las tareas que se realizan son las siguientes:
 
-* Se actualiza el repositorio de paquetes en nuestra máuina virtual (playbooks/common.yaml).
-* Se instala apache2 en la máuina virtual (playbooks/webservers.yaml)
-* Se copia un fichero index.html en el DocumentRoot del servidor web (playbooks/webservers.yaml)
+  * Se actualiza el repositorio de paquetes en nuestra máuina virtual (playbooks/common.yaml).
+  * Se instala apache2 en la máuina virtual (playbooks/webservers.yaml)
+  * Se copia un fichero index.html en el DocumentRoot del servidor web (playbooks/webservers.yaml)
    	
 5. Podemos porbar que el servidor web funciona accedeiendo a la URL:
 
@@ -44,7 +44,7 @@ Las tareas que se realizan son las siguientes:
         
 ###Práctica 2: Balanceador DNS
 
-Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u1/practicas/ansible/practica2).
+Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica2).
 
 Utilizando entradas tipo A duplicadas en un servidor DNS es posible realizar de forma muy sencilla un balanceo de carga entre varios equipos, esto se conoce como [DNS round robin](http://en.wikipedia.org/wiki/Round-robin_DNS).
 
@@ -54,9 +54,9 @@ Utilizando entradas tipo A duplicadas en un servidor DNS es posible realizar de 
 
 En este caso vamos a realizar un balanceo de carga entre dos servidores web, para lo que creamos un escenario con tres equipos:
 
-* nodo1: 10.1.1.101 <- Servidor web
-* nodo2: 10.1.1.102 <- Servidor web
-* dns: 10.1.1.103 <- Servidor DNS
+  * nodo1: 10.1.1.101 <- Servidor web
+  * nodo2: 10.1.1.102 <- Servidor web
+  * dns: 10.1.1.103 <- Servidor DNS
 
 2. Configuración del escenario:
 
