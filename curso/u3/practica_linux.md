@@ -46,6 +46,7 @@ leerla: chmod 600.
 
 	> **Instancia**: Clon de una imagen que se crea a demanda del usuario en uno de
     los nodos del cloud.
+
 	> **Un sabor (flavor)**: Define para una instancia el número de cores
  virtuales, la RAM, si dispone o no de discos efímeros, etc.
 
