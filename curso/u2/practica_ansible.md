@@ -31,7 +31,7 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
         usuario@maquina:~/practica1$ chmod 600 vagrant_private_key
         usuario@maquina:~/practica1$ ansible-playbook escenario.yaml
         
-Las tareas que se realizan son las siguientes:
+	Las tareas que se realizan son las siguientes:
 
 	* Se actualiza el repositorio de paquetes en nuestra máuina virtual (playbooks/common.yaml).
 	* Se instala apache2 en la máuina virtual (playbooks/webservers.yaml)
