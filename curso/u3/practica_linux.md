@@ -43,10 +43,8 @@ crea un par de claves.
 envía al usuario la clave privada. Descárgate la clave privada, almacénala en tu
 equipo y asígnale los permisos adecuados para que ningún otro usuario pueda
 leerla: chmod 600.
-
 	> **Instancia**: Clon de una imagen que se crea a demanda del usuario en uno de
     los nodos del cloud.
-
 	> **Un sabor (flavor)**: Define para una instancia el número de cores
  virtuales, la RAM, si dispone o no de discos efímeros, etc.
 
