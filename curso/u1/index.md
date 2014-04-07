@@ -15,7 +15,7 @@ menu:
 
 ###Contenidos
 
-[Presentación: Introducción al Cloud Computing](presentacion)
+* [Presentación: Introducción al Cloud Computing](presentacion)
 
 ###Enlaces interesantes
 
@@ -44,8 +44,4 @@ Software libre para implantar IaaS:
 
 ### Videos
 
-Introducción al Cloud Computing
-[![Video 1](http://img.youtube.com/vi/vTleauKzh64/0.jpg)](http://www.youtube.com/watch?v=vTleauKzh64)
-
-Cloud computing: la visión de IBM
-[![Video 2](http://img.youtube.com/vi/5rBwfCf5LZE/0.jpg)](http://www.youtube.com/watch?v=5rBwfCf5LZE)
+* [Cloud computing: la visión de IBM](http://www.youtube.com/watch?v=5rBwfCf5LZE)
