@@ -27,7 +27,7 @@ Sitio web con todos los resultados del proyecto:
 El proyecto nos permitió obtener los recursos para la adquisición de los equipos necesarios para el montaje de la infraestructura de cloud computing.
 Podemos ver las características de los distintos equipos en el siguiente documento:
 
-[Infraestructura para el cloud](http://www.gonzalonazareno.org/cloud/material/infraestructura.pdf)
+* [Infraestructura para el cloud](http://www.gonzalonazareno.org/cloud/material/infraestructura.pdf)
 
 El software que elegido para la gestión del cloud fue OpenStack. La primera
 versión del software que se instaló fue OpenStack Essex (2012.1) sobre Debian
@@ -40,7 +40,7 @@ de [GPLHost](http://www.gplhost.com/software-openstack.html).
 La forma más sencilla de trabajar con OpenStack es a través de la aplicación web
 Horizon:
 
-[Presentación: Introducción a OpenStack Horizon (Grizzly)](presentacion)
+* [Presentación: Introducción a OpenStack Horizon (Grizzly)](presentacion)
 
 ###Prácticas
 

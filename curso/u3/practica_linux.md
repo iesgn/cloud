@@ -25,14 +25,14 @@ introduce el nombre de usuario y la contraseña que te han asignado.
 
 2. Familiarízate con el entorno navegando por el menú principal.
 
- > **Imagen**: Imagen de sistema preconfigurado que se utiliza como base para
+	> **Imagen**: Imagen de sistema preconfigurado que se utiliza como base para
      crear instancias. Dentro del cloud podemos encontrar diferentes imágenes
      para cada tipo de instacia que se qu$
 
 3. Comprueba las imágenes que tenemos a nuestra disposición en el apartado
 **Imágenes e instanteneas**.
 
- > **Par de claves ssh**: Utilizadas para acceder por ssh a las instancias desde
+	> **Par de claves ssh**: Utilizadas para acceder por ssh a las instancias desde
      fuera del cloud.
 
 4. Antes de crear la instancia vamos a crear nuestro par de claves, desde la
