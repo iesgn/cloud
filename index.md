@@ -30,7 +30,10 @@ Nazareno, tienen amplia experiencia en cloud computing y han participado hasta l
 
 |Fecha|Contenido|Lugar|
 |:---:|---------|-----|
-|21/04/2014|**Sesión 1**<br/>Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift<br/>Unidad 2: Aplicaciones Git, Vagrant y Ansible|IES Romero Vargas|
+|21/04/2014|**Sesión 1**<br/><br/>|IES Romero Vargas|
+|          |* Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift|                   |
+|          |* Unidad 2: Aplicaciones Git, Vagrant y Ansible|                  |
+|---
 |23/04/2014|Sesión 2|IES Gonzalo Nazareno|
 |28/04/2014|Sesión 3|IES Romero Vargas|
 
