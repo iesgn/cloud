@@ -37,9 +37,9 @@ determinado y se fusionan (*merge*) cuando se termina.
 
 4. Cuando trabajemos con OpenShift necesitaremos hacer cambios en el repositorio remoto a partir de nuestro repositorio local, para ello tenemos que ejecutar tres instrucciones:
 
-	$ git add <filename>
-	$ git commit -m "Mensaje del commit"
-	$ git push
+        $ git add <filename>
+        $ git commit -m "Mensaje del commit"
+        $ git push
 
 ###Enlaces interesantes
 
