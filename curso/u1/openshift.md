@@ -22,4 +22,4 @@ la empresa Red Hat para proporcionar PaaS tanto en clouds públicos como privado
 
 ### Videos
 
-* [![Video](http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg)](http://www.youtube.com/watch?v=rbFIHgHDRgo)
+[![Video](http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg)](http://www.youtube.com/watch?v=rbFIHgHDRgo)
