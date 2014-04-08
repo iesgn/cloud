@@ -98,7 +98,7 @@ strong {
 }
 
 ul {
-  list-style: inside;
+#  list-style: inside;
   padding-left: 25px;
 }
 
