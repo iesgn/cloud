@@ -7,9 +7,10 @@ menu:
 ---
 ###Objetivos
 
+* Estudiar las distintas formas para implantar OpenStack como infraestructura de prueba.
 * Implantar la infraestructura de openstack que vamos a usar durante el curso.
 * Conocer los pasos que se van a producir durante la instalación de OpenStack.
-* Conocer la estructuras de máquinas virtuales que se van a crear con vagrant.
+* Conocer la estructuras de máquinas virtuales que se van a crear con vagrant en algunos de los métodos de intalación.
 * Conocer las configuraciones básicas que se van a desplegar en los distintos nodos.
 * Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
 
