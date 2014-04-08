@@ -6,12 +6,6 @@ menu:
 ---
 ## Introducción a OpenStack
 
-###Objetivos
-
-* Conocer el proyecto de software libre OpenStack. Importante proyecto para
-proporcionar IaaS tanto en clouds públicos como privados.
-* Conocer las características principales de OpenStack.
-
 ###Contenidos
 
 OpenStack: "Plataforma de cloud computing hecha con software libre para desplegar nubes públicas y privadas, desarrollada con la idea de ser sencilla de implementar, masivamente escalable y con muchas prestaciones"

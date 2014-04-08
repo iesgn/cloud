@@ -12,6 +12,12 @@ menu:
 * Conocer los distintos tipos de Cloud Computing: públicos, privados o híbridos
 * Conocer diversos usos de tecnologías de Cloud Computing 
 * Conocer algunos proveedores de Cloud Computing de IaaS o PaaS
+* Conocer el proyecto de software libre OpenStack. Importante proyecto para
+proporcionar IaaS tanto en clouds públicos como privados.
+* Conocer las características principales de OpenStack.
+* Conocer el proyecto de software libre OpenShift. Proyecto de Software libre de
+la empresa Red Hat para proporcionar PaaS tanto en clouds públicos como privados.
+* Conocer las características principales de OpenShift.
 
 ###Contenidos
 

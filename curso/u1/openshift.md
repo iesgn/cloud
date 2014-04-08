@@ -6,13 +6,9 @@ menu:
 ---
 ## Introducción a OpenShift
 
-### Objetivos
-
-* Conocer el proyecto de software libre OpenShift. Proyecto de Software libre de
-la empresa Red Hat para proporcionar PaaS tanto en clouds públicos como privados.
-* Conocer las características principales de OpenShift.
-
 ### Contenidos
+
+OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que se denomina [OpenShift Online](https://www.openshift.com/), mediante un producto de pago [OpenShift Enterprise](https://www.openshift.com/products/enterprise) o bien instalando directamente en un cloud privado el software [OpenShift Origin](http://openshift.github.io/) disponible en [GitHub](https://github.com/openshift).
 
 * [Presentación: Introducción a OpenShift](presentacion_openshift)
 
