@@ -8,11 +8,11 @@ menu:
 ###Objetivos
 
 * Conocer el origen del proyecto que ha permitido el despliegue de la infraestructura de cloud computing en el IES Gonzalo Nazareno.
-* Conocer las principales características de la infraestructura de Cloud Computing montada en el IES Gonzalo Nazareno
-* Visitar las instalaciones donde tenemos alojados los servidores
-* Conocer las especificaciones técnicas del hardware de los servidores
+* Conocer las principales características de la infraestructura de Cloud Computing montada en el IES Gonzalo Nazareno.
+* Visitar las instalaciones donde tenemos alojados los servidores.
+* Conocer las especificaciones técnicas del hardware de los servidores.
 * Introducir los conceptos fundamentales para utilizar OpenStack.
-* Utilizar el cloud computing del IES Gonzalo Nazareno
+* Utilizar el cloud computing del IES Gonzalo Nazareno.
 
 ### Contenidos
 
