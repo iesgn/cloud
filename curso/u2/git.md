@@ -1,9 +1,8 @@
 ---
 layout: blog
-tittle: Implantación de la infraestructura de prueba OpenStack
+tittle: Herraminetas DevOps. Git, Vagrant y Ansible
 menu:
   - Unidad 2
-  - Aplicaciones
 ---
 ## Introducción a Git
 

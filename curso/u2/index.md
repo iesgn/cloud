@@ -1,45 +1,37 @@
 ---
 layout: blog
-tittle: Implantación de la infraestructura de prueba OpenStack
+tittle: Herraminetas DevOps. Git, Vagrant y Ansible
 menu:
   - Unidad 2
-  - Aplicaciones
 ---
+
 ###Objetivos
 
-* Estudiar las distintas formas para implantar OpenStack como infraestructura de prueba.
-* Implantar la infraestructura de openstack que vamos a usar durante el curso.
-* Conocer los pasos que se van a producir durante la instalación de OpenStack.
-* Conocer la estructuras de máquinas virtuales que se van a crear con vagrant en algunos de los métodos de intalación.
-* Conocer las configuraciones básicas que se van a desplegar en los distintos nodos.
-* Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
 
 ###Contenidos
 
-Vamos a presentar diferentes formas de instalar OpenStack en un entorno de pruebas en nuestro ordenador. Tendremos que discutir las ventajas e incovenientes de cada opción y decidir cúal puede ser la más válida para el curso. Las distintas opciones que tenemos disponibles son las siguientes:
+**DevOps** es un acrónimo inglés de development (desarrollo) y operations (operaciones), que se refiere a una metodología de desarrollo de software que se centra en la comunicación, colaboración e integración entre desarrolladores de software y los profesionales de operaciones en las tecnologías de la información (IT). 
 
-* [Devstav](devstack)
-* [RDO](rdo)
-* [OpenStack-ansible](openstack-ansible)
+Los principios fundamentales de esta nueva metodológia son:
 
-Algunas de las opciones de instalación se hacen sobre máquinas virtuales que posteriormente se configuran de forma automática, para ayudarnos a realizar estas tareas vamos a utilizar las siguientes aplicaciones:
+* Maneja tu infraestructura como tu software
+* Utiliza software de control de versiones para las configuraciones y especificaciones
+* Todo debe ser legible
+* Automatizar la configuración de nuestro sistema.
 
-* [Git](git)
-* [Vagrant](vagrant)
-* [Ansible](ansible)
+Herramientas que se pueden usar:
 
-Finalmente vamos a explicar la configuración de [VPN](vpn) para que se puedan realizar las prácticas en el OpenStack del IES Gonzalo Nazareno.
+* Automatización para crear máquinas virtuales: [Vagrant](vagrant)
+* Software de control de versiones: [Git](git), Subversion, Bazaar, ...
+* Automatización de la configuración de sistemas: [Ansible](ansible), Pupplet, Chef, ...
+* Integración continua: Jenkins, ...
 
-###Resumen
+Algunas de las opciones de instalación de la infraestructura de prueba de OpenStack, que vamos a estudiar en la siguiente unidad, requieren la utilización de estas herramientas. La instalación se va a realziar sobre máquinas virtuales que posteriormente se configuran de forma automática.
 
-Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, veamos en resumen algunas de ellas:
+###Enlaces interesantes
 
-|     |DevStack|RDO|OpenStack-ansible|
-|:---:|--------|---|-----------------|
-|**Instalación**|En máquina física o en máquina virtual|En máquina física|En 4 máquinas virtuales|
-|**Versión OpenStack**|Grizzly o Havana|Havana|Havana|
-|**Servicios Openstack**|Configuración básica (nova, cinder, glance, keystone, swift, horizon); Configuración completa(se añaden los servicios de quantum, heat y ceilometer)|Todos|Todos|
-|**Vagrant - Ansible**|Se puede utilizar el siguiente [repositorio GitHub](https://github.com/xiaohanyu/vagrant-ansible-devstack) o se puede instalar manualmente|No|Si|
-|**Ventajas**|Utilizando el repositorio github, la instalación es muy sencilla. Se puede instalar grizzly o havana, y se puede hacer una configuración básica o una completa|Fácil de instalar y creo que muy depurado. Buen rendimiento. Puede ser perfecto para un entorno de pruebas|Entorno de pruebas muy cercano al real, con nodo de red, nodo de almacenamiento, etc. Es muy adecuado para luego pasarlo a entorno real|
-|**Incovenientes**|No es totalmente real porque el controlador tiene todos los componentes. La instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal instalarlo sobre una máquina física|No es totalmente real porque el controlador tiene todos los componentes (incluso compute). No sé lo difícil que puede ser modificarlo para un entorno real|Al utilizarse sobre MVs tiene peor rendimiento y es más exigente en cuanto a requisitos de Hardware|
+* [Que demonios es eso de Devops (y porqué debería estar interesado ((Jacobo García))](http://www.slideshare.net/therobot/que-demonios-es-eso-de-devops-y-porquedebera-interesarme)
 
+### Videos
+
+* [From Dev To DevOps (Carlos Sánchez)](http://vimeo.com/41555302)

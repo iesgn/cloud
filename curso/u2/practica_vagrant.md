@@ -1,9 +1,8 @@
 ---
 layout: blog
-tittle: Introducción al Cloud Computing, OpenStack, vagrant y ansible. 
+tittle: Herraminetas DevOps. Git, Vagrant y Ansible
 menu:
   - Unidad 2
-  - Aplicaciones
 ---
 ## Prácticas con Vagrant
 

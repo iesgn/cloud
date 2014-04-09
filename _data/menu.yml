@@ -8,6 +8,8 @@
      url: http://iesgn.github.io/cloud/curso/u1/openshift  
 - nombre: Unidad 2
   items:
+   - name: DevOps
+     url: http://iesgn.github.io/cloud/curso/u2
    - name: Git
      url: http://iesgn.github.io/cloud/curso/u2/git
    - name: Vagrant
@@ -24,7 +26,6 @@
      url: http://iesgn.github.io/cloud/curso/u3/rdo
    - name: OpenStack-ansible
      url: http://iesgn.github.io/cloud/curso/u3/openstack-ansible
-   
  
 - nombre: Unidad 4
   items:
@@ -34,6 +35,7 @@
      url: http://iesgn.github.io/cloud/curso/u4/practica_linux
    - name: Práctica Windows
      url: http://iesgn.github.io/cloud/curso/u4/practica_windows
+
 - nombre: Unidad 5
   items:
 - nombre: Unidad 6
@@ -42,7 +44,9 @@
   items:
 - nombre: Unidad 8
   items:
-- nombre: Unidad 8
+- nombre: Unidad 9
+  items:
+- nombre: Unidad 10
   items:
 
 - nombre: Unidades
@@ -65,8 +69,8 @@
      url: http://iesgn.github.io/cloud/curso/u7
    - name: Unidad 8
      url: http://iesgn.github.io/cloud/curso/u8
-   - name: Unidad 8
+   - name: Unidad 9
      url: http://iesgn.github.io/cloud/curso/u9
-   - name: Unidad 8
+   - name: Unidad 10
      url: http://iesgn.github.io/cloud/curso/u10
 

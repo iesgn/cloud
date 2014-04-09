@@ -2,8 +2,7 @@
 layout: blog
 tittle: Implantación de la infraestructura de prueba OpenStack. 
 menu:
-  - Unidad 2
-  - Aplicaciones
+  - Unidad 3
 ---
 ## OpenStack-ansible
 
