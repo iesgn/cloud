@@ -2,8 +2,7 @@
 layout: blog
 tittle: Implantación de la infraestructura de prueba OpenStack
 menu:
-  - Unidad 2
-  - Aplicaciones
+  - Unidad 3
 ---
 ###Objetivos
 
@@ -22,13 +21,6 @@ Vamos a presentar diferentes formas de instalar OpenStack en un entorno de prueb
 * [RDO](rdo)
 * [OpenStack-ansible](openstack-ansible)
 
-Algunas de las opciones de instalación se hacen sobre máquinas virtuales que posteriormente se configuran de forma automática, para ayudarnos a realizar estas tareas vamos a utilizar las siguientes aplicaciones:
-
-* [Git](git)
-* [Vagrant](vagrant)
-* [Ansible](ansible)
-
-Finalmente vamos a explicar la configuración de [VPN](vpn) para que se puedan realizar las prácticas en el OpenStack del IES Gonzalo Nazareno.
 
 ###Resumen
 
