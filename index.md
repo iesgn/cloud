@@ -33,9 +33,14 @@ jornadas sobre el tema a nivel local y estatal.
 
 |Fecha|Contenido|Lugar|
 |:---:|---------|-----|
-|21/04/2014|**Sesión 1**<br/><ul><li>Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift</li></ul>|IES Romero Vargas|
-|23/04/2014|Sesión 2|IES Gonzalo Nazareno|
-|28/04/2014|Sesión 3|IES Romero Vargas|
+|21/04/2014|**Sesión 1**<br/><ul><li>Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift</li><li>Unidad 2: Implantación de la infraestructura de prueba OpenStack (Herramientas)</li></ul>|IES Romero Vargas|
+|23/04/2014|**Sesión 2**<br/>Unidad 3:Introducción a OpenStack. Uso básico de horizon.|IES Gonzalo Nazareno|
+|28/04/2014|**Sesión 3**<br/>Unidad 2:Implantación de la infraestructura de prueba OpenStack|IES Romero Vargas|
+|7/05/2014|**Sesión 4**<br/>Unidad 4:OpenStack. Instancias.|Webinar|
+|14/05/2014|**Sesión 5**<br/>Unidad 5:OpenStack. Volúmenes.|Webinar|
+|21/05/2014|**Sesión 6**<br/>Unidad 6:OpenStack. Redes.|Webinar|
+|28/05/2014|**Sesión 7**<br/>Unidad 7:Introducción a PaaS. OpenShift|Webinar|
+|4/06/2014|**Sesión 8**|IES Romero Vargas|
 
 ###Licencia
 
