@@ -2,7 +2,7 @@
 layout: blog
 tittle: Introducción a PaaS. OpenShift
 menu:
-  - Unidad 7
+  - Unidad 8
 ---
 
 ###Objetivos
