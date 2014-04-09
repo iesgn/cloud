@@ -33,10 +33,7 @@ jornadas sobre el tema a nivel local y estatal.
 
 |Fecha|Contenido|Lugar|
 |:---:|---------|-----|
-|21/04/2014|**Sesión 1**<br/><br/>|IES Romero Vargas|
-|          |* Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift|                   |
-|          |* Unidad 2: Aplicaciones Git, Vagrant y Ansible|                  |
-|---
+|21/04/2014|**Sesión 1**<br/>Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift|IES Romero Vargas|
 |23/04/2014|Sesión 2|IES Gonzalo Nazareno|
 |28/04/2014|Sesión 3|IES Romero Vargas|
 
