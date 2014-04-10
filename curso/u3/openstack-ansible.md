@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Implantación de la infraestructura de prueba OpenStack. 
+tittle: Entornos de pruebas para OpenStack
 menu:
   - Unidad 3
 ---

@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Entornos de prueba para OpenStack.
+tittle: Entornos de pruebas para OpenStack.
 menu:
   - Unidad 3
 ---

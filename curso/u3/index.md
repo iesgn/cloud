@@ -1,12 +1,12 @@
 ---
 layout: blog
-tittle: Entornos de prueba para OpenStack
+tittle: Entornos de pruebas para OpenStack
 menu:
   - Unidad 3
 ---
 ###Objetivos
 
-* Estudiar las distintas formas para implantar OpenStack en un entorno de prueba.
+* Estudiar las distintas formas para implantar OpenStack en un entorno de pruebas.
 * Implantar la infraestructura de openstack que vamos a usar durante el curso.
 * Conocer los pasos que se van a producir durante la instalación de OpenStack.
 * Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
