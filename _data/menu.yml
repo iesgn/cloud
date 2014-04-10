@@ -18,7 +18,7 @@
      url: http://iesgn.github.io/cloud/curso/u2/ansible
 - nombre: Unidad 3
   items:
-   - name: Entornos de prueba
+   - name: Entornos de pruebas
      url: http://iesgn.github.io/cloud/curso/u3
    - name: DevStack
      url: http://iesgn.github.io/cloud/curso/u3/devstack
