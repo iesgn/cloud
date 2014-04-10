@@ -13,6 +13,12 @@ devops
 
 ###Objetivos
 
+* Conocer los principios y característivas de la metodología DevOps.
+* Conocer los distintos tipos de herramientas que nos permiten llevar a cabo la metodología DevOps.
+* Introducción al uso de un software de control de versiones: git.
+* Introducción al uso de un software para la creación de entornos de desarrollos ligeros y portables: vagrant.
+* Introducción al uso de un sofware de automatización de la configuración del sistema: ansible.
+
 ###Contenidos
 
 **DevOps** es un acrónimo inglés de development (desarrollo) y operations
@@ -46,5 +52,4 @@ de uso de estas herramientas y haremos énfasis en sus ventajas y aplicabilidad.
 
 ### Vídeos
 
-* [From Dev To DevOps (Carlos Sánchez)](http://vimeo.com/41555302)
 * [What is DevOps - In Simple English (RackSpace)](http://www.youtube.com/watch?v=_I94-tJlovg)
