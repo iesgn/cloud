@@ -16,6 +16,6 @@ OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red Hat. O
 
 * [Find your Platform as a Service!](http://www.paasify.it/vendors)
 
-### Videos
+### Vídeos
 
 [![Video](http://img.youtube.com/vi/rbFIHgHDRgo/0.jpg)](http://www.youtube.com/watch?v=rbFIHgHDRgo)

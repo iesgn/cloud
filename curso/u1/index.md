@@ -48,6 +48,6 @@ Software libre para implantar IaaS:
 * [CloudStack](http://cloudstack.apache.org/)
 * [OpenStack](http://www.openstack.org)
 
-### Videos
+### Vídeos
 
 * [Cloud computing: la visión de IBM](http://www.youtube.com/watch?v=5rBwfCf5LZE)
