@@ -11,6 +11,8 @@ muchos casos no se trata simplemente de la adopción de nuevas herramientas sino
 que habría que pensar en la adopción paulatina de la denominada metodología
 devops
 
+Esta unidad se puede considerar como un apéndice, un tema que por una parte nos puede ayudar a montar algunos de los entornos de prueba, pero que por otra parte nos introduce en algunas de las herramientas utilizadas habitualmente en nuevas tecnologías como el cloud computing. 
+
 ###Objetivos
 
 * Conocer los principios y característivas de la metodología DevOps.
@@ -41,7 +43,7 @@ Herramientas que se pueden usar:
 * Automatización de la configuración de sistemas: [Ansible](ansible), Pupplet, Chef, ...
 * Integración continua: Jenkins, ...
 
-Algunas de las opciones de instalación de la infraestructura de prueba de OpenStack, que vamos a estudiar en la siguiente unidad, requieren la utilización de estas herramientas. La instalación se va a realziar sobre máquinas virtuales que posteriormente se configuran de forma automática.
+Algunas de las opciones de instalación de los entornos de pruebas de OpenStack, que vamos a estudiar en la siguiente unidad, requieren la utilización de estas herramientas. La instalación se va a realizar sobre máquinas virtuales que posteriormente se configuran de forma automática.
 
 A lo largo del curso y siempre que sea posible intentaremos poner otros ejemplos
 de uso de estas herramientas y haremos énfasis en sus ventajas y aplicabilidad.
