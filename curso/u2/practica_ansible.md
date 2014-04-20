@@ -38,7 +38,7 @@ del respositorio del curso.
 	* Se instala apache2 en la máuina virtual (playbooks/webservers.yaml)
 	* Se copia un fichero index.html en el DocumentRoot del servidor web (playbooks/webservers.yaml)
    	
-5. Podemos porbar que el servidor web funciona accedeiendo a la URL:
+5. Podemos probar que el servidor web funciona accedeiendo a la URL:
 
         http://10.1.1.101
      
