@@ -23,6 +23,10 @@ del repositorio del curso.
 1. Nos descargamos el box de Ubuntu 12.04 de 64 bits, esto lo hacemos un usuario sin privilegios:
 
         usuario@maquina:~$ vagrant box add precise64 http://files.vagrantup.com/precise64.box
+
+**Nota:** Ya podemos descargarnos el box de Ubutntu 14.04, para ello:
+
+        usuario@maquina:~$ vagrant box add trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
         
 2. Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la siguiente instrucción:
 
