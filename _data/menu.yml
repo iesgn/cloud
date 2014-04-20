@@ -73,4 +73,5 @@
      url: http://iesgn.github.io/cloud/curso/u9
    - name: Unidad 10
      url: http://iesgn.github.io/cloud/curso/u10
-
+   - name: Foro
+     url: https://github.com/iesgn/cloud/issues
