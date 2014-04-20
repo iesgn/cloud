@@ -86,7 +86,7 @@ En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile c
         end
 
 Cuando iniciemos el escenario veremos que hemos creado dos máquinas virtuales: nodo1 y nodo2. 
-nodo1 tendrá una red interna con ip 10.0.1.1.101, y nodo2 tendrá una interfaz de red "modo puente" y una interfaz de red del tipo red interna con ip 10.1.1.102.
+nodo1 tendrá una red interna con ip 10.1.1.101, y nodo2 tendrá una interfaz de red "modo puente" y una interfaz de red del tipo red interna con ip 10.1.1.102.
 
 Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
