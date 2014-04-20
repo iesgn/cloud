@@ -8,16 +8,18 @@ menu:
 
 ###Práctica 1: Instalación de un servidor web apache en una máquina virtual
 
-Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica1).
+Puedes encontrar los ficheros que vamos a usar en esta práctica en el siguiente
+[directorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica1)
+del respositorio del curso.
 
 1. Instalar ansible
 
-   	    root@maquina:~$ apt-get install python-pip python-dev
-	    root@maquina:~$ pip install ansible
+	root@maquina:~$ apt-get install python-pip python-dev
+	root@maquina:~$ pip install ansible
  
 2. Creamos con vagrant la máquina virtual
 
-   	   usuario@maquina:~/practica1$ vagrant up
+	usuario@maquina:~/practica1$ vagrant up
         
 3. Veamos algunos ficheros importantes en nuestro escenario:
 

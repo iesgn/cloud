@@ -6,9 +6,11 @@ menu:
 ---
 ## Prácticas con Vagrant
 
-Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/vagrant/).
+Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente
+[directorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/vagrant/)
+del repositorio del curso.
 
-###Práctica 1: Creación de una máquina virtual
+###Práctica 1: Instalación de vagrant
 
 1. Instalar virtualbox y vagrant
 
@@ -16,19 +18,22 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
         root@maquina:~$ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.1_x86_64.deb
         root@maquina:~$ dpkg -i vagrant_1.5.1_x86_64.deb
 
-2. Nos descargamos el box de Ubuntu 12.04 de 64 bits, esto lo hacemos un usuario sin privilegios:
+### Práctica 2: Instalación de un "box" de Ubuntu 12.04
+
+1. Nos descargamos el box de Ubuntu 12.04 de 64 bits, esto lo hacemos un usuario sin privilegios:
 
         usuario@maquina:~$ vagrant box add precise64 http://files.vagrantup.com/precise64.box
         
-3. Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la siguiente instrucción:
+2. Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la siguiente instrucción:
 
         usuario@maquina:~$ vagrant box list
-        
-4. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:
+
+### Práctica 3: Creación de una máquina virtual
+1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:
         
         usuario@maquina:~/vagrant$ vagrant init
         
-5. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:
+2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:
 
         # -*- mode: ruby -*-
         # vi: set ft=ruby :
@@ -38,15 +43,15 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
                        config.vm.network :public_network,:bridge=>"eth0"
         end    
         
-6. Iniciamos la máquina:
+3. Iniciamos la máquina:
 
         usuario@maquina:~/vagrant$ vagrant up
         
-7. Para acceder a la instancia:
+4. Para acceder a la instancia:
    	
         usuario@maquina:~/vagrant$ vagrant ssh default
     	      
-8. Suspender, apagar o destruir:
+5. Suspender, apagar o destruir:
     	
         usuario@maquina:~/vagrant$ vagrant suspend
         usuario@maquina:~/vagrant$ vagrant halt
@@ -54,7 +59,7 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente 
     	       
      
         
-###Práctica 2: Creación de varias máquinas virtuales
+###Práctica 4: Creación de varias máquinas virtuales
 
 En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:
 
@@ -82,7 +87,7 @@ nodo1 tendrá una red interna con ip 10.0.1.1.101, y nodo2 tendrá una interfaz 
 Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
 
-###Práctica 3: Añadir un dico duro adicional y modificar la RAM a una máquina virtual
+###Práctica 5: Añadir un dico duro adicional y modificar la RAM a una máquina virtual
 
 Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este contenido:
 
@@ -116,7 +121,14 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
             end
         end
 
-Como podemos ver al nodo1 le hemos modifcado el tamaño de lamemoria RAM y en el nodo2 hemos añadido undisco duro de 1Gb.
+Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en el
+nodo2 hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto
+debes ejecutar la instrucción:
 
-Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Para más información accede a [http://docs.vagrantup.com/v2/](http://docs.vagrantup.com/v2/)
+	vagrant reload
+
+Para terminar, indicar que tenemos más parámetros de configuración que nos
+permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más
+información en la [http://docs.vagrantup.com/v2/](documentación oficial de
+Vagrant).
 
