@@ -129,6 +129,5 @@ debes ejecutar la instrucción:
 
 Para terminar, indicar que tenemos más parámetros de configuración que nos
 permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más
-información en la [http://docs.vagrantup.com/v2/](documentación oficial de
-Vagrant).
+información en la [documentación oficial de vagrant](http://docs.vagrantup.com/v2/).
 
