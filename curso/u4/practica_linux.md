@@ -59,7 +59,7 @@ Instancia**).
        primera opción.
 	* **Imagen**: Podemos elegir de la lista de imágenes disponibles. Vamos a
        hacer
-	* Una instancia a partir de la imagen **Debian 7.2 (Wheezy)**.
+	* Una instancia a partir de la imagen **Debian 7.4 (Wheezy)**.
 	* **Nombre** de la instancia
 	* El **sabor** de la máquina que vamos a crear.
 	* Número de instancias, por defecto 1.
@@ -97,7 +97,7 @@ nueva en la que permitas el acceso por el puero 22 desde la IP de tu ordenador.
 9. Por último, utilizando un cliente ssh accede a la instancia utilizando la ip
 flotante que le hemos asignado a la instancia. Por ejemplo:
 
-        ssh -i ~/.ssh/vostro.pem ubuntu@172.22.200.63
+        ssh -i clave_ssh.pem debian@172.22.200.63
 
 10. Una vez que has trabajado un poco con la intancia, practica las distintas
 operaciones que puedes hacer sobre ella: pausar, suspender, reiniciar, terminar,
