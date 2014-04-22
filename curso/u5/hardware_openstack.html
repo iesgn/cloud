@@ -1,0 +1,94 @@
+---
+layout: presentacion
+title: Hardware
+tema: solarized
+---
+<section>
+  <h1>Hardware</h1>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+  <p>OpenStack puede funcionar perfectamente en equipos y dispositivos
+  convencionales, aunque también soporta gran cantidad de dispositivos más
+  especializados</p>
+</section>
+<section>
+  <h2>Redes. Tipos de redes</h2>
+  <ul>
+    <li>Pueden utilizarse redes básicas Gigabit Ethernet</li>
+    <li>Es habitual utilizar combinaciones de varias interfaces de red Gigabit
+    Ethernet en modo "bonding" para eliminar cuellos de botella</li>
+    <li>En caso necesario, bien por el tamaño del cloud, bien por la utilización
+    de modos de almacenamiento distribuido, se puede optar por
+    utilizar redes 10GbE</li>
+    <li>Alternativamente a la utilización de redes 10GbE, principalmente en la
+      red de almacenamiento, se puede optar por utilizar Fibre Channel</li>
+    <li>También está
+      soportado <a href="http://www.storagereview.com/mellanox_announces_openstack_infiniband_and_ethernet_interconnect_solutions">Infiniband</a>,
+      aconsejable para conseguir altas prestaciones</li>
+  </ul>
+</section>
+<section>
+  <h2>Redes. Dispositivos de interconexión</h2>
+  <ul>
+    <li>Pueden utilizarse switches convencionales que simplemente conecten los
+ nodos del cloud. Toda la configuración de redes virtuales puede hacerse por
+ software</li>
+    <li>Puede optarse por utilizar dispositivos de mayor categoría que trabajen
+ de forma coordinada con el software y controladores específicos para conseguir
+ mayor rendimiento y control. Como en el caso  de algunos dispositivos
+ de <a href="http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-727737.html">Cisco</a>
+ o <a href="http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html">juniper</a></li>
+    <li>Para centros de datos y clouds de mayor tamaño hay que estudiar la
+ posibilidad de realizar un cambio íntegro de arquitectura de red,
+ hacia <a href="http://blog.movingonesandzeros.net/2013/05/cisco-nexus-part-2-design-basics.html">spine-leaf</a></li>
+  </ul>
+</section>
+<section>
+  <h2>Servidores</h2>
+  <ul>
+    <li>Equipos convencionales</li>
+    <li>El nodo controlador no requiere de características especiales</li>
+    <li>Para los nodos de computación será necesario utilizar procesadores con
+    <a href="http://en.wikipedia.org/wiki/Hardware-assisted_virtualization">extensiones
+    de virtualización</a>, Intel o AMD</li>
+    <li>La cantidad de RAM de los nodos de computación condicionará el número de
+    instancias a ejecutar en cada nodo</li>
+    <li>En los nodos de computación es necesario disponer de procesadores
+    multicore y en Intel hyper-threading:
+    <ul>
+    <li>AMD
+    Opteron <a href="http://www.amd.com/en-gb/products/server/6000/6200#">Interlagos</a>
+    o <a href="http://www.amd.com/en-gb/products/server/6000/6300#">Abu-Dhabi</a></li>
+    <li>Intel
+    Xeon <a href="http://ark.intel.com/products/codename/29902/#@Server">Ivy
+    Bridge</a>
+    o <a href="http://ark.intel.com/products/codename/42174/haswell#@Server">Haswell</a></li>
+    </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h2>Almacenamiento. Dispositivos específicos</h2>
+</section>
+<section>
+  <h2>Almacenamiento. Servidores</h2>
+</section>
+<section>
+  <h2>Almacenamiento. Unidades</h2>
+</section>
