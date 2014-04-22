@@ -3,6 +3,25 @@ layout: presentacion
 title: Componentes de OpenStack
 tema: solarized
 ---
+<section>
+  <h1>Componentes Principales de OpenStack</h1>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
 	  <section>
 	    <h2>Componentes de OpenStack</h2>
 	    <ul>
@@ -187,17 +206,21 @@ tema: solarized
 	      correspondiente</li>
 	    </ul>
 	  </section>
-
 	  <section>
-	    <h2>Tipos de nodos</h2>
+	    <h2>Componentes de Nova</h2>
 	    <ul>
-	      <li>Un cloud de OpenStack se compone de varios equipos (nodos) con
-	      diferentes funciones dependiendo de los componentes de OpenStack
-	      que tenga instalados</li>
-	      <li>Nodo controlador (<em>Controller node</em>): Nodo encargado de
-	      la gestión de las instancias con nova y de la orquestación del
-	      resto de componentes</li>
-	      <li>Nodo de computación (<em>Compute node</em>): Nodo encargado de
-	      la ejecución de las instancias como máquinas virtuales sobre un
-	      hipervisor.</li>
-	      <li>Nodo de red (<em>Network node</em>): 
+	      <li>nova-api: Encargado de aceptar las peticiones de los usuarios
+		o del resto de componentes de OpenStack mediante una API
+		RESTful</li>
+	      <li>nova-scheduler: Encargado de planificar la ejecución de las
+	      instancias en los diferentes nodos del cloud</li>
+	      <li>nova-compute: Encargado de ejecutar una instancia sobre un
+	      hipervisor</li>
+	      <li>nova-console: Encargado de proporcionar consola de acceso a
+	      las instancias</li>
+	      <li><strike>nova-network</strike>: Antiguo componente encargado de
+	      la configuración de las redes. Sustituido por neutron</li>
+	      <li><strike>nova-volume</strike>: Antiguo componente encargado de
+	      la gestión de los volúmenes. Sustituido por cinder</li>
+	    </ul>
+	  </section>
