@@ -46,14 +46,14 @@ tema: solarized
 <section>
   <h2>Redes. Dispositivos de interconexión</h2>
   <ul>
-    <li>Pueden utilizarse switches convencionales que simplemente conecten los
- nodos del cloud. Toda la configuración de redes virtuales puede hacerse por
- software</li>
-    <li>Puede optarse por utilizar dispositivos de mayor categoría que trabajen
+    <li>La opción más sencilla es utilizar switches convencionales que
+ simplemente conecten los nodos del cloud. Toda la configuración de redes
+ virtuales puede hacerse por software</li>
+    <li>Otra opción es utilizar dispositivos de mayor categoría que trabajen
  de forma coordinada con el software y controladores específicos para conseguir
- mayor rendimiento y control. Como en el caso  de algunos dispositivos
+ mayor rendimiento y control, como en el caso  de algunos dispositivos
  de <a href="http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-727737.html">Cisco</a>
- o <a href="http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html">juniper</a></li>
+ o <a href="http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html">Juniper</a></li>
     <li>Para centros de datos y clouds de mayor tamaño hay que estudiar la
  posibilidad de realizar un cambio íntegro de arquitectura de red,
  hacia <a href="http://blog.movingonesandzeros.net/2013/05/cisco-nexus-part-2-design-basics.html">spine-leaf</a></li>
@@ -70,7 +70,7 @@ tema: solarized
     <li>La cantidad de RAM de los nodos de computación condicionará el número de
     instancias a ejecutar en cada nodo</li>
     <li>En los nodos de computación es necesario disponer de procesadores
-    multicore y en Intel hyper-threading:
+    multicore y en Intel Hyper-Threading, por ejemplo:
     <ul>
     <li>AMD
     Opteron <a href="http://www.amd.com/en-gb/products/server/6000/6200#">Interlagos</a>
@@ -81,14 +81,43 @@ tema: solarized
     o <a href="http://ark.intel.com/products/codename/42174/haswell#@Server">Haswell</a></li>
     </ul>
     </li>
+    <li>El nodo de red conecta todas las redes virtuales con el exterior y por
+    tanto debe tener interfaces de red ajustadas al tamaño del cloud para no
+    provocar cuellos de botella</li>
   </ul>
 </section>
 <section>
+  <h2>Almacenamiento. Unidades</h2>
+  <ul>
+    <li>Hay principalmente tres tipos de unidades de almacenamiento: SATA, SAS y
+    SSD, que se diferencian en capacidad de almacenamiento, cantidad de
+    operaciones de entrada y salida por segundo (iops) y precio:
+      <ul>
+	<li>SATA HD (7200 ó 10000 rpm): Hasta 4 TiB de almacenamiento, bus de 3
+	  Gbps y hasta 100 IOPS</li>
+	<li>SAS HD (10000 ó 15000 rpm): Hasta 900 GiB de almacenamiento, bus de 6
+	  Gbps y hasta 150 IOPS</li>
+	<li>SSD: Están aumentando rápidamente su capacidad de almacenamiento que
+	  hace poco estaba limitada a 256 GiB. Ya hay unidades SSD en el mercado
+	  de 1 ó 2 TiB, bus de 3 ó 6 Gbps y desde 1000 hasta 100.000 IOPS (!)</li>
+      </ul>
+    </li>
+    <li>El precio es directamente proporcional al orden anterior</li>
+    <li>Las unidades SSD no tienen aún la fiabilidad de los discos SATA
+    Enterprise o SAS.</li>
+    <li>Las unidades SSD consumen mucho menos que los discos SATA o SAS</li>
+    <li>Cuando sea posible y el presupuesto lo permita se suele optar por
+    SSD, aunque en casos de que no se precise alto rendimiento y sí mucha
+    capacidad se opta por discos SATA.</li>
+    <li>SAS quedaría para los casos en que no necesitamos gran almacenamiento,
+    ni alto rendimiento y las unidades fueran más económicas que SSD, pero el
+    margen es cada vez menor.</li>
+</section>
+<section>
   <h2>Almacenamiento. Dispositivos específicos</h2>
+  <ul>
+    <li>
 </section>
 <section>
   <h2>Almacenamiento. Servidores</h2>
-</section>
-<section>
-  <h2>Almacenamiento. Unidades</h2>
 </section>
