@@ -5,6 +5,7 @@ tema: solarized
 ---
 <section>
   <h1>Hardware</h1>
+  <h3>Características para utilizar OpenStack</h3>
   <p>
     <small><a href="http://albertomolina.wordpress.com">Alberto Molina
 	Coballes</a> / <a
@@ -94,15 +95,13 @@ tema: solarized
 	  Gbps y hasta 100 IOPS</li>
 	<li>SAS HD (10000 ó 15000 rpm): Hasta 900 GiB de almacenamiento, bus de 6
 	  Gbps y hasta 150 IOPS</li>
-	<li>SSD: Están aumentando rápidamente su capacidad de almacenamiento que
-	  hace poco estaba limitada a 256 GiB. Ya hay unidades SSD en el mercado
-	  de 1 ó 2 TiB, bus de 3 ó 6 Gbps y desde 1000 hasta 100.000 IOPS (!)</li>
+	<li>SSD: Ya hay unidades SSD en el mercado de 1 ó 2 TiB, bus de 3 ó 6
+	Gbps y desde 1000 hasta 100.000 IOPS (!)</li>
       </ul>
     </li>
     <li>El precio es directamente proporcional al orden anterior</li>
     <li>Las unidades SSD no tienen aún la fiabilidad de los discos SATA
-    Enterprise o SAS.</li>
-    <li>Las unidades SSD consumen mucho menos que los discos SATA o SAS</li>
+    Enterprise o SAS, aunque consumen mucho menos.</li>
     <li>Cuando sea posible y el presupuesto lo permita se suele optar por
     SSD, aunque en casos de que no se precise alto rendimiento y sí mucha
     capacidad se opta por discos SATA.</li>
@@ -111,13 +110,13 @@ tema: solarized
     margen es cada vez menor.</li>
 </section>
 <section>
-  <h2>Almacenamiento. Dispositivos específicos</h2>
+  <h2>Almacenamiento</h2><h2>Equipos específicos</h2>
   <ul>
-    <li>Es habitual en centros de datos utilizar dispositivos específicos para
+    <li>Es habitual en centros de datos utilizar equipos específicos para
     el almacenamiento.</li>
-    <li>Una gran parte de los fabricantes de estos dispositivos pertenecen a la
-    OpenStack Foundation y por tanto sus dispositivos están soportados o van a
-    estarlo en OpenStack</li>
+    <li>Una gran parte de los fabricantes de estos dispositivos (NetApp, EMC,
+    etc.) pertenecen a la OpenStack Foundation y por tanto sus dispositivos
+    están soportados o van a estarlo en OpenStack</li>
     <li>Pueden utilizarse estos dispositivos
     para <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">almacenamiento
     de volúmenes con cinder</a> y/o almacenamiento distribuido o no de los
@@ -130,11 +129,11 @@ tema: solarized
   <h2>Almacenamiento. Servidores</h2>
   <ul>
     <li>De forma alternativa a lo anterior, puede optarse por utilizar
-    servidores en los que se instala alguna variedad de GNU/Linux y se configura
-    el almacenamiento por software</li>
-    <li>En esos casos se suelen utilizar servidores con chasis con muchas bahías
+    servidores en los que se instala algún sistema operativo y se configura el
+    almacenamiento por software</li>
+    <li>En esos casos se suelen utilizar servidores con chasis con varias bahías
     para discos duros extraíbles en caliente y un backplane que permita
-    conectarlos todos a la placa</li>
+    conectarlos todos a la placa base</li>
     <li>Puede optarse por utilizar controladoras RAID hardware o configurar el
     RAID por software (en ese caso es necesario que la controladora de disco
     soporte el modo JBOD)</li>
