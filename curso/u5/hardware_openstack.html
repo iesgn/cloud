@@ -113,9 +113,30 @@ tema: solarized
 <section>
   <h2>Almacenamiento. Dispositivos específicos</h2>
   <ul>
-    <li></li>
+    <li>Es habitual en centros de datos utilizar dispositivos específicos para
+    el almacenamiento.</li>
+    <li>Una gran parte de los fabricantes de estos dispositivos pertenecen a la
+    OpenStack Foundation y por tanto sus dispositivos están soportados o van a
+    estarlo en OpenStack</li>
+    <li>Pueden utilizarse estos dispositivos
+    para <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">almacenamiento
+    de volúmenes con cinder</a> y/o almacenamiento distribuido o no de los
+    sistemas de ficheros de las instancias</li>
+    <li>La mayor parte de estos dispositivos no incluyen soporte de
+    almacenamiento de objetos directamente.</li>
   </ul>
 </section>
 <section>
   <h2>Almacenamiento. Servidores</h2>
+  <ul>
+    <li>De forma alternativa a lo anterior, puede optarse por utilizar
+    servidores en los que se instala alguna variedad de GNU/Linux y se configura
+    el almacenamiento por software</li>
+    <li>En esos casos se suelen utilizar servidores con chasis con muchas bahías
+    para discos duros extraíbles en caliente y un backplane que permita
+    conectarlos todos a la placa</li>
+    <li>Puede optarse por utilizar controladoras RAID hardware o configurar el
+    RAID por software (en ese caso es necesario que la controladora de disco
+    soporte el modo JBOD)</li>
+  </ul>
 </section>
