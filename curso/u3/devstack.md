@@ -17,7 +17,7 @@ La configuración de los servicios de OpenStack que se van a instalar se definen
 
 Para la instalación en una máquina virtual tenemos a nuestra disposición varios repositorio GitHub, que nos facilitan la tarea usando las herramientas de vagrant y ansible:  [vagrant-ansible-devstack]( https://github.com/xiaohanyu/vagrant-ansible-devstack) y [devstack-vm](https://github.com/lorin/devstack-vm).
 
-Para el presente curso hemos desarrollado un [repositorio GitHub](https://github.com/iesgn/devstack-havana-cursocloud.git) donde tenemos disponibles los ficheros de instalación, para intalar devstack en una máquina virtual (basado en el repositorio [devstack-vm](https://github.com/lorin/devstack-vm)) o en una física. 
+Para el presente curso hemos desarrollado un [repositorio GitHub](https://github.com/iesgn/devstack-havana-cursocloud.git) donde tenemos disponibles los ficheros de instalación para instalar devstack en una máquina virtual (basado en el repositorio [devstack-vm](https://github.com/lorin/devstack-vm)) o en una física. 
 
 * [Presentación: Implantación de la infraestructura de prueba OpenStack. DevStack](presentacion_devstack)
 
