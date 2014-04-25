@@ -116,32 +116,31 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 			<h2>¿Qué hacemos cuando hemos terminado?</h2>
 			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
 			<pre><code>
-vagrant ssh
+$ cd devstack-havana-cursocloud
+$ vagrant ssh
+
 $ cd devstack
 $ ./unstack.sh
 		       </code></pre>
 			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
 			<pre><code>
-vagrant ssh
+$ cd devstack-havana-cursocloud
+$ vagrant ssh
+
 $ cd devstack
 $ kpartx -va /opt/stack/data/cinder....
 $ source openrc
 $ source functions
 $ ./rejoin-stack.sh &
 			</code></pre>
-			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack:</p>
-			<pre><code>
-vagrant ssh
-$ cd devstack
-$ ./stack.sh
-			</code></pre>
-
 		  </section>
 		  <section>
 			<h2>Y si algo falla...</h2>
 			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack (tardará menos que la inslación incial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
-vagrant ssh
+$ cd devstack-havana-cursocloud
+$ vagrant ssh
+
 $ cd devstack
 $ ./stack.sh
 			</code></pre>
