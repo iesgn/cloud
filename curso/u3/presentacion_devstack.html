@@ -59,6 +59,7 @@ tema: solarized
 
 # apt-get install python-pip python-dev
 # pip install ansible
+
 ; Como usuario sin privilegio nos bajamos el box precise64
 $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 		</code></pre>
@@ -66,20 +67,21 @@ $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 		<section>
 			<h2>Realizando la instalación</h2>
 			<pre><code>
-$ git clone hhttps://github.com/iesgn/devstack-havana-cursocloud
+$ git clone https://github.com/iesgn/devstack-havana-cursocloud
 $ cd devstack-havana-cursocloud
 $ chmod 0600 id_vagrant
 $ vagrant up
 		        </code></pre>
 			<ul>
-				<li>Arranca una máquiba virtual Ubuntu 12.04</li>
+				<li>Arranca una máquina virtual Ubuntu 12.04</li>
 				<li>Clona el repositorio devstack dentro de la máquina</li>
-				<li>Instala el devstack en la máuina (stack.sh)</li>
+				<li>Instala el devstack en la máquina (stack.sh)</li>
 			</ul>
 			<p>La máquina virtual por defento tiene 4 Gb de RAM si quieres cambiarlo antes de ejecutar la intalación modifica el fichero Vagrantfile:</p>
 			<pre><code>
 vb.customize ["modifyvm", :id, "--memory", 4096]		
 		        </code></pre>
+			<h3>¡¡¡ Nos tomamos un cafe!!!</h3>
 
 		  </section>
 	  </section>
