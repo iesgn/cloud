@@ -65,7 +65,7 @@ $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 		</code></pre>
 		</section>
 		<section>
-			<h2>Realizando la instalación</h2>
+			<h3>Realizando la instalación</h3>
 			<pre><code>
 $ git clone https://github.com/iesgn/devstack-havana-cursocloud
 $ cd devstack-havana-cursocloud
@@ -85,7 +85,7 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 
 		  </section>
 		  <section>
-			<h2>Accediendo a OpenStack</h2>
+			<h3>Accediendo a OpenStack</h3>
 			<ul>
 				<li>http://192.168.27.100</li>
 				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
@@ -104,7 +104,7 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 			</ul>
 		  </section>
 		  <section>
-			<h2>¿Las instancias tienen internet?</h2>
+			<h3>¿Las instancias tienen internet?</h3>
 			<p>Por defecto las instancias no tienen acceso a internet. Si queremos tener esta funcionalidad hay que configurar la máquina host para que haga NAT, para ello como root ejecuta:</p>
 			<pre><code>
 echo 1 > /proc/sys/net/ipv4/ip_forward
@@ -113,7 +113,7 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 		  </section>
 		  <section>
-			<h2>Al terminar de trabajar...</h2>
+			<h3>Al terminar de trabajar...</h3>
 			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
 			<pre><code>
 $ cd devstack-havana-cursocloud
@@ -135,7 +135,7 @@ $ ./rejoin-stack.sh &
 			</code></pre>
 		  </section>
 		  <section>
-			<h2>Y si algo falla...</h2>
+			<h3>Y si algo falla...</h3>
 			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack (tardará menos que la inslación incial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
 $ cd devstack-havana-cursocloud
