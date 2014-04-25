@@ -27,9 +27,9 @@ Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, ve
 |     |DevStack|RDO|OpenStack-ansible|
 |:---:|--------|---|-----------------|
 |**Instalación**|En máquina física o en máquina virtual|En máquina física|En 4 máquinas virtuales|
-|**Versión OpenStack**|Grizzly o Havana|Havana|Havana|
-|**Servicios Openstack**|Configuración básica (nova, cinder, glance, keystone, swift, horizon); Configuración completa(se añaden los servicios de quantum, heat y ceilometer)|Todos|Todos|
-|**Vagrant - Ansible**|Se puede utilizar el siguiente [repositorio GitHub](https://github.com/xiaohanyu/vagrant-ansible-devstack) o se puede instalar manualmente|No|Si|
-|**Ventajas**|Utilizando el repositorio github, la instalación es muy sencilla. Se puede instalar grizzly o havana, y se puede hacer una configuración básica o una completa|Fácil de instalar y creo que muy depurado. Buen rendimiento. Puede ser perfecto para un entorno de pruebas|Entorno de pruebas muy cercano al real, con nodo de red, nodo de almacenamiento, etc. Es muy adecuado para luego pasarlo a entorno real|
-|**Incovenientes**|No es totalmente real porque el controlador tiene todos los componentes. La instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal instalarlo sobre una máquina física|No es totalmente real porque el controlador tiene todos los componentes (incluso compute). No sé lo difícil que puede ser modificarlo para un entorno real|Al utilizarse sobre MVs tiene peor rendimiento y es más exigente en cuanto a requisitos de Hardware|
+|**Versión OpenStack**|Havana o Ice House|Havana|Havana|
+|**Servicios Openstack**|Se pueden configurar de una manera fácil los servicios que queremos ofrecer|Todos|Todos|
+|**Vagrant - Ansible**|Para la instalación en una máquina virtual existen repositorios donde encontramos las recetas|No|Si|
+|**Ventajas**|La instalación y configuración es muy sencilla. Se puede instalar distintas versiones.|Fácil de instalar y creo que muy depurado. Buen rendimiento. Puede ser perfecto para un entorno de pruebas|Entorno de pruebas muy cercano al real, con nodo de red, nodo de almacenamiento, etc. Es muy adecuado para luego pasarlo a entorno real|
+|**Incovenientes**|No es totalmente real porque el controlador tiene todos los componentes. La instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal es instalarlo sobre una máquina física|No es totalmente real porque el controlador tiene todos los componentes (incluso compute). No sé lo difícil que puede ser modificarlo para un entorno real|Al utilizarse sobre MVs tiene peor rendimiento y es más exigente en cuanto a requisitos de Hardware|
 
