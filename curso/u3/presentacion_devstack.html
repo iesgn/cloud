@@ -46,6 +46,23 @@ tema: solarized
 				<li>Andible instalado</li>
 			</ul>
 		</section>
+		<section>
+		<pre><code>
+; Como root
+# apt-get install git
+
+# apt-get install virtualbox
+
+# wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.4.3_x86_64.deb
+# dpkg -i vagrant_1.4.3_x86_64.deb
+
+
+# apt-get install python-pip python-dev
+# pip install ansible
+; Como usuario sin privilegio nos bajamos el box precise64
+$ vagrant box add precise64 http://files.vagrantup.com/precise64.box
+		</pre></code>
+		</section>
 	  </section>
 	  <section>
 		<h2>Realizando la instalación</h2>
