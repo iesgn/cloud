@@ -75,7 +75,7 @@ $ vagrant up
 			<ul>
 				<li>Arranca una máquina virtual Ubuntu 12.04</li>
 				<li>Clona el repositorio devstack dentro de la máquina</li>
-				<li>Instala el devstack (verrsión havana) en la máquina (stack.sh)</li>
+				<li>Instala el devstack (versión havana) en la máquina (stack.sh)</li>
 			</ul>
 			<small>La máquina virtual tiene 4 Gb de RAM si quieres cambiarlo, antes de ejecutar la intalación, modifica el fichero Vagrantfile:</small>
 			<pre><code>
@@ -84,7 +84,26 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 			<h3>¡¡¡ Nos tomamos un cafe!!!</h3>
 
 		  </section>
+		  <section>
+			<h2>Accediendo a OpenStack</h2>
+			<ul>
+				<li>http://192.168.27.100</li>
+				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
+				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
+				<li>Credenciales en la máquina virtual:</li>
+				<ul>
+					<li><pre>source openrc demo demo</pre></li>
+				<ul>
+				<li>Credenciales en en el host:</li>
+			</ul>
+		  </section>
+	
 	  </section>
+	  <section>
+	   	<section>
+			<h2>Instalación en una máquina física</h2>
+		</section>
+	</section>
 	  
 	  
 	  <section>
