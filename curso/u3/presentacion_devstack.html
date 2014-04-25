@@ -43,7 +43,7 @@ tema: solarized
 				<li>Virtualbox instalado (versión de debian wheezy 4.1.18) </li>
 				<li>Vagrant instalado (1.5.1)</li>
 				<li>Box precise64</li>
-				<li>Andible instalado</li>
+				<li>Ansible instalado</li>
 			</ul>
 		</section>
 		<section>
@@ -61,34 +61,29 @@ tema: solarized
 # pip install ansible
 ; Como usuario sin privilegio nos bajamos el box precise64
 $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
-		</pre></code>
+		</code></pre>
 		</section>
-	  </section>
-	  <section>
-		<h2>Realizando la instalación</h2>
-		<pre><code>
-git clone https://github.com/xiaohanyu/vagrant-ansible-devstack.git
-	    </code>
-		</pre>
-		<p>	Configuramos la instalación (devstack/devstack.yml):</p>
-		<ul>
-		<li>Versión de Openstack</li>
+		<section>
+			<h2>Realizando la instalación</h2>
+			<pre><code>
+$ git clone hhttps://github.com/iesgn/devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud
+$ chmod 0600 id_vagrant
+$ vagrant up
+		        </code></pre>
 			<ul>
-			<li>branch: master</li>
-			<li>branch: stable/havana</li>
-			<li>branch: stable/icehouse</li>
+				<li>Arranca una máquiba virtual Ubuntu 12.04</li>
+				<li>Clona el repositorio devstack dentro de la máquina</li>
+				<li>Instala el devstack en la máuina (stack.sh)</li>
 			</ul>
-		<li>Componentes de OpenStack</li>
-			<ul>
-				<li>localrc.basic: nova, cinder, glance, swift, keystone y horizon</li>
-				<li>localrc.full: + neutron, heat y ceilometer</li>
-			</ul>
-		</ul>
-		<pre><code>
-vagrant up
-	    </code>
-		</pre>
+			<p>La máquina virtual por defento tiene 4 Gb de RAM si quieres cambiarlo antes de ejecutar la intalación modifica el fichero Vagrantfile:</p>
+			<pre><code>
+vb.customize ["modifyvm", :id, "--memory", 4096]		
+		        </code></pre>
+
+		  </section>
 	  </section>
+	  
 	  
 	  <section>
 		<h2>Accediendo a OpenStack</h2>
