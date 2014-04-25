@@ -11,16 +11,20 @@ menu:
 DevStack es un conjunto de script bash que nos permiten instalar OpenStack de forma automática. Tenemos varias formas de realizar la instalación:
 
 * En una máquina física
-* En una máquina virtual, podemos usar el repositorio GitHub [https://github.com/xiaohanyu/vagrant-ansible-devstack]( https://github.com/xiaohanyu/vagrant-ansible-devstack).
+* En una máquina virtual
 
-La instlación se realiza en un único nodo, y se puede seleccionar la versión de OpenStack que vamos a instalr: Grizzly o Havana.
-Además podemos decidir hacer una instlación básica (nova, cinder, glance, swift, keystone y horizon) o completa (se añaden los componentes neutron, heat y ceilometer).
+La configuración de los servicios de OpenStack que se van a instalar se definen en un fichero de configuración de una forma muy sencilla. La instalación se realiza en un único nodo (aunque se puede realiza en multi-nodo), y se puede seleccionar la versión de OpenStack que vamos a instalar, en la actualidad, havana o ice house. Hay que tener en cuenta que la instalación sobre una máquina virtual ofrece menos rendimiento, lo ideal es instalarlo sobre una máquina física.
+
+Para la instalación en una máquina virtual tenemos a nuestra disposición varios repositorio GitHub, que nos facilitan la tarea usando las herramientas de vagrant y ansible:  [vagrant-ansible-devstack]( https://github.com/xiaohanyu/vagrant-ansible-devstack) y [devstack-vm](https://github.com/lorin/devstack-vm).
+
+Para el presente curso hemos desarrollado un [repositorio GitHub](https://github.com/iesgn/devstack-havana-cursocloud.git) donde tenemos disponibles los ficheros de instalación, para intalar devstack en una máquina virtual (basado en el repositorio [devstack-vm](https://github.com/lorin/devstack-vm)) o en una física. 
 
 * [Presentación: Implantación de la infraestructura de prueba OpenStack. DevStack](presentacion_devstack)
-* [Instalando OpenStack en mi portátil (2ª parte): DevStack](http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/)
 
 ###Enlaces interesantes
 
 * [Devstack](http://devstack.org/)
 * [Devstack en GitHub](https://github.com/openstack-dev/devstack)
 * [https://github.com/xiaohanyu/vagrant-ansible-devstack]( https://github.com/xiaohanyu/vagrant-ansible-devstack)
+* [https://github.com/lorin/devstack-vm](https://github.com/lorin/devstack-vm)
+* [Instalando OpenStack en mi portátil (2ª parte): DevStack](http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/)
