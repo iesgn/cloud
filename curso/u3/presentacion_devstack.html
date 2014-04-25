@@ -103,6 +103,40 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 
 			</ul>
 		  </section>
+		  <section>
+			<h2>¿Las instancias tienen internet?</h2>
+			<p>Por defecto las instancias no tienen acceso a internet. Si queremos tener esta funcionalidad hay que configurar la máquina host para que haga NAT, para ello como root ejecuta:</p>
+			<pre><code>
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+		       </code></pre>
+
+		  </section>
+		  <section>
+			<h2>¿Qué hacemos cuando hemos terminado?</h2>
+			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
+			<pre><code>
+vagrant ssh
+$ cd devstack
+$ ./unstack.sh
+		       </code></pre>
+			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
+			<pre><code>
+vagrant ssh
+$ cd devstack
+$ kpartx -va /opt/stack/data/cinder....
+$ source openrc
+$ source functions
+$ ./rejoin-stack.sh &
+			</code></pre>
+			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack:</p>
+			<pre><code>
+vagrant ssh
+$ cd devstack
+$ ./stack.sh
+			</code></pre>
+
+		  </section>
 	
 	  </section>
 	  <section>
@@ -112,30 +146,5 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 	</section>
 	  
 	  
-	  <section>
-		<h2>Accediendo a OpenStack</h2>
-		<ul>
-			<li>http://192.168.27.100</li>
-			<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
-			<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
-			<li>Credenciales en la máquina virtual: openrc</li>
-		</ul>
-	  </section>
 	 
-	  <section>
-		<h2>¿Qué hacemos cuando hemos terminado?</h2>
-		<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
-			<pre><code>
-vagrant ssh
-# cd devstack
-# ./unstack.sh
-	    </code>
-		</pre>
-		<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
-		<pre><code>
-vagrant ssh
-# cd devstack
-# ./rejoin-stack.sh
-	    </code>
-		</pre>
-	  </section>
+
