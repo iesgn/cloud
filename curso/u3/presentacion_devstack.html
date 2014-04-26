@@ -38,8 +38,8 @@ tema: solarized
 		<section>
 			<h3>¿Qué necesito?</h3>
 			<ul>
-				<li>Equipo necesario: RAM 2Gb y procesador VT-x/AMD-v</li>
-				<li>Git instaldo</li>
+				<li>Equipo necesario: RAM 3Gb y procesador VT-x/AMD-v</li>
+				<li>Git instalado</li>
 				<li>Virtualbox instalado (versión de debian wheezy 4.1.18) </li>
 				<li>Vagrant instalado (1.5.1)</li>
 				<li>Box precise64</li>
@@ -68,7 +68,7 @@ $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 			<h3>Realizando la instalación</h3>
 			<pre><code>
 $ git clone https://github.com/iesgn/devstack-havana-cursocloud
-$ cd devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud/MV
 $ chmod 0600 id_vagrant
 $ vagrant up
 		        </code></pre>
@@ -116,7 +116,7 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 			<h3>Al terminar de trabajar...</h3>
 			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
 			<pre><code>
-$ cd devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
@@ -124,11 +124,11 @@ $ ./unstack.sh
 		       </code></pre>
 			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
 			<pre><code>
-$ cd devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
-$ kpartx -va /opt/stack/data/cinder....
+$ kpartx -va /opt/stack/data/stack-volumes-backing-file
 $ source openrc
 $ source functions
 $ ./rejoin-stack.sh &
@@ -138,7 +138,7 @@ $ ./rejoin-stack.sh &
 			<h3>Y si algo falla...</h3>
 			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la inslación inicial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
-$ cd devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
@@ -152,6 +152,84 @@ $ ./stack.sh
 	   	<section>
 			<h2>Instalación en una máquina física</h2>
 		</section>
+		<section>
+			<h3>¿Qué necesito?</h3>
+			<ul>
+				<li>Equipo necesario: RAM 2Gb y procesador VT-x/AMD-v</li>
+				<li>Git instalado</li>
+			</ul>
+			<pre><code>
+; Como root
+# apt-get install git
+			</code></pre>
+		</section>
+		
+		<section>
+			<h3>Realizando la instalación</h3>
+			<pre><code>
+$ git clone https://github.com/iesgn/devstack-havana-cursocloud
+$ cd devstack-havana-cursocloud/MF
+$ chmod 755 instalar.sh
+$ ./instalar.sh
+		        </code></pre>
+			<ul>
+				<li>Clona el repositorio devstack dentro de la máquina</li>
+				<li>Instala el devstack (versión havana) en la máquina (stack.sh)</li>
+			</ul>
+			<h3>¡¡¡ Nos tomamos un cafe!!!</h3>
+
+		  </section>
+		  <section>
+			<h3>Accediendo a OpenStack</h3>
+			<ul>
+				<li>http://localhost</li>
+				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
+				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
+				<li>Credenciales en ekl directorio devstcak:</li>
+				<ul>
+					<li><pre>source openrc demo demo</pre></li>
+					<li><pre>source openrc admin admin</pre></li>
+				</ul>
+
+			</ul>
+		  </section>
+		  <section>
+			<h3>¿Las instancias tienen internet?</h3>
+			<p>Por defecto las instancias no tienen acceso a internet. Si queremos tener esta funcionalidad hay que configurar la máquina host para que haga NAT, para ello como root ejecuta:</p>
+			<pre><code>
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+		       </code></pre>
+
+		  </section>
+		  <section>
+			<h3>Al terminar de trabajar...</h3>
+			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
+			<pre><code>
+$ cd devstack
+$ ./unstack.sh
+		       </code></pre>
+			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
+			<pre><code>
+$ cd devstack
+$ kpartx -va /opt/stack/data/cinder....
+$ source openrc
+$ source functions
+$ ./rejoin-stack.sh &
+			</code></pre>
+		  </section>
+		  <section>
+			<h3>Y si algo falla...</h3>
+			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la inslación inicial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
+			<pre><code>
+$ cd devstack
+$ ./stack.sh
+			</code></pre>
+
+		  </section>
+	</section>
+	<section>
+		<h2>Los siguientes pasos...</h2>
 	</section>
 	  
 	  
