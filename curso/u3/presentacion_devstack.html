@@ -128,7 +128,7 @@ $ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
-$ kpartx -va /opt/stack/data/stack-volumes-backing-file
+$ sudo kpartx -va /opt/stack/data/stack-volumes-backing-file
 $ source openrc functions
 $ ./rejoin-stack.sh &
 			</code></pre>
@@ -212,7 +212,7 @@ $ ./unstack.sh
 			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
 			<pre><code>
 $ cd devstack
-$ kpartx -va /opt/stack/data/stack-volumes-backing-file
+$ sudo kpartx -va /opt/stack/data/stack-volumes-backing-file
 $ source openrc functions
 $ ./rejoin-stack.sh &
 			</code></pre>
