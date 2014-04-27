@@ -96,34 +96,64 @@ tema: solarized
   </ul>
 </section>
 <section>
+  <h2>OpenStack. Arquitectura lógica</h2>
+  <img src="img/logical-dia-openstack.jpg" alt="logical-dia-openstack"/>
+</section>
 <section>
   <h2>Cloud con un solo nodo</h2>
   <ul>
     <li>Utilizado para pruebas</li>
     <li>Todos los componentes se instalan en un solo equipo</li>
+    <li>Recomendado para conocer OpenStack</li>
+    <li>Fácil instalación</li>
   </ul>
 </section>
 <section>
-  <h2>Controlador + n nodos de computación</h2>
+  <h2>1 Controlador + n Computación</h2>
   <ul>
-    <li>Expresión mínima de cloud de infraestructura</li>
     <li>En el nodo controlador se instalan los componentes de los nodos de red y
     almacenamiento</li>
+    <li>Se utiliza uno o varios equipos potentes como nodos de computación</li>
     <li>Fácilmente ampliable añadiendo nodos de computación</li>
-    <p><img src="img/esquema1.png" alt="esquema 1"/></p>
   </ul>
 </section>
 <section>
-  <h2>Controlador + Red + Computación</h2>
+  <h2>1 Controlador + n Computación</h2>
+  <img src="img/esquema1.png" alt="esquema 1"/>
+</section>
+<section>
+  <h2>1 Controlador + 1 Red + n Computación</h2>
+  <ul>
+    <li>Un nodo de red con todos los componentes de neutron</li>
+    <li>Uno o varios nodos de computación donde se ejecutan las instancias</li>
+    <li>Un nodo controlador con el resto de componentes</li>
+  </ul>
+</section>
+<section>
+  <h2>1 Controlador + 1 Red + n Computación</h2>
+  <img src="img/esquema2.png" alt="esquema 2"/>
 </section>
 <section>
   <h2>
-    <h2>Controlador + Red + Computación + Almacenamiento</h2>
+    <h2>1 Controlador + 1 Red + n Computación + Almacenamiento</h2>
+    <ul>
+    <li>Un nodo de red con todos los componentes de neutron</li>
+    <li>Uno o varios nodos de computación donde se ejecutan las instancias</li>
+    <li>Un nodo con Cinder, Glance y en su caso Swift</li>
+    <li>Opcionalmente varios nodos más para swift, gluster o ceph como solución
+    de almacenamiento distribuida</li>
+    <li>Un nodo controlador con el resto de componentes</li>
+</section>
+<section>
+    <h2>1 Controlador + 1 Red + n Computación + Almacenamiento</h2>
+    <img src="img/esquema3.png" alt="esquema 3"/>
 </section>
 <section>
   <h2>Alta disponibilidad</h2>
   <ul>
-    <li>Eliminación de SPOF</li>
+    <li>Eliminación de SPOF:
+      <li>Duplicación de los nodos de red y controlador</li>
+      <li>Duplicación de los dispositivos de red</li>
     <li>Servicios Stateless o Stateful</li>
     <li>Inclusión de pacemaker y corosync</li>
     <li>Almacenamiento distribuido</li>
