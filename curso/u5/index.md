@@ -47,5 +47,7 @@ de [GPLHost](http://www.gplhost.com/software-openstack.html).
 ####Infraestructura para OpenStack
 
 [Componentes de OpenStack](componentes_openstack.html)
+
 [Hardware](hardware_openstack.html)
+
 [Ejemplos de arquitectutura](arquitectura_openstack.html)
