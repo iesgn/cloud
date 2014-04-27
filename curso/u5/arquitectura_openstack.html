@@ -22,21 +22,111 @@ tema: solarized
     </small>
   </p>
 </section>
-	  <section>
-	    <h2>Tipos de nodos</h2>
-	    <ul>
-	      <li>Un cloud de OpenStack se compone de varios equipos (nodos) con
-	      diferentes funciones dependiendo de los componentes de OpenStack
-	      que tenga instalados</li>
-	      <li>Nodo controlador (<em>Controller node</em>): Nodo encargado de
-	      la gestión de las instancias con nova y de la orquestación del
-	      resto de componentes</li>
-	      <li>Nodo de computación (<em>Compute node</em>): Nodo encargado de
-	      la ejecución de las instancias como máquinas virtuales sobre un
-	      hipervisor.</li>
-	      <li>Nodo de red (<em>Network node</em>): Nodo encargado de la
-	      comunicación de las redes internas con el exterior</li>
-	      <li>Nodo de almacenamiento (<em>storage node</em>): Nodo encargado
-	      de la gestión del almacenamiento.</li>
-	    </ul>
-	  </section>
+<section>
+  <h2>Tipos de nodos</h2>
+  <ul>
+    <li>Un cloud de OpenStack se compone de varios equipos (nodos) con
+      diferentes funciones dependiendo de los componentes de OpenStack
+      que tenga instalados</li>
+    <li>Nodo controlador (<em>Controller node</em>): Nodo encargado de
+      la gestión de las instancias con nova y de la orquestación del
+      resto de componentes</li>
+    <li>Nodo de computación (<em>Compute node</em>): Nodo encargado de
+      la ejecución de las instancias como máquinas virtuales sobre un
+      hipervisor.</li>
+    <li>Nodo de red (<em>Network node</em>): Nodo encargado de la
+      comunicación de las redes internas con el exterior</li>
+    <li>Nodo de almacenamiento (<em>storage node</em>): Nodo encargado
+      de la gestión del almacenamiento.</li>
+  </ul>
+</section>
+<section>
+  <h2>Nodo de computación</h2>
+  <ul>
+    <li>En este nodo se instalan los siguientes componentes:
+      <ul>
+	<li>Hypervisor</li>
+	<li>Nova-compute</li>
+	<li>Plugin de red (OpenvSwitch por ejemplo)</li>
+      </ul>
+    <li>Configuración muy sencilla</li>
+    <li>Es muy fácil ampliar el número de nodos de computación en un cloud</li>
+  </ul>
+</section>
+<section>
+  <h2>Nodo de red</h2>
+  <ul>
+    <li>En este nodo se instalan todos los componentes de red:
+      <ul>
+	<li>neutron-dhcp</li>
+	<li>neutron-l3</li>
+	<li>neutron-metadata</li>
+	<li>neutron server</li>
+	<li>Plugins de red</li>
+      </ul>
+      <li>En el nodo de red se configura el bridge exterior para comunicar las
+      instancias con el exterior</li>
+  </ul>
+</section>
+<section>
+  <h2>Nodo de almacenamiento</h2>
+  <ul>
+    <li>Los componentes que se instalen dependen mucho de la opción de
+    almacenamiento elegida</li>
+    <li>De forma general podríamos instalar los componentes de Glance, cinder y
+    Swift</li>
+  </ul>
+</section>
+<section>
+  <h2>Nodo controlador</h2>
+  <ul>
+    <li>Se instalan los componentes de nova que controlan y gestionan el cloud:
+    nova-api y nova-scheduler</li>
+    <li>Otros componentes que suelen instalarse en este nodo:
+      <ul>
+	<li>Keystone</li>
+	<li>Servidor de bases de datos</li>
+	<li>Servidor AMQP</li>
+	<li>Horizon</li>
+	<li>nova-consoleproxy</li>
+	<li>Ceilometer</li>
+	<li>Heat</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+<section>
+  <h2>Cloud con un solo nodo</h2>
+  <ul>
+    <li>Utilizado para pruebas</li>
+    <li>Todos los componentes se instalan en un solo equipo</li>
+  </ul>
+</section>
+<section>
+  <h2>Controlador + n nodos de computación</h2>
+  <ul>
+    <li>Expresión mínima de cloud de infraestructura</li>
+    <li>En el nodo controlador se instalan los componentes de los nodos de red y
+    almacenamiento</li>
+    <li>Fácilmente ampliable añadiendo nodos de computación</li>
+    <p><img src="img/esquema1.png" alt="esquema 1"/></p>
+  </ul>
+</section>
+<section>
+  <h2>Controlador + Red + Computación</h2>
+</section>
+<section>
+  <h2>
+    <h2>Controlador + Red + Computación + Almacenamiento</h2>
+</section>
+<section>
+  <h2>Alta disponibilidad</h2>
+  <ul>
+    <li>Eliminación de SPOF</li>
+    <li>Servicios Stateless o Stateful</li>
+    <li>Inclusión de pacemaker y corosync</li>
+    <li>Almacenamiento distribuido</li>
+    <li>Migración en vivo de instancias</li>
+  </ul>
+</section>

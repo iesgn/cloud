@@ -7,10 +7,6 @@ menu:
 
 ###Objetivos
 
-* Conocer el origen del proyecto que ha permitido el despliegue de la infraestructura de cloud computing en el IES Gonzalo Nazareno.
-* Conocer las principales características de la infraestructura de Cloud Computing montada en el IES Gonzalo Nazareno.
-* Visitar las instalaciones donde tenemos alojados los servidores.
-* Conocer las especificaciones técnicas del hardware de los servidores.
 * Introducir los conceptos fundamentales para utilizar OpenStack.
 * Utilizar el cloud computing del IES Gonzalo Nazareno.
 
@@ -23,11 +19,6 @@ El objetivo general de este proyecto es la inclusión de las tecnologías de clo
 
 Sitio web con todos los resultados del proyecto:
 [Cloud Computing con OpenStack en educación](http://www.gonzalonazareno.org/cloud/)
-
-El proyecto nos permitió obtener los recursos para la adquisición de los equipos necesarios para el montaje de la infraestructura de cloud computing.
-Podemos ver las características de los distintos equipos en el siguiente documento:
-
-* [Infraestructura para el cloud](http://www.gonzalonazareno.org/cloud/material/infraestructura.pdf)
 
 El software que elegido para la gestión del cloud fue OpenStack. La primera
 versión del software que se instaló fue OpenStack Essex (2012.1) sobre Debian
