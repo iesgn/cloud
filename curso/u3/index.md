@@ -15,7 +15,7 @@ menu:
 
 Vamos a presentar diferentes formas de instalar OpenStack en un entorno de pruebas en nuestro ordenador. Tendremos que discutir las ventajas e incovenientes de cada opción y decidir cúal puede ser la más válida para el curso. Las distintas opciones que tenemos disponibles son las siguientes:
 
-* [Devstav](devstack)
+* [Devstack](devstack)
 * [RDO](rdo)
 * [OpenStack-ansible](openstack-ansible)
 
