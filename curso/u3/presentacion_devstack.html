@@ -129,8 +129,7 @@ $ vagrant ssh
 
 $ cd devstack
 $ kpartx -va /opt/stack/data/stack-volumes-backing-file
-$ source openrc
-$ source functions
+$ source openrc functions
 $ ./rejoin-stack.sh &
 			</code></pre>
 		  </section>
@@ -213,9 +212,8 @@ $ ./unstack.sh
 			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
 			<pre><code>
 $ cd devstack
-$ kpartx -va /opt/stack/data/cinder....
-$ source openrc
-$ source functions
+$ kpartx -va /opt/stack/data/stack-volumes-backing-file
+$ source openrc functions
 $ ./rejoin-stack.sh &
 			</code></pre>
 		  </section>
