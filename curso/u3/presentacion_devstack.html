@@ -185,7 +185,7 @@ $ ./instalar.sh
 				<li>http://localhost</li>
 				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
 				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
-				<li>Credenciales en ekl directorio devstcak:</li>
+				<li>Credenciales en el directorio devstcak:</li>
 				<ul>
 					<li><pre>source openrc demo demo</pre></li>
 					<li><pre>source openrc admin admin</pre></li>
@@ -200,6 +200,7 @@ $ ./instalar.sh
 echo 1 > /proc/sys/net/ipv4/ip_forward
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 		       </code></pre>
+			<small>Modifica eth0 por la interfaz de red conectada a internet (por ejemplo si tienes WIFI será wlan0).</small>
 
 		  </section>
 		  <section>
@@ -234,8 +235,8 @@ $ ./stack.sh
 			<li>Crear sabores personales (por ejemplo, m1.enano con 256 Mb de RAM, otro m1.amedida con el parámetro "disco raíz" a 0). Esa operación la hacemos con el usuario admin.</li>
 			<li>Bajarnos una imagen de Ubuntu 12.04 y subirla al cloud (apartado Imágenes)</li>
 			<pre>http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img</pre>
-			<li>El usuario demo debe trabajar en el poryecto "demo", no en uno que se llama "invisible_to_admin"</li>
-			<li>Las reglas de seguridad que vienen definididas parecen que no funcionan. Crear al menos las dos siguientes:</li>
+			<li>El usuario demo debe trabajar en el proyecto "demo", no en uno que se llama "invisible_to_admin"</li>
+			<li>Las reglas de seguridad que vienen definidas parecen que no funcionan. Crear al menos las dos siguientes:</li>
 			<ul>
 				<li>Para hacer ping, una regla del tipo "ALL ICMP"</li>
 				<li>Para acceder por ssh, una regla del tipo SSH</li>
@@ -246,9 +247,9 @@ $ ./stack.sh
 	<section>
 		<h2>Ejercicio</h2>
 		<ol>
-			<li>Modifica las reglas de seguridad como se ha explicado aneriormente</li>
+			<li>Modifica las reglas de seguridad como se ha explicado anteriormente</li>
 			<li>Crea una instancia a partir de la imagen cirros</li>
-			<li>Asignale una ip flotante</li>
+			<li>Asígnale una ip flotante</li>
 			<li>Comprueba que se le puede hacer ping</li>
 			<li>Comprueba que se puede acceder por ssh. Usuario: cirros, password: cubswin:)</li>
 			<li>Una vez has accedido a la instancia comprueba que tiene internet (ping 8.8.8.8)</li>
