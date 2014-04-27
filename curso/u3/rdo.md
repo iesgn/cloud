@@ -37,6 +37,10 @@ utilización normal de OpenStack. Las contraseñas de ambos usuarios se encuentr
 definidas en los ficheros keystonerc_admin o keystonerc_demo ubicados en el
 directorio desde el que se ejecutó la instrucción packstack.
 
+La principal limitación que tiene la configuración automática de RDO con
+packstack es que no se puede acceder a las instancias desde un equipo exterior,
+ya que el bridge-exterior no está conectado a ninguna interfaz física.
+
 ### Enlaces interesantes
 
 [RDO](http://openstack.redhat.com/Main_Page)
