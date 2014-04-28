@@ -28,15 +28,15 @@ tema: solarized
     <li>Un cloud de OpenStack se compone de varios equipos (nodos) con
       diferentes funciones dependiendo de los componentes de OpenStack
       que tenga instalados</li>
-    <li>Nodo controlador (<em>Controller node</em>): Nodo encargado de
+    <li><strong>Nodo controlador</strong> (<em>Controller node</em>): Nodo encargado de
       la gestión de las instancias con nova y de la orquestación del
       resto de componentes</li>
-    <li>Nodo de computación (<em>Compute node</em>): Nodo encargado de
+    <li><strong>Nodo de computación</strong> (<em>Compute node</em>): Nodo encargado de
       la ejecución de las instancias como máquinas virtuales sobre un
       hipervisor.</li>
-    <li>Nodo de red (<em>Network node</em>): Nodo encargado de la
+    <li><strong>Nodo de red</strong> (<em>Network node</em>): Nodo encargado de la
       comunicación de las redes internas con el exterior</li>
-    <li>Nodo de almacenamiento (<em>storage node</em>): Nodo encargado
+    <li><strong>Nodo de almacenamiento</strong> (<em>storage node</em>): Nodo encargado
       de la gestión del almacenamiento.</li>
   </ul>
 </section>
@@ -48,6 +48,7 @@ tema: solarized
 	<li>Hypervisor</li>
 	<li>Nova-compute</li>
 	<li>Plugin de red (OpenvSwitch por ejemplo)</li>
+	<li>Cliente de protocolo de red de almacenamiento (iSCSI p. ej.)</li>
       </ul>
     <li>Configuración muy sencilla</li>
     <li>Es muy fácil ampliar el número de nodos de computación en un cloud</li>
@@ -73,8 +74,12 @@ tema: solarized
   <ul>
     <li>Los componentes que se instalen dependen mucho de la opción de
     almacenamiento elegida</li>
-    <li>De forma general podríamos instalar los componentes de Glance, cinder y
+    <li>De forma general podríamos instalar los componentes de Glance, Cinder y
     Swift</li>
+    <li>Servidores de protocolo de red de almacenamiento (iSCSI, FC, etc.)</li>
+    <li>Configuración, en su caso, de la conexión con los equipos específicos de
+    almacenamiento (ZFS, NetApp, ...)</li> 
+    <li>También podría instalarse en este nodo GlusterFS o Ceph</li>
   </ul>
 </section>
 <section>
