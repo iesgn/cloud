@@ -50,4 +50,4 @@ de [GPLHost](http://www.gplhost.com/software-openstack.html).
 
 [Hardware](hardware_openstack.html)
 
-[Ejemplos de arquitectutura](arquitectura_openstack.html)
+[Ejemplos de arquitectura](arquitectura_openstack.html)
