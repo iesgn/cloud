@@ -34,8 +34,7 @@ jornadas sobre el tema a nivel local y estatal.
 |Fecha|Contenido|Lugar|
 |:---:|---------|-----|
 |21/04/2014|**Sesión 1**<br/>Unidad 1:Introducción al Cloud Computing. OpenStack y OpenShift<br/>Unidad 2: Herraminetas DevOps. Git, Vagrant y Ansible|IES Romero Vargas|
-|28/04/2014|**Sesión 2**<br/><br/>Unidad 4:Introducción a OpenStack. Uso básico
-|de horizon.<br/>Unidad 5: Infraestructura para utilizar OpenStack|IES Gonzalo Nazareno|
+|28/04/2014|**Sesión 2**<br/><br/>Unidad 4:Introducción a OpenStack. Uso básico de horizon.<br/>Unidad 5: Infraestructura para utilizar OpenStack|IES Gonzalo Nazareno|
 |5/05/2014|**Sesión 3**<br/>Unidad 3:Entornos de pruebas para OpenStack|IES Romero Vargas|
 |7/05/2014|**Sesión 4**|Webinar|
 |14/05/2014|**Sesión 5**|Webinar|
