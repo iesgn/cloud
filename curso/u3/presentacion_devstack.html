@@ -172,9 +172,12 @@ $ chmod 755 instalar.sh
 $ ./instalar.sh
 		        </code></pre>
 			<ul>
+				<li>Configura NAT para que las instancias tengan acceso a internet</li>
 				<li>Clona el repositorio devstack dentro de la máquina</li>
 				<li>Instala el devstack (versión havana) en la máquina (stack.sh)</li>
 			</ul>
+<small>En el fichero <strong>instalar.sh</strong> modifica eth0 por la interfaz de red conectada a internet (por ejemplo si tienes WIFI será wlan0).</small>
+			<br/>
 			<h3>¡¡¡ Nos tomamos un cafe!!!</h3>
 
 		  </section>
@@ -184,7 +187,7 @@ $ ./instalar.sh
 				<li>http://localhost</li>
 				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
 				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
-				<li>Credenciales en el directorio devstcak:</li>
+				<li>Credenciales en el directorio devstack:</li>
 				<ul>
 					<li><pre>source openrc demo demo</pre></li>
 					<li><pre>source openrc admin admin</pre></li>
@@ -193,33 +196,23 @@ $ ./instalar.sh
 			</ul>
 		  </section>
 		  <section>
-			<h3>¿Las instancias tienen internet?</h3>
-			<p>Por defecto las instancias no tienen acceso a internet. Si queremos tener esta funcionalidad hay que configurar la máquina host para que haga NAT, para ello como root ejecuta:</p>
-			<pre><code>
-echo 1 > /proc/sys/net/ipv4/ip_forward
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-		       </code></pre>
-			<small>Modifica eth0 por la interfaz de red conectada a internet (por ejemplo si tienes WIFI será wlan0).</small>
-
-		  </section>
-		  <section>
 			<h3>Al terminar de trabajar...</h3>
-			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
+			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos <strong>detener todas las instancias</strong>.</p>
+			<p>Cuando queramos seguir trabajando, encendemos nuestra máquina y ejecutamos:</p>
 			<pre><code>
 $ cd devstack
-$ ./unstack.sh
-		       </code></pre>
-			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
-			<pre><code>
-$ cd devstack
-$ sudo kpartx -va /opt/stack/data/stack-volumes-backing-file
-$ source openrc functions
-$ ./rejoin-stack.sh &
+$ ./reinicio.sh
 			</code></pre>
+			<ul>
+				<li>Se configura y levanta el bridge br-ex</li>
+				<li>Configura NAT para que las instancias tengan acceso a internet</li>
+				<li>Se congifura el grupo de volumenes</li>
+				<li>Se levantan los servicios</li>
+			</ul>
 		  </section>
 		  <section>
 			<h3>Y si algo falla...</h3>
-			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la inslación inicial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
+			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la instalación inicial, aunque se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
 $ cd devstack
 $ ./stack.sh
