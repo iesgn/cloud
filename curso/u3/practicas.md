@@ -14,7 +14,7 @@ menu:
 
 * Bajarnos una imagen de Ubuntu 12.04 y subirla al cloud (apartado Imágenes):
 
-        http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img
+[http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img](http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img)
 
 * Las reglas de seguridad que vienen definidas parecen que no funcionan. Crear al menos las dos siguientes:
 	* Para hacer ping, una regla del tipo "ALL ICMP"
