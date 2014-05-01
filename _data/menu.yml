@@ -26,6 +26,8 @@
      url: http://iesgn.github.io/cloud/curso/u3/rdo
    - name: OpenStack-ansible
      url: http://iesgn.github.io/cloud/curso/u3/openstack-ansible
+   - name: Prácticas
+     url: http://iesgn.github.io/cloud/curso/u3/practicas
  
 - nombre: Unidad 4
   items:
