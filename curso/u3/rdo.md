@@ -17,8 +17,7 @@ uno o varios nodos.
 ### Requisitos
 
 * Software: RHEL 6.4 o equivalente (CentOS p. ej.)
-* Hardware: Equipo con extensiones de virtualización por hardware en el
-* procesador y al menos 2 GiB de RAM libre.
+* Hardware: Equipo con extensiones de virtualización por hardware en el procesador y al menos 2 GiB de RAM libre.
 
 ### Instalación
 
