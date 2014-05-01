@@ -77,10 +77,12 @@ $ vagrant up
 				<li>Clona el repositorio devstack dentro de la máquina</li>
 				<li>Instala el devstack (versión havana) en la máquina (stack.sh)</li>
 			</ul>
-			<small>La máquina virtual tiene 4 Gb de RAM si quieres cambiarlo, antes de ejecutar la intalación, modifica el fichero Vagrantfile:</small>
+			<br/>
+			<small>La máquina virtual tiene 4 Gb de RAM si quieres cambiarlo, antes de ejecutar la instalación, modifica el fichero Vagrantfile:</small>
 			<pre><code>
 vb.customize ["modifyvm", :id, "--memory", 4096]		
 		        </code></pre>
+			<br/>
 			<h3>¡¡¡ Nos tomamos un cafe!!!</h3>
 
 		  </section>
@@ -90,58 +92,31 @@ vb.customize ["modifyvm", :id, "--memory", 4096]
 				<li>http://192.168.27.100</li>
 				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
 				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
-				<li>Credenciales en la máquina virtual:</li>
-				<ul>
-					<li><pre>source openrc demo demo</pre></li>
-					<li><pre>source openrc admin admin</pre></li>
-				</ul>
-				<li>Credenciales en en el host:</li>
-				<ul>
-					<li><pre>source demo.openrc</pre></li>
-					<li><pre>source admin.openrc</pre></li>
-				</ul>
-
+				<li>El usuario demo debe trabajar en el proyecto "demo", no en uno que se llama "invisible_to_admin"</li>
+				
 			</ul>
 		  </section>
 		  <section>
-			<h3>¿Las instancias tienen internet?</h3>
-			<p>Por defecto las instancias no tienen acceso a internet. Si queremos tener esta funcionalidad hay que configurar la máquina host para que haga NAT, para ello como root ejecuta:</p>
-			<pre><code>
-echo 1 > /proc/sys/net/ipv4/ip_forward
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-		       </code></pre>
-		       <small>Modifica eth0 por la interfaz de red conectada a internet (por ejemplo si tienes WIFI será wlan0).</small>
-		  </section>
-		  <section>
 			<h3>Al terminar de trabajar...</h3>
-			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos parar los servicios:</p>
-			<pre><code>
-$ cd devstack-havana-cursocloud/MV
-$ vagrant ssh
-
-$ cd devstack
-$ ./unstack.sh
-		       </code></pre>
+			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos <strong>detener todas las instancias</strong>.</p>
 			<p>Cuando queramos seguir trabajando, encendemos la máquina y ejecutamos:</p>
 			<pre><code>
 $ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
-$ sudo kpartx -va /opt/stack/data/stack-volumes-backing-file
-$ source openrc functions
-$ ./rejoin-stack.sh &
+$ ./reiniciar.sh
 			</code></pre>
 		  </section>
 		  <section>
 			<h3>Y si algo falla...</h3>
-			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la inslación inicial y se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
+			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la instalación inicial y se perderán todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
 $ cd devstack-havana-cursocloud/MV
 $ vagrant ssh
 
 $ cd devstack
-$ ./stack.sh
+$ ./instalar.sh
 			</code></pre>
 
 		  </section>
@@ -187,17 +162,13 @@ $ ./instalar.sh
 				<li>http://localhost</li>
 				<li>Usuario de prueba: <strong>demo</strong> con contraseña <strong>devstack</strong>. </li>
 				<li>Usuario <strong>admin</strong> con contraseña <strong>devstack</strong>. </li>
-				<li>Credenciales en el directorio devstack:</li>
-				<ul>
-					<li><pre>source openrc demo demo</pre></li>
-					<li><pre>source openrc admin admin</pre></li>
-				</ul>
+				<li>El usuario demo debe trabajar en el proyecto "demo", no en uno que se llama "invisible_to_admin"</li>
 
 			</ul>
 		  </section>
 		  <section>
 			<h3>Al terminar de trabajar...</h3>
-			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina virtual, debemos <strong>detener todas las instancias</strong>.</p>
+			<p>Una vez que hemos terminado de trabajar con OpenStack y antes de apagar nuestra máquina, debemos <strong>detener todas las instancias</strong>.</p>
 			<p>Cuando queramos seguir trabajando, encendemos nuestra máquina y ejecutamos:</p>
 			<pre><code>
 $ cd devstack
@@ -212,10 +183,10 @@ $ ./reinicio.sh
 		  </section>
 		  <section>
 			<h3>Y si algo falla...</h3>
-			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la instalación inicial, aunque se perderan todos los datos (instancias, volúmenes, imágenes,...):</p>
+			<p>Si algo no funciona, podemos reiniciar nuestro OpenStack: tardará menos que la instalación inicial, aunque se perderán todos los datos (instancias, volúmenes, imágenes,...):</p>
 			<pre><code>
-$ cd devstack
-$ ./stack.sh
+$ cd devstack-havana-cursocloud/MF
+$ ./instalar.sh
 			</code></pre>
 
 		  </section>
@@ -226,7 +197,6 @@ $ ./stack.sh
 			<li>Crear sabores personales (por ejemplo, m1.enano con 256 Mb de RAM, otro m1.amedida con el parámetro "disco raíz" a 0). Esa operación la hacemos con el usuario admin.</li>
 			<li>Bajarnos una imagen de Ubuntu 12.04 y subirla al cloud (apartado Imágenes)</li>
 			<pre>http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img</pre>
-			<li>El usuario demo debe trabajar en el proyecto "demo", no en uno que se llama "invisible_to_admin"</li>
 			<li>Las reglas de seguridad que vienen definidas parecen que no funcionan. Crear al menos las dos siguientes:</li>
 			<ul>
 				<li>Para hacer ping, una regla del tipo "ALL ICMP"</li>
