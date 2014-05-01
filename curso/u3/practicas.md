@@ -11,6 +11,7 @@ menu:
 * Crear sabores que se adapten mejor a nuestras necesidades:
     * Si queremos instanciar máquinas cirros no es necesario 512 Mb de RAM. Podemos crear un sabor **m1.enano** con 256 Mb de RAM.
     * Si necesitamos instanciar máuinas ubuntu necesitamos un sabor con 512 Mb pero que tenga de "Disco raiz" 0 Mb. Podemos crear un sabor **m1.tiny2** con 512 Mb de RAM y 0 Mb de "Disco raíz".
+
 * Bajarnos una imagen de Ubuntu 12.04 y subirla al cloud (apartado Imágenes):
 
         http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-armhf-disk1.img
