@@ -19,7 +19,8 @@ menu:
 * Las reglas de seguridad que vienen definidas parecen que no funcionan. Crear al menos las dos siguientes:
 	* Para hacer ping, una regla del tipo "ALL ICMP"
 	* Para acceder por ssh, una regla del tipo SSH
-* Las instancias deben tener conexión a internet, pero el servidor DNS habrá que modificarlo para resolver nombres
+* Las instancias deben tener conexión a internet, pero el servidor DNS habrá que modificarlo para resolver nombres.
+* Solo se pueden acceder a las instancias desde la máquina en que hemos instalado el sistema.
 
 
 ###Ejercicio
