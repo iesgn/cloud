@@ -7,6 +7,6 @@ menu:
 <iframe
     width="560"
     height="315"
-    src="http://https://www.youtube.com/watch?v=XYOme2eNQTg"
+    src="https://www.youtube.com/watch?v=XYOme2eNQTg"
     frameborder="0"
     allowfullscreen></iframe>
