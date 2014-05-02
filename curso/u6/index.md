@@ -6,14 +6,14 @@ menu:
 ---
 ###Objetivos
 
-* Recprdar los conceptos fundamentales que entran en juego en el trabajo con OpenStack.
-* Trabajar con instancias, imágenes y sanpshots desde la aplicación web Horizon.
-* Trabajar con instancias, imágenes y sanpshots desde la aplicación nova.
+* Recordar los conceptos fundamentales que entran en juego en el trabajo con OpenStack.
+* Trabajar con instancias, imágenes y snapshots desde la aplicación web Horizon.
+* Trabajar con instancias, imágenes y snapshots desde la aplicación nova.
 * Introducir conceptos avanzados sobre el funcionamiento interno de OpenStack cuando se trabaja con instancias.
 
 ### Contenidos
 
-* [Pesntación OpenStack Instancias](presentacion_instancias)
+* [Presentación OpenStack Instancias](presentacion_instancias)
 
 ###Video
 
