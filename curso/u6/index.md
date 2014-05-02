@@ -17,4 +17,4 @@ menu:
 
 ###Video
 
-[![Video](http://iesgn.github.io/cloud/curso/u4/img/instancia.png)](https://www.youtube.com/watch?v=XYOme2eNQTg)
+[![Video](http://img.youtube.com/vi/3m5LeyI7Bss/0.jpg)](https://www.youtube.com/watch?v=XYOme2eNQTg)
