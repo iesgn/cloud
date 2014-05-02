@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: OpenStack. Redes.
+tittle: OpenStack. Volúmenes.
 menu:
   - Unidad 7
 ---

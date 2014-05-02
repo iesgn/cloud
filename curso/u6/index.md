@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: OpenStack. Volúmenes.
+tittle: OpenStack. Instancias.
 menu:
   - Unidad 6
 ---
