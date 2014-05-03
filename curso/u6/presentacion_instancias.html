@@ -180,7 +180,20 @@ Borrar, parar, vnc,
 <section>
 	<h2>IP flotantes</h2>
 	<pre><code>
+# Listar el pool de ip flotantes
+$ nova floating-ip-pool-list
 
+# Listar las ip flotantes que tienes reservada
+$ nova floating-ip-list
+
+# Reservar una nueva ip flotante
+$ nova floating-ip-create
+
+# Asociar una IP flotante a una instancia
+$ nova floating-ip-associate instancia_prueba 172.24.4.227
+
+# Desaciar una IP flotante de una instancia
+$ nova floating-ip-disassociate instancia_prueba 172.24.4.227
 	</code></pre>
 </section>
 
