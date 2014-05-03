@@ -102,6 +102,36 @@ $ glace delete ubuntu12.04
 	</code></pre>
 </section>
 <section>
+	<h2>Grupos de seguridad</h2>
+	<pre><code>
+# Listar grupos de seguridad
+$ nova secgroup-list
+
+# Crear un grupo de seguridad
+$ nova secgroup-create cortafuegos
+
+# Listar reglas de un grupo de seguridad
+$ nova secgroup-list-rules default
+
+# Añadir una regla a un grupo de seguridad
+$ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
+	</code></pre>
+</section>
+<section>
+	<h2>Claves SSH</h2>
+	<pre><code>
+# Añadir un par de claves ssh
+$ nova keypair-add mis_claves > mis_claves.pem
+$ chmod 600 mis_claves.pem
+
+# Listar las claves ssh
+$ nova keypair-list
+	</code></pre>
+</section>
+
+</section>
+
+<section>
 	<h2>Conceptos avanzados</h2>
 </section>
 
