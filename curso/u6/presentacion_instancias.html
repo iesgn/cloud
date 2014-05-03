@@ -167,14 +167,36 @@ $ nova boot --flavor 1 --image 9715a365-3b56-40b0-a30a-0ba030347cf5 \
 <section>
 	<h2>Instancias (3)</h2>
 	<pre><code>
-Borrar, parar, vnc, 
+# Pausar instancia
+$ nova pause INSTANCE_NAME 
+$ nova unpause INSTANCE_NAME 
 
+# Suspender/resumir
+$ nova suspend INSTANCE_NAME
+$ nova resume INSTANCE_NAME
+
+# Reiniciar
+$ nova reboot SERVER
+$ nova reboot --hard SERVER
+
+# Borrar
+$ nova delete INSTANCE_NAME
+
+# Acceder por consola
+$ nova get-vnc-console INSTANCE_NAME xvpvnc
 	</code></pre>
 </section>
 <section>
-	<h2>Cambiar tamaño  de la instancias</h2>
+	<h2>Cambiar tamaño de la instancias</h2>
 	<pre><code>
+# Cambiar el flavor de una instancia
+$ nova resize instancia_prueba 4 --poll
 
+# Confirmar el cambio de tamaño
+$ nova resize-confirm 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5
+
+# Revertir el cambio de tamaño
+$ nova resize-revert 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5
 	</code></pre>
 </section>
 <section>
@@ -200,6 +222,13 @@ $ nova floating-ip-disassociate instancia_prueba 172.24.4.227
 <section>
 	<h2>Snapshot</h2>
 	<pre><code>
+# Crear snapshot de una instancia
+$ nova image-create --poll instancia_prueba snapshot_prueba
+
+# Listar snapshots
+$ nova image-list
+
+# Para crear una nueva instancia se puede usar el snapshot
 
 	</code></pre>
 </section>
