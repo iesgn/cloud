@@ -80,9 +80,25 @@ tema: solarized
 </section>
 
 <section>
+<section>
 	<h2>Instancias con OpenStack CLI</h2>
 </section>
+<section>
+	<h2>Imágenes</h2>
+	<code><pre>
+# Listar imágenes
+$ glance image-list
 
+# Detalles de una imagen
+$ glance image-show cirros-0.3.1-x86_64-uec
+
+# Crear una imagen
+$ glance image-create --name ubuntu12.04 --disk-format=raw --container-format=bare --is-public=True --file=precise-server-cloudimg-amd64-disk1.img
+
+# Borrar una imagen
+$ glace delete ubuntu12.04
+	</pre></code>
+</section>
 <section>
 	<h2>Conceptos avanzados</h2>
 </section>
