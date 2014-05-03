@@ -93,7 +93,9 @@ $ glance image-list
 $ glance image-show cirros-0.3.1-x86_64-uec
 
 # Crear una imagen
-$ glance image-create --name ubuntu12.04 --disk-format=raw --container-format=bare --is-public=True --file=precise-server-cloudimg-amd64-disk1.img
+$ glance image-create --name ubuntu12.04 --disk-format=raw\
+                      --container-format=bare --is-public=True\
+		      --file=precise-server-cloudimg-amd64-disk1.img
 
 # Borrar una imagen
 $ glace delete ubuntu12.04
