@@ -128,6 +128,37 @@ $ chmod 600 mis_claves.pem
 $ nova keypair-list
 	</code></pre>
 </section>
+<section>
+	<h2>Instancias (1)</h2>
+	<pre><code>
+#Listar de imágenes
+$ nova image-list
+
+# Listar sabores
+$ nova flavor-list
+
+# Listar las redes que tenemos definidas"
+$ nova net-list
+
+# Listar grupos de seguridad
+$ nova secgroup-list
+
+# Listar claves ssh
+$ nova keypair-list
+
+# Creamos una instancia
+$ nova boot --flavor FLAVOR_ID --image IMAGE_ID --key-name KEY_NAME \
+            --security-groups SEC_GROUP --key-name KEY_NAME \
+	    --nic net-id=NET_ID \
+	    INSTANCE_NAME
+
+# Ejemplo
+$ nova boot --flavor 1 --image 9715a365-3b56-40b0-a30a-0ba030347cf5 \
+            --security-groups default --key-name mis_claves 
+            --nic net-id=d8d4d80e-923f-47fc-ac88-b9079328080b \
+            instancia_prueba
+	</code></pre>
+</section>
 
 </section>
 
