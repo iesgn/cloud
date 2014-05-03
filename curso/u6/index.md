@@ -18,3 +18,7 @@ menu:
 ###Video
 
 [![Video](http://img.youtube.com/vi/3m5LeyI7Bss/0.jpg)](https://www.youtube.com/watch?v=XYOme2eNQTg)
+
+###Referencias
+
+* [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
