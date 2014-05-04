@@ -94,11 +94,14 @@ tema: solarized
       comandos con toda la funcionalidad</li>
       <li>Existe un cliente "unificado" (nova) que permite utilizar la
       funcionalidad básica de los componentes principales</li>
+    </ul>
+  </section>
   <section>
     <h2>Configuración del entorno</h2>
     <ul>
       <li>Obtenemos el fichero openrc de Horizon</li>
-      <li>Instalamos en el equipo el cliente de línea de comandos de OpenStack:
+      <li>Instalamos en el equipo el cliente de línea de comandos de OpenStack
+      (con este método instalamos la última versión):
 	<pre><code>
 # pip install python-novaclient
 	</code></pre></li>
@@ -116,11 +119,12 @@ $ nova flavor-list
 	<h2>Imágenes</h2>
 	<pre><code>
 # Listar imágenes
-$ glance image-list
+$ nova image-list
 
 # Detalles de una imagen
-$ glance image-show cirros-0.3.1-x86_64-uec
+$ nova image-show cirros-0.3.1-x86_64-uec
 
+#### ESto no se puede hacer con Nova !!!!
 # Crear una imagen
 $ glance image-create --name ubuntu12.04 --disk-format=raw\
                       --container-format=bare --is-public=True\
@@ -131,8 +135,8 @@ $ glace delete ubuntu12.04
 	</code></pre>
 </section>
 <section>
-	<h2>Grupos de seguridad</h2>
-	<pre><code>
+  <h2>Grupos de seguridad</h2>
+  <pre><code>
 # Listar grupos de seguridad
 $ nova secgroup-list
 
@@ -166,7 +170,7 @@ $ nova image-list
 # Listar sabores
 $ nova flavor-list
 
-# Listar las redes que tenemos definidas"
+# Listar las redes que tenemos definidas
 $ nova net-list
 
 # Listar grupos de seguridad
@@ -211,7 +215,7 @@ $ nova reboot --hard SERVER
 $ nova delete INSTANCE_NAME
 
 # Acceder por consola
-$ nova get-vnc-console INSTANCE_NAME xvpvnc
+$ nova get-vnc-console INSTANCE_NAME novnc
 	</code></pre>
 </section>
 <section>
