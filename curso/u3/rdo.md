@@ -42,33 +42,35 @@ ya que el bridge-exterior no está conectado a ninguna interfaz física.
 ### Conectar el br-ex al exterior
 
 Para conectar el bridge exterior al exterior seguimos los siguientes pasos:
-
-* Editamos el fichero /etc/sysconfig/network-scripts/ifcfg-br-ex y ponemos el siguiente contenido:
-
+<ul>
+<li>Editamos el fichero /etc/sysconfig/network-scripts/ifcfg-br-ex y ponemos el siguiente contenido:
+<pre><code>
 	DEVICE=br-ex
 	DEVICETYPE=ovs
 	TYPE=OVSBridge
 	BOOTPROTO=static
 	IPADDR=X.X.X.X   # La dirección inical de eth0
 	NETMASK=X.X.X.X  # La máscara de red que corresponda
-	GATEWAY=X.X.X.X  # La dirección IP de la puerta de enlace
+ 	GATEWAY=X.X.X.X  # La dirección IP de la puerta de enlace
 	DNS1=X.X.X.X     # El servidor DNS
 	ONBOOT=yes
-
-* Editamos el fichero /etc/sysconf/network-scripts/ifcfg-eth0 y ponemos el siguiente contenido:
-
+</code></pre></li>
+<li>Editamos el fichero /etc/sysconf/network-scripts/ifcfg-eth0 y ponemos el siguiente contenido:
+<pre><code>
 	DEVICE=eth0
 	HWADDR=XX:XX:XX:XX:XX:XX # La dirección MAC de eth0
 	TYPE=OVSPort
 	DEVICETYPE=ovs
 	OVS_BRIDGE=br-ex
 	ONBOOT=yes
+</code></pre></li>
 
-* Reiniciamos el servicio de red:
-
+<li>Reiniciamos el servicio de red:
+<pre><code>
 	# service network restart
+</code></pre></li>
 
-* Comprobamos la conectividad de la máquina con el exterior a través de br-ex
+<li>Comprobamos la conectividad de la máquina con el exterior a través de br-ex</li></ul>
 
 ### Enlaces interesantes
 
