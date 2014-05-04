@@ -79,7 +79,7 @@ tema: solarized
       instantánea</li> 
       <li>Crear una nueva imagen a partir de la instantánea y comprobar su
       estado</li>
-      <li>Redimensionar una instancia???</li>
+      <!-- <li>Redimensionar una instancia???</li> -->
   </section>
 </section>
 
@@ -100,6 +100,7 @@ tema: solarized
       <li>Instalamos en el equipo el cliente de línea de comandos de OpenStack
       (con este método instalamos la última versión):
 	<pre><code>
+# apt-get install python-pip
 # pip install python-novaclient
 	</code></pre></li>
       <li>Iniciamos la sesión del usuario:
@@ -132,32 +133,6 @@ $ nova flavor-list
 <!-- 	</code></pre> -->
 <!-- </section> -->
 <!-- <section> -->
-<!--   <h2>Grupos de seguridad</h2> -->
-<!--   <pre><code> -->
-<!-- # Listar grupos de seguridad -->
-<!-- $ nova secgroup-list -->
-
-<!-- # Crear un grupo de seguridad -->
-<!-- $ nova secgroup-create cortafuegos -->
-
-<!-- # Listar reglas de un grupo de seguridad -->
-<!-- $ nova secgroup-list-rules default -->
-
-<!-- # Añadir una regla a un grupo de seguridad -->
-<!-- $ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0 -->
-<!-- 	</code></pre> -->
-<!-- </section> -->
-<!-- <section> -->
-<!-- 	<h2>Claves SSH</h2> -->
-<!-- 	<pre><code> -->
-<!-- # Crear un par de claves ssh -->
-<!-- $ nova keypair-add mi_claves > mi_claves.pem -->
-<!-- $ chmod 600 mi_clave.pem -->
-
-<!-- # Listar las claves ssh -->
-<!-- $ nova keypair-list -->
-<!-- 	</code></pre> -->
-<!-- </section> -->
 <section>
 	<h2>Instancias (1)</h2>
 	<pre><code>
@@ -215,19 +190,19 @@ $ nova delete INSTANCE_NAME
 $ nova get-vnc-console INSTANCE_NAME novnc
 	</code></pre>
 </section>
-<section>
-	<h2>Cambiar tamaño de la instancias???</h2>
-	<pre><code>
-# Cambiar el flavor de una instancia
-$ nova resize instancia_prueba 4 --poll
+<!-- <section> -->
+<!-- 	<h2>Cambiar tamaño de la instancias???</h2> -->
+<!-- 	<pre><code> -->
+<!-- # Cambiar el flavor de una instancia -->
+<!-- $ nova resize instancia_prueba 4 --poll -->
 
-# Confirmar el cambio de tamaño
-$ nova resize-confirm 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5
+<!-- # Confirmar el cambio de tamaño -->
+<!-- $ nova resize-confirm 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5 -->
 
-# Revertir el cambio de tamaño
-$ nova resize-revert 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5
-	</code></pre>
-</section>
+<!-- # Revertir el cambio de tamaño -->
+<!-- $ nova resize-revert 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5 -->
+<!-- 	</code></pre> -->
+<!-- </section> -->
 <section>
 	<h2>IPs Flotantes</h2>
 	<pre><code>
@@ -247,7 +222,32 @@ $ nova floating-ip-associate instancia_prueba 172.24.4.227
 $ nova floating-ip-disassociate instancia_prueba 172.24.4.227
 	</code></pre>
 </section>
+  <h2>Grupos de seguridad</h2>
+  <pre><code>
+# Listar grupos de seguridad
+$ nova secgroup-list
 
+# Crear un grupo de seguridad
+$ nova secgroup-create cortafuegos
+
+# Listar reglas de un grupo de seguridad
+$ nova secgroup-list-rules default
+
+# Añadir una regla a un grupo de seguridad
+$ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
+	</code></pre>
+</section>
+<section>
+	<h2>Claves SSH</h2>
+	<pre><code>
+# Crear un par de claves ssh
+$ nova keypair-add mi_claves > mi_claves.pem
+$ chmod 600 mi_clave.pem
+
+# Listar las claves ssh
+$ nova keypair-list
+	</code></pre>
+</section>
 <section>
   <h2>Instantáneas</h2>
   <pre><code>
