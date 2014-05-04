@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Entornos de pruebas para OpenStack.
+tittle: Entornos de pruebas para OpenStack
 menu:
   - Unidad 3
 ---
@@ -21,16 +21,15 @@ uno o varios nodos.
 
 ### Instalación
 
-Utilizando RDO podemos tener OpenStack funcionando en unos minutos siguiendo
-estos [3 sencillos pasos](http://openstack.redhat.com/Quickstart):
+Utilizando RDO podemos tener OpenStack Havana (aunque ya está disponible Icehouse hemos considerado más adecuado utilizar Havana para este curso) funcionando en unos minutos siguiendo estos [3 sencillos pasos](http://openstack.redhat.com/Quickstart):
 
-      # yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+      # yum install -y http://rdo.fedorapeople.org/openstack-havana/rdo-release-havana.rpm
       # yum install -y openstack-packstack
       # packstack --allinone
 
 ### Utilización
 
-Podemos acceder a Horizon con la URL http://<IP_del_equipo>/dashboard y acceder
+Podemos acceder a Horizon con la URL http://&lt;IP_del_equipo&gt;/dashboard y acceder
 con el usuario admin (para tareas de administración) o el usuario demo para
 utilización normal de OpenStack. Las contraseñas de ambos usuarios se encuentran
 definidas en los ficheros keystonerc_admin o keystonerc_demo ubicados en el
@@ -39,6 +38,37 @@ directorio desde el que se ejecutó la instrucción packstack.
 La principal limitación que tiene la configuración automática de RDO con
 packstack es que no se puede acceder a las instancias desde un equipo exterior,
 ya que el bridge-exterior no está conectado a ninguna interfaz física.
+
+### Conectar el br-ex al exterior
+
+Para conectar el bridge exterior al exterior seguimos los siguientes pasos:
+
+* Editamos el fichero /etc/sysconfig/network-scripts/ifcfg-br-ex y ponemos el siguiente contenido:
+
+    DEVICE=br-ex
+	DEVICETYPE=ovs
+	TYPE=OVSBridge
+	BOOTPROTO=static
+	IPADDR=X.X.X.X   # La dirección inical de eth0
+	NETMASK=X.X.X.X  # La máscara de red que corresponda
+	GATEWAY=X.X.X.X  # La dirección IP de la puerta de enlace
+	DNS1=X.X.X.X     # El servidor DNS
+	ONBOOT=yes
+
+* Editamos el fichero /etc/sysconf/network-scripts/ifcfg-eth0 y ponemos el siguiente contenido:
+
+    DEVICE=eth0
+	HWADDR=XX:XX:XX:XX:XX:XX # La dirección MAC de eth0
+	TYPE=OVSPort
+	DEVICETYPE=ovs
+	OVS_BRIDGE=br-ex
+	ONBOOT=yes
+
+* Reiniciamos el servicio de red:
+
+    # service network restart
+
+* Comprobamos la conectividad de la máquina con el exterior a través de br-ex
 
 ### Enlaces interesantes
 
