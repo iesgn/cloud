@@ -45,7 +45,7 @@ Para conectar el bridge exterior al exterior seguimos los siguientes pasos:
 
 * Editamos el fichero /etc/sysconfig/network-scripts/ifcfg-br-ex y ponemos el siguiente contenido:
 
-    DEVICE=br-ex
+	DEVICE=br-ex
 	DEVICETYPE=ovs
 	TYPE=OVSBridge
 	BOOTPROTO=static
@@ -57,7 +57,7 @@ Para conectar el bridge exterior al exterior seguimos los siguientes pasos:
 
 * Editamos el fichero /etc/sysconf/network-scripts/ifcfg-eth0 y ponemos el siguiente contenido:
 
-    DEVICE=eth0
+	DEVICE=eth0
 	HWADDR=XX:XX:XX:XX:XX:XX # La dirección MAC de eth0
 	TYPE=OVSPort
 	DEVICETYPE=ovs
@@ -66,10 +66,10 @@ Para conectar el bridge exterior al exterior seguimos los siguientes pasos:
 
 * Reiniciamos el servicio de red:
 
-    # service network restart
+	# service network restart
 
 * Comprobamos la conectividad de la máquina con el exterior a través de br-ex
 
 ### Enlaces interesantes
 
-[RDO](http://openstack.redhat.com/Main_Page)
+* [RDO](http://openstack.redhat.com/Main_Page)
