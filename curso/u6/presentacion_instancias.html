@@ -73,27 +73,24 @@ tema: solarized
   </section>
   <section>
     <ul>
-      <li>Utilizar instancias creadas a partir de la imagen cirros (calves ssh,
-      reglas de seguriad, ip flotantes,...)</li>
+      <li>Utilizar instancias creadas a partir de la imagen cirros</li>
       <li>Subir una imagen de Ubuntu y crear una instancia</li>
       <li>Modificar la configuración de la instancia Ubuntu y crear una
       instantánea</li> 
       <li>Crear una nueva imagen a partir de la instantánea y comprobar su
       estado</li>
-      <li>Redimensionar una instancia</li>
+      <li>Redimensionar una instancia???</li>
   </section>
 </section>
 
 <section>
   <section>
     <h2>Instancias con OpenStack CLI</h2>
-  </section>
-  <section>
     <ul>
       <li>Cada componente de OpenStack tiene su propio cliente de línea de
-      comandos con toda la funcionalidad</li>
-      <li>Existe un cliente "unificado" (nova) que permite utilizar la
-      funcionalidad básica de los componentes principales</li>
+      comandos con toda las funcionalidades</li>
+      <li>Existe un cliente "unificado" (nova) que permite utilizar las
+      funcionalidades básicas de los componentes principales</li>
     </ul>
   </section>
   <section>
@@ -107,7 +104,7 @@ tema: solarized
 	</code></pre></li>
       <li>Iniciamos la sesión del usuario:
 	<pre><code>
-$ source proy-usuario22
+$ source proy-usuario22.sh
 	</code></pre></li>
       <li>Comprobamos que funciona correctamente:
 	<pre><code>
@@ -115,52 +112,52 @@ $ nova flavor-list
         </code></pre></li>
     </ul>
 </section>
-<section>
-	<h2>Imágenes</h2>
-	<pre><code>
-# Listar imágenes
-$ nova image-list
+<!-- <section> -->
+<!-- 	<h2>Imágenes</h2> -->
+<!-- 	<pre><code> -->
+<!-- # Listar imágenes -->
+<!-- $ nova image-list -->
 
-# Detalles de una imagen
-$ nova image-show cirros-0.3.1-x86_64-uec
+<!-- # Detalles de una imagen -->
+<!-- $ nova image-show cirros-0.3.1-x86_64-uec -->
 
-#### ESto no se puede hacer con Nova !!!!
-# Crear una imagen
-$ glance image-create --name ubuntu12.04 --disk-format=raw\
-                      --container-format=bare --is-public=True\
-                      --file=precise-server-cloudimg-amd64-disk1.img
+<!-- #### ESto no se puede hacer con Nova !!!! -->
+<!-- # Crear una imagen -->
+<!-- $ glance image-create --name ubuntu12.04 --disk-format=raw\ -->
+<!--                       --container-format=bare --is-public=True\ -->
+<!--                       --file=precise-server-cloudimg-amd64-disk1.img -->
 
-# Borrar una imagen
-$ glace delete ubuntu12.04
-	</code></pre>
-</section>
-<section>
-  <h2>Grupos de seguridad</h2>
-  <pre><code>
-# Listar grupos de seguridad
-$ nova secgroup-list
+<!-- # Borrar una imagen -->
+<!-- $ glace delete ubuntu12.04 -->
+<!-- 	</code></pre> -->
+<!-- </section> -->
+<!-- <section> -->
+<!--   <h2>Grupos de seguridad</h2> -->
+<!--   <pre><code> -->
+<!-- # Listar grupos de seguridad -->
+<!-- $ nova secgroup-list -->
 
-# Crear un grupo de seguridad
-$ nova secgroup-create cortafuegos
+<!-- # Crear un grupo de seguridad -->
+<!-- $ nova secgroup-create cortafuegos -->
 
-# Listar reglas de un grupo de seguridad
-$ nova secgroup-list-rules default
+<!-- # Listar reglas de un grupo de seguridad -->
+<!-- $ nova secgroup-list-rules default -->
 
-# Añadir una regla a un grupo de seguridad
-$ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
-	</code></pre>
-</section>
-<section>
-	<h2>Claves SSH</h2>
-	<pre><code>
-# Añadir un par de claves ssh
-$ nova keypair-add mis_claves > mis_claves.pem
-$ chmod 600 mis_claves.pem
+<!-- # Añadir una regla a un grupo de seguridad -->
+<!-- $ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0 -->
+<!-- 	</code></pre> -->
+<!-- </section> -->
+<!-- <section> -->
+<!-- 	<h2>Claves SSH</h2> -->
+<!-- 	<pre><code> -->
+<!-- # Crear un par de claves ssh -->
+<!-- $ nova keypair-add mi_claves > mi_claves.pem -->
+<!-- $ chmod 600 mi_clave.pem -->
 
-# Listar las claves ssh
-$ nova keypair-list
-	</code></pre>
-</section>
+<!-- # Listar las claves ssh -->
+<!-- $ nova keypair-list -->
+<!-- 	</code></pre> -->
+<!-- </section> -->
 <section>
 	<h2>Instancias (1)</h2>
 	<pre><code>
@@ -219,7 +216,7 @@ $ nova get-vnc-console INSTANCE_NAME novnc
 	</code></pre>
 </section>
 <section>
-	<h2>Cambiar tamaño de la instancias</h2>
+	<h2>Cambiar tamaño de la instancias???</h2>
 	<pre><code>
 # Cambiar el flavor de una instancia
 $ nova resize instancia_prueba 4 --poll
@@ -232,43 +229,46 @@ $ nova resize-revert 84c6e57d-a6b1-44b6-81eb-fcb36afd31b5
 	</code></pre>
 </section>
 <section>
-	<h2>IP flotantes</h2>
+	<h2>IPs Flotantes</h2>
 	<pre><code>
 # Listar el pool de ip flotantes
 $ nova floating-ip-pool-list
 
-# Listar las ip flotantes que tienes reservada
+# Listar las ip flotantes que asignadas al proyecto
 $ nova floating-ip-list
 
-# Reservar una nueva ip flotante
+# Asignar una IP flotante al proyecto
 $ nova floating-ip-create
 
 # Asociar una IP flotante a una instancia
 $ nova floating-ip-associate instancia_prueba 172.24.4.227
 
-# Desaciar una IP flotante de una instancia
+# Desasociar una IP flotante de una instancia
 $ nova floating-ip-disassociate instancia_prueba 172.24.4.227
 	</code></pre>
 </section>
 
 <section>
-	<h2>Snapshot</h2>
-	<pre><code>
-# Crear snapshot de una instancia
+  <h2>Instantáneas</h2>
+  <pre><code>
+# Crear una instantánea de una instancia
 $ nova image-create --poll instancia_prueba snapshot_prueba
 
-# Listar snapshots
+# Listar instantáneas (e imágenes)
 $ nova image-list
 
-# Para crear una nueva instancia se puede usar el snapshot
-
-	</code></pre>
+# Para crear una nueva instancia se puede usar esta instantánea como cualquier
+# otra imagen
+  </code></pre>
 </section>
 </section>
-
-
 
 <section>
-	<h2>Conceptos avanzados</h2>
+  <h2>Conceptos avanzados</h2>
+  <ul>
+    <li>¿Dónde se ubican las imágenes?</li>
+    <li>¿Cómo se clona la imagen al disco de la instancia?</li>
+    <li>¿En qué directorio se encuentran definidas las máquinas
+      virtuales?</li>
+  </ul>
 </section>
-
