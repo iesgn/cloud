@@ -9,8 +9,8 @@ menu:
 ###Los siguientes pasos... (Después de la instalación de OpenStack)
 
 * Crear sabores que se adapten mejor a nuestras necesidades:
-	* Si queremos instanciar máquinas cirros no es necesario 512 Mb de RAM. Podemos crear un sabor **m1.enano** con 256 Mb de RAM.
-	* Si necesitamos instanciar máquinas ubuntu necesitamos un sabor con 512 Mb pero que tenga de "Disco raiz" 0 Mb. Podemos crear un sabor **m1.tiny2** con 512 Mb de RAM y 0 Mb de "Disco raíz".
+	* Si queremos instanciar máquinas cirros no es necesario 512 MB de RAM. Podemos crear un sabor **m1.enano** con 256 MB de RAM.
+	* Si necesitamos instanciar máquinas ubuntu necesitamos un sabor con 512 MB pero que tenga de "Disco raiz" 0 MB. Podemos crear un sabor **m1.tiny2** con 512 MB de RAM y 0 MB de "Disco raíz".
 
 * Bajarnos una imagen de Ubuntu 12.04 y subirla al cloud (apartado Imágenes):
 
