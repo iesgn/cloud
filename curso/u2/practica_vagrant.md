@@ -1,6 +1,6 @@
 ---
 layout: blog
-tittle: Herraminetas DevOps. Git, Vagrant y Ansible
+tittle: Herramientas DevOps. Git, Vagrant y Ansible
 menu:
   - Unidad 2
 ---
