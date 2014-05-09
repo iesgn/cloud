@@ -17,7 +17,7 @@ menu:
 
 ###Video
 
-[![Video](http://img.youtube.com/vi/3m5LeyI7Bss/0.jpg)](https://www.youtube.com/watch?v=XYOme2eNQTg)
+[![Video](http://img.youtube.com/vi/XYOme2eNQTg/0.jpg)](https://www.youtube.com/watch?v=XYOme2eNQTg)
 
 ###Enlaces interesantes
 
