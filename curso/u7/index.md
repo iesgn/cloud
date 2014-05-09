@@ -21,4 +21,4 @@ menu:
 ###Enlaces interesantes
 
 * [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
-
+* [OpenStack Operations Guide - Storage Decisions](http://docs.openstack.org/trunk/openstack-ops/content/storage_decision.html)

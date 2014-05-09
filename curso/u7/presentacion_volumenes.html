@@ -1,0 +1,97 @@
+---
+layout: presentacion
+title: Instancias
+tema: solarized
+---
+<section>
+  <h1>OpenStack</h1>
+  <h3>Trabajo con Instancias</h3>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+	<ol>
+	  <li>Conceptos previos</li>
+	  <li>Volúmenes, instantáneas y lanzamiento de instancias desde
+	  volúmenes con Horizon</li>
+	  <li>Volúmenes, instantáneas y lanzamiento de instancias desde
+	  volúmenes nova cli</li>
+	  <li>Funcionamiento interno de los volúmenes</li>
+	</ol>
+
+</section>
+<section>
+  <h2>Conceptos previos</h2>
+  <ul>
+    <li><strong>Volumen</strong>: Dispositivo de bloques que se puede
+      asociar y desasociar de una instancia cuando se desee</li>
+    <li>Utilizado para proporcionar almacenamiento permanente o independiente
+      de la vida de una instancia</li>
+    <li>El componente de OpenStack que proporciona volúmenes es cinder:
+      <ul>
+	<li>Equivalente a Amazon EBS</li>
+	<li>Incluye gran cantidad
+	  de <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">controladores</a></li>
+	<li>Soporta diferentes protocolos de redes de almacenamiento (por
+	  defecto iSCSI)</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <section>
+    <h2>Volúmenes con Horizon</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Crear un volúmen, asociarlo y desasociarlo a una instancia</li>
+      <li>Redimensionar volúmenes</li>
+      <li>Instantáneas de volumen</li>
+      <li>Iniciar una instancia desde un volumen</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Volúmenes con OpenStack CLI</h2>
+  </section>
+  <section>
+    <h2>Volúmenes (1)</h2>
+    <pre><code>
+#Listar volúmenes
+$ nova volume-list
+#Asociar un volumen a una instancia
+$ nova volume-attach SERVIDOR_ID VOLUMEN_ID DISPOSITIVO
+#Desasociar un volumen de una instancia
+$ nova volume-detach SERVIDOR_ID VOLUMEN_ID
+#Crear una instantánea de volumen
+$ nova volume-snapshot-create [opciones] VOLUMEN_ID
+    </code></pre>
+  </section>
+</section>
+
+<section>
+  <h2>Conceptos avanzados</h2>
+  <ul>
+    <li>Creación de un volumen: cinder-volume.log
+    <li>Volúmenes con LVM</li>
+    <li>Compartir volumen con iSCSI: tgt</li>
+    <li>Asociar volumen: nova-compute.log</li>
+    <li>Modificaciones en la definición de la instancia</li>
+    <li>Desasociar, clonar, redimensionar, etc.</li>
+  </ul>
+</section>
