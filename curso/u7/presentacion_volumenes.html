@@ -35,22 +35,50 @@ tema: solarized
 
 </section>
 <section>
-  <h2>Conceptos previos</h2>
-  <ul>
-    <li><strong>Volumen</strong>: Dispositivo de bloques que se puede
-      asociar y desasociar de una instancia cuando se desee</li>
-    <li>Utilizado para proporcionar almacenamiento permanente o independiente
-      de la vida de una instancia</li>
-    <li>El componente de OpenStack que proporciona volúmenes es cinder:
-      <ul>
-	<li>Equivalente a Amazon EBS</li>
-	<li>Incluye gran cantidad
-	  de <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">controladores</a></li>
-	<li>Soporta diferentes protocolos de redes de almacenamiento (por
-	  defecto iSCSI)</li>
-      </ul>
-    </li>
-  </ul>
+  <section>
+    <h2>Conceptos previos</h2>
+  </section>
+  <section>
+    <h2>Redes de almacenamiento</h2>
+    <h3><em>Storage Area Network (SAN)</em></h3>
+    <ul>
+      <li>Red dedicada de almacenamiento que proporciona dispositivos de bloques a
+	los servidores</li>
+      <li>Los elementos típicos de una SAN son:
+	<ul>
+	  <li>Red dedicada alta velocidad (cobre o fibra óptica)</li>
+	  <li>Equipos o servidores que proporcionan el almacenamiento</li>
+	  <li>Servidores que utilizan los dispositivos de bloques</li></ul>
+      </li>
+      <li>Los protocolos más utilizados son iSCSI y FC</li>
+    </ul>
+  </section>
+  <section>
+    <h2>SAN en OpenStack</h2>
+    <ul>
+      <li>Cinder (OpenStack block storage) gestiona de forma sencilla una
+      SAN</li>
+      <li>Puede utilizar una red específica para almacenamiento o alguna de las
+      redes internas del cloud (gestión, datos, etc.)</li>
+      <li>Soporta gran cantidad de tecnologías libres de almacenamiento:
+      GlusterFS, LVM, ZFS o Ceph RBD</li>
+      <li>Además incluye gran cantidad
+      de <a href="https://wiki.openstack.org/wiki/CinderSupportMatrix">controladores</a>
+      para equipos específicos</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Terminología</h2>
+    <ul>
+      <li><strong>Volumen</strong>: Dispositivo de bloques que se puede
+	asociar y desasociar de una instancia cuando se desee</li>
+      <li>Utilizado para proporcionar almacenamiento permanente o independiente
+	de la vida de una instancia</li>
+      <li>Cinder es equivalente a Amazon EBS</li>
+      <li>Hasta ahora no es posible asociar un volumen a más de una instancia a
+      la vez, pero está en <a href="https://wiki.openstack.org/wiki/Cinder/blueprints/multi-attach-volume">estudio</a></li>
+    </ul>
+  </section>
 </section>
 <section>
   <section>
@@ -59,8 +87,9 @@ tema: solarized
   <section>
     <ul>
       <li>Crear un volúmen, asociarlo y desasociarlo a una instancia</li>
+      <li>Formatear volúmenes</li>
       <li>Redimensionar volúmenes</li>
-      <li>Instantáneas de volumen</li>
+      <li>Instantáneas de volumen (en uso o no)</li>
       <li>Iniciar una instancia desde un volumen</li>
     </ul>
   </section>
