@@ -1,0 +1,107 @@
+---
+layout: presentacion
+title: Instancias
+tema: solarized
+---
+<section>
+  <h1>OpenStack</h1>
+  <h3>Trabajo con Redes</h3>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+	<ol>
+	  <li>Conceptos previos</li>
+	  <li> Utilizar routers desde Horizon. Puerta de enlace e interfaces
+	  adicionales</li>
+	  <li>Utilizar redes y subredes desde Horizon.</li>
+	  <li> Utilizar routers, redes y subredes desde la línea de
+	  comandos.</li>
+	  <li>Conceptos avanzados:
+	    <ul>
+	      <li>Linux network namespaces</li>
+	      <li>OpenvSwitch</li>
+	      <li>Funcionamiento interno de OpenStack al trabajar con
+	      neutron</li>
+	      </ul></li>
+	</ol>
+</section>
+<section>
+  <section>
+    <h2>Conceptos previos</h2>
+  </section>
+  <section>
+    <h2>Terminología</h2>
+    <ul>
+      <li><strong>Red</strong>: Red Dominio aislado de capa 2. Sería el
+      equivalente a una VLAN. Las redes externas solo pueden ser definidas por
+      el administrador.</li>
+      <li><strong>Subred</strong>: Bloque de direcciones IPv4 o IPv6 que se
+    asignan a las máquinas virtuales que se conectan a ella.</li>
+      <li><strong>Router</strong>: Dispositivo de capa 3 para conectar redes.</li>
+      <li><strong>Puerto</strong>: Puerto virtual de un switch o router.</li>
+      <li><strong>IP fija</strong>: Direcciín IP con la que se crean una
+      instancia en una red y que se utiliza para comunicacion interna. La
+      dirección IP fija no cambia durante la vida de la instancia.</li>
+      <li><strong>IP flotante</strong>: Direccion IP asociada a una instancia en
+      un momento dado para poder acceder a ella desde fuera. Una IP flotante
+      puede asignarse a otra instancia diferente cuando se estime oportuno.</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Volúmenes con Horizon</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Crear una red privada y una subred asociada</li>
+      <li>Crear un router, conectarlo a la red externa y a la red anterior</li>
+      <li>Crear una instancia en la nueva red</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Redes con OpenStack CLI</h2>
+  </section>
+  <section>
+    <h2>Instalación de python-neutronclient</h2>
+  </section>
+  <section>
+    <h2>Redes</h2>
+    <pre><code>
+#Listar redes
+$ nova net-list
+#Listar subredes
+$ nova subnet-list
+#Listar routers
+$ nova router-list
+# Establecer puerta de enlace de un router
+$ neutron router-gateway-set ROUTER_ID EXTERNAL_NETWORK_ID
+# Conectar un router a una red privada
+$ neutron router-interface-add ROUTER_ID SUBNET_ID
+    </code></pre>
+  </section>
+</section>
+
+<section>
+  <h2>Conceptos avanzados</h2>
+  <ul>
+    <li></li>
+  </ul>
+</section>
