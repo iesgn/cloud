@@ -20,7 +20,7 @@ menu:
 
 ###Vídeo
 
-[![Video](http://img.youtube.com/vi/3m5LeyI7Bss/0.jpg)](https://www.youtube.com/watch?v=-NAb8pp5E1g)
+[![Video](http://img.youtube.com/vi/-NAb8pp5E1g/0.jpg)](https://www.youtube.com/watch?v=-NAb8pp5E1g)
 
 ###Enlaces interesantes
 
