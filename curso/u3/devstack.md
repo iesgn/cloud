@@ -28,3 +28,12 @@ Para el presente curso hemos desarrollado un [repositorio GitHub](https://github
 * [https://github.com/xiaohanyu/vagrant-ansible-devstack]( https://github.com/xiaohanyu/vagrant-ansible-devstack)
 * [https://github.com/lorin/devstack-vm](https://github.com/lorin/devstack-vm)
 * [Instalando OpenStack en mi portátil (2ª parte): DevStack](http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/)
+
+###Máquina virtual virtualbox con devstack
+
+Si el proceso de instalación da algún problema, podemos probar OpenStack usando una máquina virtual de VirtualBox con devtack instalada. Es una máquina virtual con un interfaz de red tipo NAT, por lo tanto sólo se puede trabajar con openstack desde la misma máquina.
+
+1. Bájate el [fichero ova](https://drive.google.com/file/d/0B7UU0o7-2U7pS1ZPV3AtUzlSN2s/edit?usp=sharing)
+2. Importa la máquina a virtualbox. La máquina está configurada con 4GB de RAM; modifica este parámetro según tus necesidades.
+3. Para acceder usa el usuario y contraseña: stack
+4. Sigue las instrucciones de la presentación para reiniciar los servicios.
