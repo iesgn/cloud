@@ -103,12 +103,24 @@ tema: solarized
     <pre><code>
 #Listar volúmenes
 $ nova volume-list
+#Crear un volumen
+$ nova volume-create --display-name NOMBRE SIZE
 #Asociar un volumen a una instancia
 $ nova volume-attach SERVIDOR_ID VOLUMEN_ID DISPOSITIVO
 #Desasociar un volumen de una instancia
 $ nova volume-detach SERVIDOR_ID VOLUMEN_ID
 #Crear una instantánea de volumen
 $ nova volume-snapshot-create [opciones] VOLUMEN_ID
+    </code></pre>
+  </section>
+  <section>
+	<h2>Redimensionar volúmenes</h2>
+	<p>Para hacer esta operación necesitamos el cliente cinder.</p>
+    <pre><code>
+# pip install python-cinderclient
+
+#Redimensionar un volumen
+$ cinder extend ID_VOLUME NEW_SIZE
     </code></pre>
   </section>
 </section>
