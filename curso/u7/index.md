@@ -14,7 +14,6 @@ menu:
 * Trabajar con contenedores y objetos desde Horizon
 * Utilizar swift desde línea de comandos
 * Conceder permiso de lectura a cualquiera a un determinado contenedor desde CLI
-* Utilizar Swift como CDN
 
 ### Contenidos
 
