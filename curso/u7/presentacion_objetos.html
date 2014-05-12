@@ -48,8 +48,8 @@ tema: solarized
       <li>El almacenamiento de objetos es ideal para almacenar grandes ficheros
       multimedia o archivos grandes como copias de seguridad.</li>
       <li>La comunicación con OpenStack Swift se hace mediante una sencilla API
-      RESTful, e incluso es posible utilizar una API compatible con Amazon
-      S3</li>
+      RESTful. Es posible utilizar una API compatible con Amazon S3 si se
+      desea.</li>
     </ul>
   </section>
   <section>
@@ -91,11 +91,12 @@ tema: solarized
     <pre><code>
 #Listar contenedores
 $ swift list
-#Listar objetos
+#Listar objetos dentro de un contenedor
 $ swift list CONTENEDOR
 # Subir un objeto
 $ swift upload CONTENEDOR NOMBRE_FICHERO
-# swift download CONTENEDOR NOMBRE_OBJETO
+# Bajar un objeto
+$ swift download CONTENEDOR NOMBRE_OBJETO
 # Actualizar metadatos de contenedor u objetos
 $ swift post ARGUMENTOS
     </code></pre>
