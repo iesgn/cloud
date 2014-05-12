@@ -13,7 +13,7 @@ menu:
 
 ### Contenidos
 
-* [Presentación OpenStack Instancias](presentacion_instancias)
+* [Presentación: Instancias](presentacion_instancias)
 
 ###Video
 

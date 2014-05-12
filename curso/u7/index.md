@@ -18,8 +18,8 @@ menu:
 
 ### Contenidos
 
-* [Presentación OpenStack Volúmenes](presentacion_volumenes)
-* [Presentación OpenStack Objetos](presentacion_objetos)
+* [Presentación: Volúmenes](presentacion_volumenes)
+* [Presentación: Objetos](presentacion_objetos)
 
 ###Vídeo
 

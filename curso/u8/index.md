@@ -16,7 +16,7 @@ menu:
 
 ### Contenidos
 
-* [Presentación: OpenStack - Redes](presentacion_redes)
+* [Presentación: Redes](presentacion_redes)
 
 ###Vídeo
 
