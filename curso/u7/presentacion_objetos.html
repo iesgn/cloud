@@ -1,0 +1,106 @@
+---
+layout: presentacion
+title: Instancias
+tema: solarized
+---
+<section>
+  <h1>OpenStack</h1>
+  <h3>Trabajo con Objetos</h3>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+	<ol>
+	  <li>Conceptos previos</li>
+	  <li>Volúmenes, instantáneas y lanzamiento de instancias desde
+	  volúmenes con Horizon</li>
+	  <li>Volúmenes, instantáneas y lanzamiento de instancias desde
+	  volúmenes nova cli</li>
+	  <li>Funcionamiento interno de los volúmenes</li>
+	</ol>
+
+</section>
+<section>
+  <section>
+    <h2>Conceptos previos</h2>
+  </section>
+  <section>
+    <h2>OpenStack Swift</h2>
+    <ul>
+      <li>Swift es un almacén de objetos distribuido y altamente escalable. Se
+ utiliza para almacenar grandes cantidades de datos de forma segura y
+ económica.</li>
+      <li>La diferencia fundamental entre el almacenamiento de objetos y un
+    sistema de ficheros tradicional es que los objetos no pueden anidarse y no
+    se puede asignar a cada objeto permisos y propietarios de forma
+    individual.</li>
+      <li>El almacenamiento de objetos es ideal para almacenar grandes ficheros
+      multimedia o archivos grandes como copias de seguridad.</li>
+      <li>La comunicación con OpenStack Swift se hace mediante una sencilla API
+      RESTful, e incluso es posible utilizar una API compatible con Amazon
+      S3</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Terminología</h2>
+    <ul>
+      <li><strong>Contenedor</strong>: Equivalente a un directorio en un sistema
+	de ficheros, sirve para organizar objetos, pero tiene una diferencia
+	fundamental con el directorio: No se pueden anidar contenedores</li>
+      <li><strong>Objeto</strong>: Elemento que se almacena, suele estar
+	relacionado con un fichero o archivo, pero además incluye una serie de
+	metadatos.</li>
+      <li><strong>ACL</strong>: Utilizada para gestionar los permisos que otros
+      usuarios pueden tener sobre cada contenedor, no sobre cada objeto. De
+      momento, las ACLs sólo pueden definirse desde la línea de comandos.</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Objetos con Horizon</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Crear varios contenedores desde Horizon</li>
+      <li>Subir y bajar objetos desde Horizon</li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Objetos con Swift CLI</h2>
+    <ul>
+      <li>Utilizar swift desde la línea de comandos: list, stat, download, upload</li>
+      <li>Permitir acceso anónimo a un contenedor</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Objetos</h2>
+    <pre><code>
+#Listar contenedores
+$ swift list
+#Listar objetos
+$ swift list CONTENEDOR
+# Subir un objeto
+$ swift upload CONTENEDOR NOMBRE_FICHERO
+# swift download CONTENEDOR NOMBRE_OBJETO
+# Actualizar metadatos de contenedor u objetos
+$ swift post ARGUMENTOS
+    </code></pre>
+  </section>
+</section>
