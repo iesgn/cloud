@@ -80,7 +80,9 @@ tema: solarized
 	asociar y desasociar de una instancia cuando se desee</li>
       <li>Utilizado para proporcionar almacenamiento permanente o independiente
 	de la vida de una instancia</li>
-      <li>Cinder es equivalente a Amazon EBS</li>
+      <li>Un volumen en cinder es equivalente a una unidad lógica en SAN</li>
+      <li>Cinder es equivalente a <a href="http://aws.amazon.com/es/ebs/">Amazon
+      EBS</a></li>
       <li>Hasta ahora no es posible asociar un volumen a más de una instancia a
       la vez o modificar el tamaño de un volumen "en caliente"</li>
     </ul>
@@ -134,21 +136,7 @@ $ cinder extend ID_VOLUME NEW_SIZE
 <section>
   <h2>Conceptos avanzados</h2>
   <ul>
-    <li>Creación de un volumen: cinder-volume.log
     <li>Volúmenes con LVM</li>
     <li>Compartir volumen con iSCSI: tgt</li>
-    <li>Asociar volumen: nova-compute.log</li>
-    <li>Modificaciones en la definición de la instancia</li>
-    <li>Desasociar, clonar, redimensionar, etc.</li>
   </ul>
 </section>
-<!-- <section> -->
-<!-- Si incluimos almacenamiento de objetos: -->
-<!-- - http://s3.amazonaws.com/szmanuals/cebc8a6eaeb9498c4ae0d2f827645abf enlace tipo -->
-<!-- pesado para CDN -->
-<!-- - Contenedor -->
-<!-- - Objeto -->
-<!-- - Utilización desde horizon -->
-<!-- - Utilización desde CLI (swift), URL -->
-<!-- - ACL para contenedores -->
-<!-- </section> -->
