@@ -47,9 +47,9 @@
 - nombre: Unidad 8
   items:
   - name: L2
-    url: cloud/curso/u8/l2
+    url: l2
   - name: L3
-    url: cloud/curso/u8/l3
+    url: l3
 - nombre: Unidad 9
   items:
 - nombre: Unidad 10
