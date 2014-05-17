@@ -46,6 +46,8 @@
   items:
 - nombre: Unidad 8
   items:
+  - name: Redes
+    url: http://iesgn.github.io/cloud/curso/u8
   - name: Open vSwitch
     url: openvswitch
   - name: L2
