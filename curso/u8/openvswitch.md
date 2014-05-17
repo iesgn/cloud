@@ -29,7 +29,7 @@ de software libre de un switch virtual distribuido multicapa.
 Las máquinas GNU/Linux incluyen ya un software para la utilización de switches
 L2, software conocido como "linux bridge", incluido en el kérnel linux y
 manejado con las herramientas del espacio de usuario "bridge-utils" y en
-particular con la instricción *brctl*. OpenvSwitch es un desarrollo nuevo e
+particular con la instrucción *brctl*. OpenvSwitch es un desarrollo nuevo e
 independiente que se incluyó en la versión 3.3 del kérnel linux y que
 proporciona mayor funcionalidad para entornos de virtualización de redes, como
 muy bien se explica en <a
