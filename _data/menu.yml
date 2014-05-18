@@ -50,10 +50,10 @@
     url: http://iesgn.github.io/cloud/curso/u8
   - name: Open vSwitch
     url: openvswitch
-  - name: L2
-    url: l2
-  - name: L3
-    url: l3
+  - name: Red privada
+    url: red-privada
+  - name: Red exterior
+    url: red-exterior
 - nombre: Unidad 9
   items:
 - nombre: Unidad 10

@@ -5,17 +5,12 @@ menu:
   - Unidad 8
 ---
 
-## Nivel de enlace (L2)
+## Redes privadas
 
 Puesto que el despliegue completo incluye muchos elementos y puede resultar
-demasiado complejo, vamos a tratar de forma separada el nivel de enlace y el
-nivel de red. En esta primera parte, nos centraremos en ver cómo se
-interconectan entre sí las máquinas virtuales dentro de una misma red virtual y
-cómo se aplican a cada instancia las reglas del grupo de seguridad.
-
-Cuando estamos trabajando en nivel de enlace, los parámetros significativos en
-este nivel son los switches virtuales o bridges, puertos de los mismos y las
-direcciones MAC de las interfaces de red conectadas.
+demasiado complejo, vamos a tratar en esta sección el funcionamiento interno de
+las redes privadas y en la siguiente sección veremos cómo se conectan al
+exterior.
 
 ## Bridge de integración y túneles GRE
 
@@ -80,10 +75,37 @@ interfaz especial denominada puerto patch:
 	     speed: 0 Mbps now, 0 Mbps max
 	OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
 
-### Creación de la primera red y subred
+En el caso de br-tun existe un puerto para cada túnel GRE:
 
-Utilizando el cliente de línea de comandos de neutron, creamos una red privada y
-una subred asociada a ella con el rango de direcciones IP 10.0.0.0/24:
+	# ovs-ofctl show br-tun
+	OFPT_FEATURES_REPLY (xid=0x2): dpid:0000d2c93b314b42
+	n_tables:254, n_buffers:256
+	capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS ARP_MATCH_IP
+	actions: OUTPUT SET_VLAN_VID SET_VLAN_PCP STRIP_VLAN SET_DL_SRC SET_DL_DST
+	SET_NW_SRC SET_NW_DST SET_NW_TOS SET_TP_SRC SET_TP_DST ENQUEUE
+	 1(patch-int): addr:56:63:30:9a:59:a7
+	      config:     0
+	      state:      0
+	      speed: 0 Mbps now, 0 Mbps max
+	 2(gre-1): addr:26:7c:0f:93:22:ee
+	      config:     0
+	      state:      0
+	      speed: 0 Mbps now, 0 Mbps max
+	 3(gre-2): addr:26:7c:0f:a3:12:ae
+	      config:     0
+	      state:      0
+	      speed: 0 Mbps now, 0 Mbps max
+	 LOCAL(br-tun): addr:d2:c9:3b:31:4b:42
+	      config:     0
+	      state:      0
+	      speed: 0 Mbps now, 0 Mbps max
+	OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
+
+### Creación de una red privada
+
+Utilizando el cliente de línea de comandos de neutron y con las credenciales de
+un usuario normal, creamos una red privada y una subred asociada a ella con el
+rango de direcciones IP 10.0.0.0/24:
 
 	$ neutron net-create privada
 	Created a new network:
@@ -119,7 +141,8 @@ una subred asociada a ella con el rango de direcciones IP 10.0.0.0/24:
 
 ### Creación automática de la red virtual al levantar una instancia:
 
-Al lanzar una instancia, se crean todos los dispositivos de red necesarios y se
+La red anteriormente definida no se crea realmente hasta que no se lance una
+instancia, para la cual se crean todos los dispositivos de red necesarios y se
 interconectan adecuadamente:
 
 	$ nova boot --image 4ddb27ab-b3cc-4a65-ac52-f4ce7894e4ed \
@@ -189,20 +212,18 @@ corresponde con la máquina que hemos creado, por lo que nos quedamos con su uui
 	 b079c24c-8386-47db-a730-35b3a99419e8
 
 Como se tienen que crear varias interfaces de red asociadas a este puerto y el UUID es 
-demasiado largo, neutron se queda con los 11 primeros caracteres (b079c24c-83).
+demasiado largo, neutron opta por utilizar solo los 11 primeros caracteres
+(b079c24c-83).
 
 Podemos comprobar que en el nodo de computación en el que se está ejecutando la
 instancia aparecen 4 interfaces de red nuevas relacionadas con el identificador
 b079c24c-83:
 
+	# ip link show|grep qbrb079c24c-83
 	13: qbrb079c24c-83: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
-	    link/ether de:a1:64:29:9d:40 brd ff:ff:ff:ff:ff:ff
 	14: qvob079c24c-83: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
-	    link/ether ae:49:25:f2:4a:1c brd ff:ff:ff:ff:ff:ff
 	15: qvbb079c24c-83: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
-	    link/ether de:a1:64:29:9d:40 brd ff:ff:ff:ff:ff:ff
 	16: tapb079c24c-83: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 500
-	    link/ether fe:16:3e:79:3b:ac brd ff:ff:ff:ff:ff:ff
 
 La forma en la que se interconectan todas estas interfaces se muestra en la siguiente
  imagen y es necesario añadir un bridge linux por cada instancia por la forma de definir
@@ -248,7 +269,7 @@ En el nodo de red ejecutamos la instrucción:
 Vemos que se ha creado un espacio de nombres que empieza por dhcp, podemos ejecutar 
 comandos en ese espacio de nombres de forma independiente del sistema:
 
-	[root@rdo log]# ip netns exec qdhcp-f84a328e-407e-4ca6-87bb-ec148853c585 ip link show
+	# ip netns exec qdhcp-f84a328e-407e-4ca6-87bb-ec148853c585 ip link show
 	11: tap79712efb-32: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
 	    link/ether fa:16:3e:dd:ff:a4 brd ff:ff:ff:ff:ff:ff
 	12: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
@@ -262,6 +283,12 @@ nodo de red  para darle IP dinámica a las instancias:
 	# ps aux|grep f84a328e-407e-4ca6-87bb-ec148853c585
 	nobody   19821  0.0  0.0  12888   652 ?        S    10:15   0:00 dnsmasq --no-hosts --no-resolv --strict-order --bind-interfaces --interface=tap79712efb-32 --except-interface=lo --pid-file=/var/lib/neutron/dhcp/f84a328e-407e-4ca6-87bb-ec148853c585/pid --dhcp-hostsfile=/var/lib/neutron/dhcp/f84a328e-407e-4ca6-87bb-ec148853c585/host --dhcp-optsfile=/var/lib/neutron/dhcp/f84a328e-407e-4ca6-87bb-ec148853c585/opts --leasefile-ro --dhcp-range=tag0,10.0.0.0,static,86400s --dhcp-lease-max=256 --conf-file= --domain=openstacklocal
 
+Hay que destacar que la instrucción anterior incluye el parámetro "--no-resolv"
+por lo que no se utilizará el fichero /etc/resolv.conf de la máquina donde se
+ejecuta dnsmasq para definir los servidores DNS en los clientes DHCP. Esto
+quiere decir que habrá que definir de forma explícita estos servidores DNS en
+cada subred privada.
+
 Podemos acceder al directorio:
 
 	# cd /var/lib/neutron/dhcp/f84a328e-407e-4ca6-87bb-ec148853c585
@@ -273,8 +300,14 @@ Y comprobar que existe una reserva para la MAC de la instancia:
 
 ### Conexión con otra instancia de la misma red
 
-Creamos una nueva instancia en la misma red, listamos los puertos que aparecen
-en el proyecto y comprobamos que aparece un puerto nuevo:
+Para comprobar la conectividad entre instancias dentro de una misma red privada,
+creamos una nueva instancia (test2) que se ejecutará en el segundo nodo de
+computación y que virtualmente está en la misma red privada que la instancia
+"test", aunque todo el tráfico pase por el bridge de integración de cada nodo de
+computación, el bridge túnel y el túnel GRE.
+
+Si listamos los puertos del proyecto al crear la nueva instancia, veremos que
+aparece un puerto nuevo:
 
 	$ neutron port-list
 	+--------------------------------------+------+-------------------+---------------------------------------------------------------------------------+
@@ -283,7 +316,7 @@ en el proyecto y comprobamos que aparece un puerto nuevo:
 	| 6a6ac39c-61fb-46a5-bd39-e8ba1701d103 |      | fa:16:3e:eb:2c:d3 | {"subnet_id": "d4bb2d0e-2af7-44fe-9729-4e3b95766e28", "ip_address": "10.0.0.4"} |
 	...
 
-Luego tiene que haber nuevas interfaces de red:
+Luego tiene que haber nuevas interfaces de red en el segundo nodo de computación:
 
 	# ip link show|grep 6a6ac39c-61
 	17: qbr6a6ac39c-61: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
@@ -311,10 +344,114 @@ Y vemos el nuevo bridge linux:
 	qbr6a6ac39c-61		8000.96a4ec71dea6	no		qvb6a6ac39c-61
 									tap6a6ac39c-61
 
+#### Reglas del grupo de seguridad
+
+Comprobamos las reglas de iptables que se han creado en el nodo de computación
+al levantar la instancia test (b079c24c-8386-47db-a730-35b3a99419e8), en este
+caso se crean reglas utilizando sólo los 10 primeros caracteres del uuid: 
+
+	# iptables -S |grep b079c24c-8 
+	-N neutron-openvswi-ib079c24c-8
+	-N neutron-openvswi-ob079c24c-8
+	-N neutron-openvswi-sb079c24c-8
+	-A neutron-openvswi-FORWARD -m physdev --physdev-out tapb079c24c-83 --physdev-is-bridged -j neutron-openvswi-sg-chain 
+	-A neutron-openvswi-FORWARD -m physdev --physdev-in tapb079c24c-83 --physdev-is-bridged -j neutron-openvswi-sg-chain 
+	-A neutron-openvswi-INPUT -m physdev --physdev-in tapb079c24c-83 --physdev-is-bridged -j neutron-openvswi-ob079c24c-8 
+	-A neutron-openvswi-ib079c24c-8 -m state --state INVALID -j DROP 
+	-A neutron-openvswi-ib079c24c-8 -m state --state RELATED,ESTABLISHED -j RETURN 
+	-A neutron-openvswi-ib079c24c-8 -s 10.0.0.3/32 -p udp -m udp --sport 67 --dport 68 -j RETURN 
+	-A neutron-openvswi-ib079c24c-8 -j neutron-openvswi-sg-fallback 
+	-A neutron-openvswi-ob079c24c-8 -p udp -m udp --sport 68 --dport 67 -j RETURN 
+	-A neutron-openvswi-ob079c24c-8 -j neutron-openvswi-sb079c24c-8 
+	-A neutron-openvswi-ob079c24c-8 -p udp -m udp --sport 67 --dport 68 -j DROP 
+	-A neutron-openvswi-ob079c24c-8 -m state --state INVALID -j DROP 
+	-A neutron-openvswi-ob079c24c-8 -m state --state RELATED,ESTABLISHED -j RETURN 
+	-A neutron-openvswi-ob079c24c-8 -j neutron-openvswi-sg-fallback 
+	-A neutron-openvswi-sb079c24c-8 -s 10.0.0.2/32 -m mac --mac-source FA:16:3E:79:3B:AC -j RETURN 
+	-A neutron-openvswi-sb079c24c-8 -j DROP 
+	-A neutron-openvswi-sg-chain -m physdev --physdev-out tapb079c24c-83 --physdev-is-bridged -j neutron-openvswi-ib079c24c-8 
+	-A neutron-openvswi-sg-chain -m physdev --physdev-in tapb079c24c-83 --physdev-is-bridged -j neutron-openvswi-ob079c24c-8 
+
+Entre las que destacamos las siguientes:
+
+* Se crean tres nuevas cadenas, para los procesos de entrada (i), salida (o) y prevenir spoofing (s):
+
+	-N neutron-openvswi-ib079c24c-8
+	-N neutron-openvswi-ob079c24c-8
+	-N neutron-openvswi-sb079c24c-8
+
+* Se permiten conexiones entrantes relacionadas o establecidas:
+
+	-A neutron-openvswi-ib079c24c-8 -m state --state RELATED,ESTABLISHED -j RETURN 
+
+* Se permiten las respuestas DHCP (DHCPOFFER y DHCPACK) desde el servidor DHCP de la red:
+
+	-A neutron-openvswi-ib079c24c-8 -s 10.0.0.3/32 -p udp -m udp --sport 67 --dport 68 -j RETURN 
+
+* Se permiten peticiones DHCP (DHCPDISCOVER y DHCPREQUEST):
+
+	-A neutron-openvswi-ob079c24c-8 -p udp -m udp --sport 68 --dport 67 -j RETURN 
+
+* Se permiten conexiones salientes relacionadas o establecidas:
+
+	-A neutron-openvswi-ob079c24c-8 -m state --state RELATED,ESTABLISHED -j RETURN 
+
+* Se verifica la correspondencia entre la dirección IP y la MAC:
+
+	-A neutron-openvswi-sb079c24c-8 -s 10.0.0.2/32 -m mac --mac-source FA:16:3E:79:3B:AC -j RETURN 
+
+#### Conectividad entre las instancias de la misma red
+
+Como las reglas de cortafuegos se aplican a las instancias de forma individual y
+no hay ninguna regla que permita acceso desde equipos del mismo segmento de red,
+no es posible inicialmente acceder desde una instancia a otra de la misma red,
+es necesario permitir explícitamente cada proceso que se desee. 
+
+Dependiendo de la versión de OpenStack varían las reglas de seguridad que se
+definen por defecto. En el caso de OpenStack Havana se definen las siguientes
+reglas de entrada (ingress) y salida (egress):
+
+	$ neutron security-group-rule-list
+	+--------------------------------------+----------------+-----------+----------+------------------+--------------+
+	| id                                   | security_group | direction | protocol | remote_ip_prefix | remote_group |
+	+--------------------------------------+----------------+-----------+----------+------------------+--------------+
+	| 68a447f4-95ef-4571-b209-17288bb17b2b | default        | ingress   |          |                  | default      |
+	| 826d3068-9173-4477-be85-a304ab90a442 | default        | ingress   |          |                  | default      |
+	| a008aa84-5543-4a24-8398-751b3aa3d1a8 | default        | egress    |          |                  |              |
+	| ffa55db3-00ae-4e8f-8e03-92f76d998ba7 | default        | egress    |          |                  |              |
+	+--------------------------------------+----------------+-----------+----------+------------------+--------------+
+	
+Añadimos una nueva regla para que puedan comunicarse por ICMP las máquinas de la red 10.0.0.0/24:
+
+	$ neutron security-group-rule-create --direction ingress --protocol icmp --remote-ip-prefix 10.0.0.0/24 default
+	
+Que produce la siguiente regla de iptables:
+
+    -A neutron-openvswi-ib079c24c-8 -s 10.0.0.0/24 -p icmp -j RETURN 
+
+Y podemos comprobar que ya es posible hacer ping entre instancias de la misma
+red privada.
+
+Para permitir de forma explícita la comunicación a algún puerto UDP o TCP se
+utilizaría una regla de seguridad como la siguiente para el servicio ssh
+(22/tcp):
+
+	$ neutron security-group-rule-create --direction ingress --protocol tcp --port-range-min 22 --port-range-max 22 --remote-ip-prefix 10.0.0.0/24 default
+
+##### Reglas permisivas en la red privada
+
+Si queremos que las instancias tengan acceso a todos los puertos del resto de
+instancias de su misma red privada, podemos definir reglas de seguridad
+permisivas para esta situación, abriendo todo el rango de puertos UDP y TCP: 
+
+	$ neutron security-group-rule-create --direction ingress --protocol tcp --port-range-min 1 --port-range-max 65535 --remote-ip-prefix 10.0.0.0/24 default
+	$ neutron security-group-rule-create --direction ingress --protocol udp --port-range-min 1 --port-range-max 65535 --remote-ip-prefix 10.0.0.0/24 default
+
 ### Redes independientes
 
 Utilizamos otro proyecto y creamos una red y una subred con el mismo
-direccionamiento 10.0.0.0/24
+direccionamiento 10.0.0.0/24 para verificar que neutron gestiona adecuadamente
+esta situación sin que se produzcan interferencias.
 
 Al lanzar la primera instancia, comprobamos los puertos que se han creado:
 
