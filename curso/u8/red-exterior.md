@@ -37,7 +37,9 @@ exterior ya creado en el nodo de red y la interfaz eth1 conectada a él:
      	  speed: 0 Mbps now, 0 Mbps max
     OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
 
-Esta situación se representa esquemáticamente en la siguiente figura:
+Esta situación se representa esquemáticamente en la siguiente figura, en la que
+puede observarse que el bridge exterior está conectado a la interfaz de red
+física eth1 y desconectado de los otros dos bridges:
 
 <div style="text-align: center;"><img src="img/netnode.png" alt="netnode"/></div>
 
@@ -122,7 +124,7 @@ el exterior:
 Conectamos el router a la red exterior, lo que se denomina en neutron configurar
 la puerta de enlace:
 
-    $ neutron router-gateway-set cc5fd2f5-59d6-484d-a759-819917a5610c \
+	$ neutron router-gateway-set cc5fd2f5-59d6-484d-a759-819917a5610c \
 	3292768d-b916-45bc-8ce5-cbab121d6d01
 	Set gateway for router cc5fd2f5-59d6-484d-a759-819917a5610c
 
