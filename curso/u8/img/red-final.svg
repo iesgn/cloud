@@ -90,8 +90,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="592.59879"
-     inkscape:cy="411.5248"
+     inkscape:cx="594.02736"
+     inkscape:cy="240.09623"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -840,7 +840,9 @@
        x="515.08691"
        y="996.36218"
        id="text3213"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3215"
          x="515.08691"
@@ -848,7 +850,7 @@
          sodipodi:role="line"
          x="515.08691"
          y="1006.3622"
-         id="tspan3221">192.168.0.16</tspan></text>
+         id="tspan3221">192.168.0.15</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSans;-inkscape-font-specification:FreeSans"
