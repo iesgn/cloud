@@ -38,6 +38,7 @@ exterior ya creado en el nodo de red y la interfaz eth1 conectada a él:
     OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
 
 Esta situación se representa esquemáticamente en la siguiente figura:
+
 <div style="text-align: center;"><img src="img/netnode.png" alt="netnode"/></div>
 
 La dirección IP de br-ex es la 192.168.0.68 y está en una red 192.168.0.0/24 del
@@ -121,7 +122,7 @@ el exterior:
 Conectamos el router a la red exterior, lo que se denomina en neutron configurar
 la puerta de enlace:
 
-   	$ neutron router-gateway-set cc5fd2f5-59d6-484d-a759-819917a5610c \
+    $ neutron router-gateway-set cc5fd2f5-59d6-484d-a759-819917a5610c \
 	3292768d-b916-45bc-8ce5-cbab121d6d01
 	Set gateway for router cc5fd2f5-59d6-484d-a759-819917a5610c
 
@@ -139,14 +140,14 @@ caracteres asociados al nuevo puerto creado:
 	# ip netns exec qrouter-cc5fd2f5-59d6-484d-a759-819917a5610c ip addr show
 	27: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
 	    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-            inet 127.0.0.1/8 scope host lo
+        inet 127.0.0.1/8 scope host lo
 	    inet6 ::1/128 scope host 
 	       valid_lft forever preferred_lft forever
 	28: qg-f14d9e65-26: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
 	    link/ether fa:16:3e:b8:0a:f9 brd ff:ff:ff:ff:ff:ff
-    	    inet 192.168.0.15/24 brd 192.168.0.255 scope global qg-f14d9e65-26
-    	    inet6 fe80::f816:3eff:feb8:af9/64 scope link 
-    	       valid_lft forever preferred_lft forever
+        inet 192.168.0.15/24 brd 192.168.0.255 scope global qg-f14d9e65-26
+        inet6 fe80::f816:3eff:feb8:af9/64 scope link 
+           valid_lft forever preferred_lft forever
 
 Si comprobamos con las credenciales del administrador del cloud los puertos,
 veremos que aparece un nuevo puerto asociado a la primera dirección IP de
@@ -253,8 +254,7 @@ test) mediante:
 	Associated floatingip bd31743b-79df-41a4-a40c-62756e868a88
 
 Si ahora vemos las reglas de la tabla nat de iptables en el espacio de nombres
-del router observaremos las reglas de SNAT y DNAT asociadas a la IP flotante
-192.168.0.16:
+del router observaremos las reglas de DNAT asociadas a la IP flotante 192.168.0.16:
 
     # ip netns exec qrouter-cc5fd2f5-59d6-484d-a759-819917a5610c iptables -t nat -S
 	...
@@ -277,5 +277,6 @@ la cadena ib079c24c-8 de la interfaz de red tapb079c24c-83 de la instancia
 	
 Finalmente podemos ver la situación generada con todas sus interfaces de red y
 direcciones IP en el siguiente diagrama:
+
 <div style="text-align: center;"><img src="img/red-final.png" alt="red final"/></div>
 
