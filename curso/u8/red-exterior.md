@@ -225,6 +225,18 @@ instancia:
 	64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=0.378 ms
 	...
 
+OpenStack neutron añade automáticamente una regla de SNAT para que las
+instancias de la red privada puedan acceder al exterior utilizando la dirección
+IP exterior del router:
+
+    # ip netns exec qrouter-cc5fd2f5-59d6-484d-a759-819917a5610c iptables -t nat -S|grep SNAT
+    -A neutron-l3-agent-snat -s 10.0.0.0/24 -j SNAT --to-source 192.168.0.15 
+
+Es decir, todas las máquinas de la red privada pueden acceder al exterior aunque
+todavía no tengan asociada una dirección IP flotante. Las IPs flotantes se
+utilizan para poder iniciar una conexión desde el exterior a una instancia
+completa, por lo que se utilizan reglas de DNAT de iptables.
+
 ### IP flotante
 
 Las IP flotantes se definen como las direcciones IPs asociadas a la red
