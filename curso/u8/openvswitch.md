@@ -5,7 +5,7 @@ menu:
   - Unidad 8
 ---
 En las unidades anteriores se han visto dos elementos fundamentales para
-configurar la infraestructura como servicio: máquinas virtuales y
+configurar la infraestructura como servicio, esto es máquinas virtuales y
 almacenamiento, pero falta un último elemento: la <a
 href="http://en.wikipedia.org/wiki/Network_virtualization">virtualización de
 redes</a>. La virtualización de redes consiste en desacoplar las redes virtuales
@@ -14,12 +14,16 @@ del hardware de red para lograr una mejor integración de los entornos virtuales
 El componente de OpenStack que se encarga de gestionar la virtualización de
 redes es neutron y es un componente que se incluyó en OpenStack Folsom con el
 nombre de quantum. OpenStack neutron está sometido a un importante desarrollo y
-va incluyendo poco a poco soporte para gran cantidad de hardware, mediante <a
+va incluyendo paulatinamente diferentes tecnologías de red como "backends"
+mediante <a
 href="https://wiki.openstack.org/wiki/Neutron#Using_Neutron">plugins</a>
 
-En nuestro caso, que no utilizamos ningún hardware con funcionalidades para
-integrarse en las redes virtuales, vamos a gestionar todo mediante Open
-vSwitch.
+En nuestro caso, vamos a utilizar Open vSwitch como la tecnología por debajo de
+neutron encargada de la virtualización de la red.
+
+**Nota:** Aunque en OpenStack Havana está recomendado utilizar Open vSwitch
+mediante el nuevo plugin *Modular Layer 2* (ML2), hemos utilizado directamente
+el plugin de Open vSwitch.
 
 ## Open vSwitch
 
