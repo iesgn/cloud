@@ -12,7 +12,8 @@ neutron router-create r3
 neutron subnet-create --name subred3 red3 75.10.3.0/24
 neutron subnet-create --name subred2 red2 75.10.2.0/24
 neutron subnet-create --name subred1 red1 75.10.1.0/24
-
+neutron router-update r2 --routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1
+neutron router-update r3 --routes type=dict list=true destination=75.10.1.0/24,nexthop=75.10.2.254
 
 neutron router-gateway-set r1 public
 neutron router-interface-add r1 subred1
@@ -29,14 +30,9 @@ neutron router-interface-add r3 subred3
 
 neutron subnet-update subred1 --host_routes type=dict list=true destination=75.10.2.0/24,nexthop=75.10.1.254 destination=75.10.3.0/24,nexthop=75.10.1.254
 
-neutron router-update r2 --routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1
+
+
 neutron subnet-update subred2 --host_routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1 destination=75.10.1.0/24,nexthop=75.10.2.254
-
-neutron router-update r3 --routes type=dict list=true destination=75.10.1.0/24,nexthop=75.10.2.254
-
-
-
-
 
 neutron security-group-rule-create --direction ingress --protocol icmp --remote-ip-prefix 0.0.0.0/0 default
 neutron security-group-rule-create --direction ingress --protocol tcp --port-range-min 22 --port-range-max 22 --remote-ip-prefix 0.0.0.0/0 default
