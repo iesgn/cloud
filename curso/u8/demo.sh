@@ -30,7 +30,7 @@ neutron router-interface-add r3 subred3
 neutron subnet-update subred1 --host_routes type=dict list=true destination=75.10.2.0/24,nexthop=75.10.1.254 destination=75.10.3.0/24,nexthop=75.10.1.254
 
 neutron router-update r2 --routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1
-neutron subnet-update subred2 --host_routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1
+neutron subnet-update subred2 --host_routes type=dict list=true destination=75.10.3.0/24,nexthop=75.10.2.1 destination=75.10.1.0/24,nexthop=75.10.2.254
 
 neutron router-update r3 --routes type=dict list=true destination=75.10.1.0/24,nexthop=75.10.2.254
 
