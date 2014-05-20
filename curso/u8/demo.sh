@@ -42,20 +42,25 @@ neutron security-group-rule-create --direction ingress --protocol icmp --remote-
 neutron security-group-rule-create --direction ingress --protocol tcp --port-range-min 22 --port-range-max 22 --remote-ip-prefix 0.0.0.0/0 default
 
 
+nova keypair-add mi_clave > mi_clave.pem
+chmod 600 mi_clave.pem
 
 
-nova boot --flavor m1.tiny --image cirros-0.3.1-x86_64-uec \
+nova boot --flavor m1.tiny2 --image ubuntu \
             --security-groups default\
+	    --key-name mi_clave \
             --nic net-id=$NET_ID1 \
             pc1
 
-nova boot --flavor m1.tiny --image cirros-0.3.1-x86_64-uec \
+nova boot --flavor m1.tiny2 --image ubuntu \
             --security-groups default\
+	    --key-name mi_clave \
             --nic net-id=$NET_ID2 \
             pc2
 
-nova boot --flavor m1.tiny --image cirros-0.3.1-x86_64-uec \
+nova boot --flavor m1.tiny2 --image ubuntu \
             --security-groups default\
+	    --key-name mi_clave \
             --nic net-id=$NET_ID3 \
             pc3
 
