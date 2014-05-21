@@ -49,6 +49,8 @@ precisamos de algunas características de la red como las siguientes:
   diferente red local.
 - Máquinas que se ejecutan en diferentes nodos de computación, pero que
   virtualmente estén en la misma red local.
+- Máquinas que puedan pasar "en vivo" de ejecutarse en un nodo de computación a
+  otro.
 - Cuando sea preciso, un servidor DHCP por cada subred que no interfiera con los
   de otras subredes
 - Reglas de cortafuegos definidas por máquina, no por red.
