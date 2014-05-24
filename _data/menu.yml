@@ -56,13 +56,19 @@
     url: red-exterior
 - nombre: Unidad 9
   items:
+  - name: OpenShift
+    url: index
+  - name: Configuración
+    url: configuracion
+  - name: Prácticas
+    url: practicas
 - nombre: Unidad 10
   items:
 
 - nombre: Unidades
   items:
    - name: Inicio
-     url: http://iesgn.github.io/cloud
+     url: /
    - name: Unidad 1
      url: http://iesgn.github.io/cloud/curso/u1
    - name: Unidad 2
