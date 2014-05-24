@@ -1,42 +1,42 @@
 - nombre: Unidad 1
   items:
    - name: Cloud Computing
-     url: http://iesgn.github.io/cloud/curso/u1
+     url: /curso/u1
    - name: OpenStack
-     url: http://iesgn.github.io/cloud/curso/u1/openstack
+     url: /curso/u1/openstack
    - name: OpenShift
-     url: http://iesgn.github.io/cloud/curso/u1/openshift  
+     url: /curso/u1/openshift  
 - nombre: Unidad 2
   items:
    - name: DevOps
-     url: http://iesgn.github.io/cloud/curso/u2
+     url: /curso/u2
    - name: Git
-     url: http://iesgn.github.io/cloud/curso/u2/git
+     url: /curso/u2/git
    - name: Vagrant
-     url: http://iesgn.github.io/cloud/curso/u2/vagrant
+     url: /curso/u2/vagrant
    - name: Ansible
-     url: http://iesgn.github.io/cloud/curso/u2/ansible
+     url: /curso/u2/ansible
 - nombre: Unidad 3
   items:
    - name: Entornos
-     url: http://iesgn.github.io/cloud/curso/u3
+     url: /curso/u3
    - name: DevStack
-     url: http://iesgn.github.io/cloud/curso/u3/devstack
+     url: /curso/u3/devstack
    - name: RDO
-     url: http://iesgn.github.io/cloud/curso/u3/rdo
+     url: /curso/u3/rdo
    - name: OpenStack-ansible
-     url: http://iesgn.github.io/cloud/curso/u3/openstack-ansible
+     url: /curso/u3/openstack-ansible
    - name: Prácticas
-     url: http://iesgn.github.io/cloud/curso/u3/practicas
+     url: /curso/u3/practicas
  
 - nombre: Unidad 4
   items:
    - name: OpenStack Grizzly
-     url: http://iesgn.github.io/cloud/curso/u4
+     url: /curso/u4
    - name: Práctica Linux
-     url: http://iesgn.github.io/cloud/curso/u4/practica_linux
+     url: /curso/u4/practica_linux
    - name: Práctica Windows
-     url: http://iesgn.github.io/cloud/curso/u4/practica_windows
+     url: /curso/u4/practica_windows
 
 - nombre: Unidad 5
   items:
@@ -47,7 +47,7 @@
 - nombre: Unidad 8
   items:
   - name: Redes
-    url: http://iesgn.github.io/cloud/curso/u8
+    url: /curso/u8
   - name: Open vSwitch
     url: openvswitch
   - name: Red privada
@@ -70,24 +70,24 @@
    - name: Inicio
      url: /
    - name: Unidad 1
-     url: http://iesgn.github.io/cloud/curso/u1
+     url: /curso/u1
    - name: Unidad 2
-     url: http://iesgn.github.io/cloud/curso/u2
+     url: /curso/u2
    - name: Unidad 3
-     url: http://iesgn.github.io/cloud/curso/u3
+     url: /curso/u3
    - name: Unidad 4
-     url: http://iesgn.github.io/cloud/curso/u4
+     url: /curso/u4
    - name: Unidad 5
-     url: http://iesgn.github.io/cloud/curso/u5
+     url: /curso/u5
    - name: Unidad 6
-     url: http://iesgn.github.io/cloud/curso/u6
+     url: /curso/u6
    - name: Unidad 7
-     url: http://iesgn.github.io/cloud/curso/u7
+     url: /curso/u7
    - name: Unidad 8
-     url: http://iesgn.github.io/cloud/curso/u8
+     url: /curso/u8
    - name: Unidad 9
-     url: http://iesgn.github.io/cloud/curso/u9
+     url: /curso/u9
    - name: Unidad 10
-     url: http://iesgn.github.io/cloud/curso/u10
+     url: /curso/u10
    - name: Foro
      url: https://github.com/iesgn/cloud/issues
