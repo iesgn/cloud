@@ -32,8 +32,7 @@ En resumen tenemos a nuestras disposición diferentes versiones:
 |**¿Precio?**|Free Plan o Premium Plan|Suscripción anual|Gratis y libre|
 |**Soporte**|Comunidad(Free Plan);Red Hat(Premium Plan)|Red Hat|Comunidad|
 |**¿Dónde puedes ejecutarlo?**|En el cloud público|En tus propios servidores o en tu cloud privado|En tu ordenador, en tus servidores o en cloud privada o pública|
-|**¿Para quién esta pensado?**|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de
-software libre|
+|**¿Para quién esta pensado?**|Startups, desarroladores, pequeñas empresas|Grandes empresas|Cualquiera que este interesado en lo último de software libre|
 
 ### Enlaces de otros PaaS
 
