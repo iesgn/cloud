@@ -28,7 +28,7 @@ El acceso remoto a nuestras aplicaciones se hace usando el protocolo SSH. El mec
 
         $ ssh-keygen
 
-Por defecto en el direcorio ~/.ssh, se generan la valve pública y la privada: id_rsa.pub y id_rsa. El contenido del fichero id_pub.pub es el que tienes que configurar en OpenShift.
+Por defecto en el direcorio ~/.ssh, se generan la clave pública y la privada: id_rsa.pub y id_rsa. El contenido del fichero id_pub.pub es el que tienes que configurar en OpenShift.
 
 ![ssh](img/openshift3.png)
 
@@ -48,6 +48,53 @@ Una vez que se ha creado la aplicación (gear), se nos ofrece información del r
 
 ![git](img/openshift6.png)
 
-3) Podemos seguir añadiendo nuevos cartridge a nuestro gear. Demos añadir el cartridge MySql 5.5 para ofrecer el servicio de base de datos para nuestra aplicación.
+3) Podemos seguir añadiendo nuevos cartridges a nuestro gear. Demos añadir el cartridge MySql 5.5 para ofrecer el servicio de base de datos para nuestra aplicación.
 
 ![mysql](img/openshift7.png)
+
+Como vemos en la imagen nos ofrecen el nombre de usuario y la contraseña del usuario de mysql. La dirreción IP y el puerto del servidor mysql nos lo ofrece en una variable de entono del sistema ($OPENSHIFT_MYSQL_DB_HOST y $OPENSHIFT_MYSQL_DB_PORT).
+
+### Despliegue de wordpress
+
+Ya tenemos nuestro gear preparado, a continuación nos tenemos que bajar la última versión de wordpress y sincronizar los ficheros en nuestro repositorio git (el repositorio git lo hemos clonado en el directorio aplicacion).
+
+        $ wget http://es.wordpress.org/wordpress-3.9.1-es_ES.zip
+        $ unzip wordpress-3.9.1-es_ES.zip
+        $ cp -R wordpress/* aplicacion
+        $ cd aplicacion 
+        ~/aplicacion$ git add *
+        ~/aplicacion$ git commit -m "Despliegue inicial de wordpress"
+        ~/aplicacion$ git push
+
+Ya podemos acceder a la url http://aplicacion-iesgn.rhcloud.com y terminar el proceso de instalación.
+
+![wordpress](img/openshift9.png)
+
+Tenemos que indicar el nombre de usuario y la contraseña del usuario mysql, el nombre de la base datos y la ip del servidor de base de datos. Este último dato, como indicamos anteriormente, lo tenemos guardado en una variable de entono del sistema, por lo tanto una opción es acceder al gear por ssh y ver las variables de entorno definidas:
+
+        ssh 53425534e0b8cd5232000e93@aplicacion-iesgn.rhcloud.com
+
+![mysql](img/openshift8.png)
+
+Otra opción es no usar el asistente de configuración de wordpress, y crear un fichero wp-config.php donde indicamos los datos de la base de datos usando las variables predefinidas:
+
+        ...
+        // ** MySQL settings - You can get this info from your web host ** //
+        /** The name of the database for WordPress */
+        define('DB_NAME', getenv('OPENSHIFT_APP_NAME'));
+         
+        /** MySQL database username */
+        define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+         
+        /** MySQL database password */
+        define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+         
+        /** MySQL hostname */
+        define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT'));
+         
+        /** Database Charset to use in creating database tables. */
+        define('DB_CHARSET', 'utf8');
+        ...
+
+
+
