@@ -9,7 +9,7 @@ menu:
 
 ### Acceso por ssh
 
-Una vez que tenemos creado nuestro gear, y accediendo desde un equipo donde tengamos nuestra clave ssh, podemos acceder por ssh a la máuina deonde se esta ejecutando nuestro gear:
+Una vez que tenemos creado nuestro gear, y accediendo desde un equipo donde tengamos nuestra clave ssh, podemos acceder por ssh a la máquina donde se esta ejecutando nuestro gear:
 
         ssh 5383412ce0b8cd98650000ae@aplicacion-iesgn.rhcloud.com
 
