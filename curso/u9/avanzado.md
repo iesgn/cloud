@@ -54,7 +54,7 @@ Si es importante indicar que los procesos que ejecuta cada gear están aislado d
 
 ### Direccionamiento de nuestra aplicación
 
-En este apartado vamos a estudiar las distintas que entran en juego en nuestra aplicación. Por un lado vamos a ver la dirección pública a la que corresponde la URL de nuestra aplicación:
+En este apartado vamos a estudiar las distintas direcciones que entran en juego en nuestra aplicación. Por un lado vamos a ver la dirección pública a la que corresponde la URL de nuestra aplicación:
 
         $ dig aplicacion-iesgn.rhcloud.com
 
