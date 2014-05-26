@@ -23,11 +23,13 @@ bien instalando directamente en un cloud privado el software [OpenShift
 Origin](http://openshift.github.io/) disponible en
 [GitHub](https://github.com/openshift).
 
-En resumen tenemos a nuestras disposición diferentes versiones:
+* [Presentación de OpenShift](presentacion_openshift.html)
+
+Resumen de las diferentas versiones:
 
 |     |OpenShift Online|OpenShift Enterprise|OpenShift Origin|
 |:---:|----------------|--------------------|----------------|
-|**¿Qué es?**|Servico PaaS en la web|PaaS privado|Software PaaS de código abierto|
+|**¿Qué es?**|Servicio PaaS en la web|PaaS privado|Software PaaS de código abierto|
 |**Funciones**|Desarrolo rápido de aplicaciones escalables y alojadas en un cloud público|Acelera los servicios TIC y agiliza el desarrollo de aplicaciones|Usar un PaaS de código abierto y libre o ayudar a desarrollar  OpenShift|
 |**¿Precio?**|Free Plan o Premium Plan|Suscripción anual|Gratis y libre|
 |**Soporte**|Comunidad(Free Plan);Red Hat(Premium Plan)|Red Hat|Comunidad|
