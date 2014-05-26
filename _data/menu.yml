@@ -58,10 +58,12 @@
   items:
   - name: OpenShift
     url: index
-  - name: Configuración
-    url: configuracion
-  - name: Prácticas
-    url: practicas
+  - name: OpenShift online
+    url: online
+  - name: rhc
+    url: rhc
+  - name: Avanzado
+    url: avanzado
 - nombre: Unidad 10
   items:
 
