@@ -5,11 +5,52 @@ menu:
   - Unidad 9
 ---
 
-## OpenShift por dentro. Conceptas avanzados
+## OpenShift por dentro. Conceptos avanzados
 
 ### Acceso por ssh
 
+Una vez que tenemos creado nuestro gear, y accediendo desde un equipo donde tengamos nuestra clave ssh, podemos acceder por ssh a la máuina deonde se esta ejecutando nuestro gear:
+
+        ssh 5383412ce0b8cd98650000ae@aplicacion-iesgn.rhcloud.com
+
+Hay que tener claro que estamos accediendo a una máquina done se esta compartiendo los recursos entre los distintos gear creados por distintos usuario de OpenShift. Por ejemplo podemos obtener información de la memoria RAM de este equipo, el almacenamiento o las características del procesador:
+
+        [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\> free
+        [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\> df -h
+        [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\> cat /proc/cpuinfo 
+
+El directorio home del usuario es /var/lib/openshoft/$UUID y tiene el siguiente contenido:
+
+        drwxr-xr-x.  4 5383412ce0b8cd98650000ae 5383412ce0b8cd98650000ae 4096 may 26 09:31 app-deployments
+        drwxr-xr-x.  5 root                     5383412ce0b8cd98650000ae 4096 may 26 09:27 app-root
+        drwxr-xr-x.  3 root                     root                     4096 may 26 09:27 git
+        drwxr-xr-x. 12 5383412ce0b8cd98650000ae 5383412ce0b8cd98650000ae 4096 may 26 09:28 mysql
+        drwxr-xr-x. 11 5383412ce0b8cd98650000ae 5383412ce0b8cd98650000ae 4096 may 26 09:27 php
+
+
 ### Procesos asociados a cada gear
+
+Si es importante indicar que los procesos que ejecuta cada gear están aislado del resto de los gear, por lo tanto podemos ver los procesos que se están ejecutando en nuestro gear:
+
+        [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\> ps -A
+           PID TTY          TIME CMD
+        309168 ?        00:00:00 control
+        309173 ?        00:00:00 scl
+        309174 ?        00:00:00 bash
+        309177 ?        00:00:00 mysqld_safe
+        309178 ?        00:00:00 logshifter
+        309762 ?        00:00:24 mysqld
+        310670 ?        00:00:01 httpd
+        310671 ?        00:00:00 logshifter
+        310699 ?        00:00:00 tee
+        310711 ?        00:00:00 tee
+        310723 ?        00:00:00 httpd
+        313231 ?        00:00:00 httpd
+        504385 ?        00:00:00 sshd
+        504386 pts/0    00:00:00 bash
+        509935 pts/0    00:00:00 ps
+
+
 
 ### Direccionamiento de nuestra aplicación
 
@@ -45,9 +86,9 @@ A continuación accedemos a nuestro gear, y vemos la dirección ip que tiene con
                   RX bytes:693208456730 (645.6 GiB)  TX bytes:988542163018 (920.6 GiB)
                   Interrupt:15 
 
-En este caso podemos observar que la máuina donde se están ejecuntando los distintos gear de distintos usuarios tiene una ip fija que en este caso corresponde con la 10.29.232.223.
+En este caso podemos observar que la máquina donde se están ejecutando los distintos gear de distintos usuarios tiene una ip fija que en este caso corresponde con la 10.29.232.223.
 
-Veamos a continuación las direcciones ip que corresponden a un gear en concreto. Para ver esta ip podemos ver dos varibles de entorno que están definidas:
+Veamos a continuación las direcciones ip que corresponden a un gear en concreto. Para ver esta ip podemos ver dos variables de entorno que están definidas:
 
         [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\> env | grep _IP
         OPENSHIFT_PHP_IP=127.5.215.1
@@ -59,7 +100,7 @@ Esta es la dirección desde la que el servidor web esta ofreciendo su servicio e
 
 Esta es la dirección desde la que el servidor de base de datos esta ofreciendo su servicio en el puerto 3306.
 
-Como podemos observar para cada gear que se ejecuta en nuestra máuina se van reservando direcciones de loopback que están en el rango de 127.0.0.0/8. Para ver las direcciones de loopback que se han reservado para los distintos gear que se ejecutan en esta máuina podemos ejecutar la siguiente instrucción:
+Como podemos observar para cada gear que se ejecuta en nuestra máquina se van reservando direcciones de loopback que están en el rango de 127.0.0.0/8. Para ver las direcciones de loopback que se han reservado para los distintos gear que se ejecutan en esta máquina podemos ejecutar la siguiente instrucción:
 
         [aplicacion-iesgn.rhcloud.com 5383412ce0b8cd98650000ae]\>  netstat -utan | grep 127.
 
@@ -72,4 +113,10 @@ Y para ver los conexiones que tiene establecida mi gear podemos ejecutar:
 
 
 ### Análisis de los registros (logs)
+
+Podemos acceder a los logs de los servicios que tenemos instalado en nuestro gear en el directorio app-root/logs:
+
+        [aplicacion-iesgn.rhcloud.com logs]\> ls
+        mysql.log  php.log
+
 
