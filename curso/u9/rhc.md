@@ -98,13 +98,13 @@ Para realizar la configuración inicial de rhc, ejecutamos la instrucción:
     'rhc setup'.
     Espacio de nombres (namespace)
 
-Cada cuenta de usuario en OpenShift Online está asociada a un "espacio de
-nombres" para generar un FQDN único para cada gear. En la configuración inicial
-de la cuenta habrá que seleccionar un espacio de nombres que sea único, este
-espacio de nombres se aplicará automáticamente a todos los gears que se creen.
+<!-- Cada cuenta de usuario en OpenShift Online está asociada a un "espacio de -->
+<!-- nombres" para generar un FQDN único para cada gear. En la configuración inicial -->
+<!-- de la cuenta habrá que seleccionar un espacio de nombres que sea único, este -->
+<!-- espacio de nombres se aplicará automáticamente a todos los gears que se creen. -->
 
-Supongamos a partir de ahora que nuestro espacio de nombres en OpenShift
-Online fuese "cepjerez" y el primer gear que creásemos tuviera el nombre
-"joomla", entonces esta aplicación sería accesible a través de la
-url http://joomla-cepjerez.rhcloud.com (no es un espacio de nombres real).
+<!-- Supongamos a partir de ahora que nuestro espacio de nombres en OpenShift -->
+<!-- Online fuese "cepjerez" y el primer gear que creásemos tuviera el nombre -->
+<!-- "joomla", entonces esta aplicación sería accesible a través de la -->
+<!-- url http://joomla-cepjerez.rhcloud.com (no es un espacio de nombres real). -->
 

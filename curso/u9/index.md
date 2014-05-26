@@ -7,11 +7,13 @@ menu:
 
 ###Objetivos
 
-* Identificar las características de la capa PaaS dentro de la tecnología de Cloud Computing
+* Identificar las características de la capa PaaS dentro de la tecnología de
+  Cloud Computing
 * Conocer las funciones que ofrece un software PaaS
-* Conocer las distintas alternativas que tenemos para usar un PaaS público.
+* Conocer las distintas alternativas que tenemos para usar un PaaS público
 * Introducir las características de un PaaS en concreto: OpenShift
-* Estudiar las posibilidades de montar un PaaS privado dentro de nuestra infraestructura.
+* Estudiar las posibilidades de montar un PaaS privado dentro de nuestra
+  infraestructura.
 
 ### Contenidos
 
@@ -25,7 +27,11 @@ Origin](http://openshift.github.io/) disponible en
 
 * [Presentación de OpenShift](presentacion_openshift.html)
 
-Resumen de las diferentas versiones:
+### Vídeo
+
+[![Video](http://img.youtube.com/vi/-bmbGfyNKCMc/0.jpg)](https://www.youtube.com/watch?v=bmbGfyNKCMc)
+
+### Resumen de las diferentas versiones
 
 |     |OpenShift Online|OpenShift Enterprise|OpenShift Origin|
 |:---:|----------------|--------------------|----------------|
