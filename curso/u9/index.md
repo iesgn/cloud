@@ -29,7 +29,7 @@ Origin](http://openshift.github.io/) disponible en
 
 ### Vídeo
 
-[![Video](http://img.youtube.com/vi/-bmbGfyNKCMc/0.jpg)](https://www.youtube.com/watch?v=bmbGfyNKCMc)
+[![Video](http://img.youtube.com/vi/bmbGfyNKCMc/0.jpg)](https://www.youtube.com/watch?v=bmbGfyNKCMc)
 
 ### Resumen de las diferentas versiones
 
