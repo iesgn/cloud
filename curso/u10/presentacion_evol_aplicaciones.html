@@ -38,34 +38,24 @@ tema: solarized
   </ul>
 </section>
 <section>
-  <table class="reveal">
-    <thead>
-    <tr>
-      <th>Aplicaciones tradicionales</th>
-      <th>Aplicaciones "cloud"</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Número estable de máquinas virtuales grandes</td>
-      <td>Número variable de pequeñas máquinas virtuales</td>
-    </tr>
-    <tr>
-      <td>Escalado vertical</td>
-      <td>Escalado horizontal</td>
-    </tr>
-    <tr>
-      <td>Vida media de años</td>
-      <td>Vida media desde algunas horas a meses</td>
-    </tr>
-    <tr>
-      <td>Aplicaciones no diseñadas para tolerar fallos</td>
-      <td>Aplicaciones tolerantes a fallos</td>
-    </tr>
-    </tbody>
-  </table>
+  <h3>Aplicaciones tradicionales</h3>
+  <ul>
+    <li>Número estable de máquinas virtuales grandes</li>
+    <li>Escalado vertical</li>
+    <li>Vida media de años</li>
+    <li>Aplicaciones no diseñadas para tolerar fallos. La redundancia se
+    proporciona en el nivel inferior</li>
+  </ul>
+  <h3>Aplicaciones "cloud"</h3>
+  <ul>
+    <li>Aplicaciones tolerantes a fallos</li>
+    <li>Número variable de pequeñas máquinas virtuales</li>
+    <li>Escalado horizontal</li>
+    <li>Vida media desde algunas horas a meses</li>
+    <li>Aplicaciones tolerantes a fallos</li>
+  </ul>
 <p><a href="http://www.slideshare.net/KeithBasil/basil-w-0230introoverviewopenstackiaascloudsfinal">Ref:
-  Keith Basil: Introduction and Overview of OpenStack for IaaS</a></p>
+  Keith Basil: Intro. and Overview of OpenStack for IaaS</a></p>
 </section>
 <section>
   <img src="img/legacy-apps.png" alt="Legacy Apps"/>
@@ -81,3 +71,21 @@ tema: solarized
     McCance - CERN</a>
 </section>
 <section>
+  <h2>Cloud Management Platform (CMP)</h2>
+  <h3>Datacenter virtualization</h3>
+  <ul>
+    <li>Extensión de la virtualización clásica</li>
+    <li>Además de la virtualización de servidores se incluyen la virtualización
+    del almacenamiento y las redes</li>
+    <li>Más adecuada para aplicaciones clásicas</li>
+    <li>Evolución natural de VMware: vCloud</li>
+  </ul>
+  <h3>Aprovisionamiento de infraestructura</h3>
+  <ul>
+    <li>Toma como referencia AWS</li>
+    <li><strong>Open</strong>: estandarizada, licencias libres, accesible,
+    abierta</li>
+    <li>Más adecuada para aplicaciones "cloud"</li>
+    <li>OpenStack</li>
+  </ul>
+</section>
