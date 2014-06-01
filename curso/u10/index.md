@@ -15,30 +15,21 @@ menu:
   pago por uso en un centro educativo
 * Comentar las ventajas e inconvenientes del uso de IaaS y PaaS en los
   diferentes ciclos de formación profesional
+* Presentar las distintas opciones de uso de una infraestructura de Cloud
+  Computing (IaaS y PaaS) público, para incorporar en los curriculum de los
+  distintos módulos de nuestro ciclos formátivos.
+* Mostrar la evolución que ha tenido la metodología didactica usada en los
+  ciclos formátivos atendiendo a las posibilidades que nos ha aportado el uso de
+  la virtualización.
+* Debatir los nuevos cambios metodológicos que puede conllevar el uso de las
+  tecnologías de Cloud Computing en la práctica docente en los ciclos formátivos
+  de la familia de informática.
+* Presentar las salidas profesionales que en los próximos años va a ofrecer las
+  tecnologías relacionadas con el Cloud Computing.
 
 ### Contenidos
 
-Después de conocer y utilizar OpenStack y OpenShift, como 
-
-OpenShift es la Plataforma como servicio (PaaS) de cloud computing de Red
-Hat. OpenShift puede utilizarse de varias maneras: mediante su cloud público que
-se denomina [OpenShift Online](https://www.openshift.com/), mediante un producto
-de pago [OpenShift Enterprise](https://www.openshift.com/products/enterprise) o
-bien instalando directamente en un cloud privado el software [OpenShift
-Origin](http://openshift.github.io/) disponible en
-[GitHub](https://github.com/openshift).
-
-* [Presentación de OpenShift](presentacion_openshift.html)
-
-
-### Resumen de las diferentas versiones
-
-
-### Enlaces de otros PaaS
-
-
 ### Enlaces relacionados
 
-* [Instalación de Joomla en OpenShift](http://albertomolina.wordpress.com/2012/12/26/instalacion-de-joomla-en-openshift/)
-* [Instalación de Redmine 2.4 en OpenShift](http://www.systerminal.com/2014/03/11/instalacion-de-redmine-2-4-en-openshift/)
+* [Cloud Computing en la formación TIC](http://www.gonzalonazareno.org/cloud/material/cloud_en_la_educacion.pdf)
 
