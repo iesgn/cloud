@@ -15,7 +15,7 @@ menu:
 
 ### Contenidos
 
-* [Presentación de OpenShift](presentacion_openshift.html)
+* [IaaS en los estudios de Informática](presentacion_iaas_educacion.html)
 
 ### Enlaces relacionados
 
