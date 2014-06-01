@@ -7,8 +7,7 @@ menu:
 
 ### Objetivos
 
-* Conocer la evolución de las aplicaciones propiciada por las tecnologías de
-* cloud computing
+* Conocer la evolución de las aplicaciones propiciada por las tecnologías de cloud computing
 * Debatir sobre las posibilidades didácticas del uso de tecnologías de cloud
   computing en el aula
 * Analizar las posibilidades reales de implantación de una nube privada en un
