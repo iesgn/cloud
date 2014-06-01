@@ -22,9 +22,9 @@ tema: solarized
     </small>
   </p>
 </section>
-
 <section>
-  <h3>Aplicaciones nativas para la nube</h3>
+  <section>
+  <h2>Aplicaciones nativas para la nube</h2>
   <ul>
     <li>La utilización de toda la funcionalidad de la nube, principalmente la
       elasticidad, implica un cambio drástico en la arquitectura del software hacia
@@ -36,41 +36,51 @@ tema: solarized
       necesidades de cada momento ejecutándose en una infraestructura elástica
       como las aplicaciones de Google o Facebook</li>
   </ul>
+  </section>
+  <section>
+    <h2>Aplicaciones tradicionales</h2>
+    <ul>
+      <li>Número estable de máquinas virtuales grandes</li>
+      <li>Escalado vertical</li>
+      <li>Vida media de años</li>
+      <li>Aplicaciones no diseñadas para tolerar fallos. La redundancia se
+	proporciona en el nivel inferior</li>
+    </ul>
+    <p>Ref: <a href="http://www.slideshare.net/KeithBasil/basil-w-0230introoverviewopenstackiaascloudsfinal">
+    K. Basil: Intro. and Overview of OpenStack for IaaS</a></p>
+  </section>
+  <section>
+    <h2>Aplicaciones nativas para la nube</h2>
+    <h3><emph>Cloud ready applications</emph></h3>
+    <ul>
+      <li>Aplicaciones tolerantes a fallos</li>
+      <li>Número variable de pequeñas máquinas virtuales</li>
+      <li>Escalado horizontal</li>
+      <li>Vida media desde algunas horas a meses</li>
+      <li>Aplicaciones tolerantes a fallos</li>
+    </ul>
+    <p>Ref: <a href="http://www.slideshare.net/KeithBasil/basil-w-0230introoverviewopenstackiaascloudsfinal">
+    K. Basil: Intro. and Overview of OpenStack for IaaS</a></p>
+  </section>
 </section>
 <section>
-  <h3>Aplicaciones tradicionales</h3>
-  <ul>
-    <li>Número estable de máquinas virtuales grandes</li>
-    <li>Escalado vertical</li>
-    <li>Vida media de años</li>
-    <li>Aplicaciones no diseñadas para tolerar fallos. La redundancia se
-    proporciona en el nivel inferior</li>
-  </ul>
-  <h3>Aplicaciones "cloud"</h3>
-  <ul>
-    <li>Aplicaciones tolerantes a fallos</li>
-    <li>Número variable de pequeñas máquinas virtuales</li>
-    <li>Escalado horizontal</li>
-    <li>Vida media desde algunas horas a meses</li>
-    <li>Aplicaciones tolerantes a fallos</li>
-  </ul>
-<p><a href="http://www.slideshare.net/KeithBasil/basil-w-0230introoverviewopenstackiaascloudsfinal">Ref:
-  Keith Basil: Intro. and Overview of OpenStack for IaaS</a></p>
+  <section>
+    <img src="img/legacy-apps.png" alt="Legacy Apps"/>
+    <p>Ref: <a href="http://www.slideshare.net/randybias/pets-vs-cattle-the-elastic-cloud-story">Cloudscaling. Pets vs. Cattle: The Elastic Cloud Story</a></p>
+  </section>
+  <section>
+    <img src="img/cloud-apps.png" alt="Cloud Apps"/>
+    <p>Ref: <a href="http://www.slideshare.net/randybias/pets-vs-cattle-the-elastic-cloud-story">Cloudscaling. Pets vs. Cattle: The Elastic Cloud Story</a></p>
+  </section>
 </section>
 <section>
-  <img src="img/legacy-apps.png" alt="Legacy Apps"/>
-  <p>Ref: <a href="http://www.slideshare.net/randybias/pets-vs-cattle-the-elastic-cloud-story">Cloudscaling. Pets vs. Cattle: The Elastic Cloud Story</a></p>
+  <h2>Pets vs Cattle</h2>
+  <img src="http://www.it20.info/misc/pictures/vCloudOpenStackPetsandCattle1.JPG" alt="pets_vs_cattle"/>
+  <p>Ref: <a href="http://www.slideshare.net/gmccance/cern-data-centre-evolution">Gavin
+      McCance - CERN</a>
 </section>
 <section>
-  <img src="img/cloud-apps.png" alt="Cloud Apps"/>
-  <p>Ref: <a href="http://www.slideshare.net/randybias/pets-vs-cattle-the-elastic-cloud-story">Cloudscaling. Pets vs. Cattle: The Elastic Cloud Story</a></p>
-</section>
-<section>
-<img src="http://www.it20.info/misc/pictures/vCloudOpenStackPetsandCattle1.JPG" alt="pets_vs_cattle"/>
-<p>Ref: <a href="http://www.slideshare.net/gmccance/cern-data-centre-evolution">Gavin
-    McCance - CERN</a>
-</section>
-<section>
+  <section>
   <h2>Cloud Management Platform (CMP)</h2>
   <h3>Datacenter virtualization</h3>
   <ul>
@@ -78,14 +88,24 @@ tema: solarized
     <li>Además de la virtualización de servidores se incluyen la virtualización
     del almacenamiento y las redes</li>
     <li>Más adecuada para aplicaciones clásicas</li>
+    <li>Puede llegar a utilizarse para aplicaciones "cloud"</li>
     <li>Evolución natural de VMware: vCloud</li>
+    <li>La alternativa libre más cercana sería Opennebula</li>
   </ul>
+  <p>Ref: <a href="http://opennebula.org/eucalyptus-cloudstack-openstack-and-opennebula-a-tale-of-two-cloud-models/">Ignacio
+    M. Llorente - Eucalyptus, CloudStack, OpenStack and OpenNebula: A Tale of
+    Two Cloud Models</a></p>
+  </section>
+  <section>
+  <h2>Cloud Management Platform (CMP)</h2>
   <h3>Aprovisionamiento de infraestructura</h3>
   <ul>
     <li>Toma como referencia AWS</li>
     <li><strong>Open</strong>: estandarizada, licencias libres, accesible,
     abierta</li>
     <li>Más adecuada para aplicaciones "cloud"</li>
-    <li>OpenStack</li>
+    <li>Puede utilizarse también para aplicaciones clásicas</li>
+    <li>La opción más conocida es OpenStack</li>
   </ul>
 </section>
+<section>
