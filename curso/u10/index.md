@@ -29,6 +29,8 @@ menu:
 
 ### Contenidos
 
+* [IaaS en los estudios de Informática](presentacion_iaas_educacion.html)
+
 ### Enlaces relacionados
 
 * [Cloud Computing en la formación TIC](http://www.gonzalonazareno.org/cloud/material/cloud_en_la_educacion.pdf)
