@@ -174,3 +174,44 @@ tema: solarized
 		<li>Un cloud puede contar con gran cantidad de imágenes preconfiguradas de sistemas con muy diversas configuraciones ⇒ La forma de aprender no viene condicionada por la necesidad de una configuración previa.</li>
 	</ul>
 </section>
+<section>
+<section>
+	<h3>Escenario 1: Instalación/configuración de un servicio</h3>
+	<p>Los pasos típicos a seguir serían:</p>
+	<ul>
+		<li>Cada alumno inicia una instancia del SO en el que va a instalar el servicio (no es necesario que previamente sepa instalar ese SO).</li>
+		<li>Realiza la instalación del servicio.</li>
+		<li>Realiza la configuración del servicio. Si esta configuración dura más de una clase, suspende la instancia y la reinicia en la siguiente clase.</li>
+		<li>Una vez terminada la configuración puede crear una instantánea para utilizarla como base en posteriores prácticas.</li>
+		<li>Si algún alumno no ha podido realizar la configuración correctamente podría utilizar la instantánea de un compañero en clases posteriores.</li>
+	</ul>
+
+</section>
+<section>
+	<h3>Escenario 2: Despliegue de una aplicación web</h3>
+	<p>Los pasos típicos a seguir serían:</p>
+	<ul>
+		<li>Se prepara una imagen de un sistema en el que se configura de forma precisa un completo servidor web con todos los módulos necesarios. Se instala y configura un servidor git u otro scm.</li>
+		<li>Cada alumno inicia una instancia de la imagen anterior y transfiere la aplicación web desde su equipo.</li>
+		<li>Comprueba el funcionamiento en un servidor remoto (la instancia) con similares características que tendría en un servidor remoto real.</li>
+		<li>En caso de que tenga que utilizar la instancia durante más de una clase, suspende y reinicia cuando sea necesario.</li>
+		<li>En caso de fallos o errores, puede crear una nueva instancia a partir de la imagen inicial o de una instantánea guardada previamente.</li>
+
+	</ul>
+
+</section>
+
+<section>
+	<h3>Escenario 3: Test de intrusión</h3>
+	<p>Los pasos típicos a seguir serían:</p>
+	<ul>
+		<li>Se levanta una instancia y se configuran algunos servicios vulnerables. Se hace una instantánea y se almacena.</li>
+		<li>Cada alumno inicia una instancia de la imagen anterior sin conocer las características de las vulnerabilidades ni en los servicios en las que se producen.</li>
+		<li>Cada alumno tiene que realizar un test de intrusión tal como se haría en un escenario real.</li>
+
+
+	</ul>
+
+</section>
+
+</section>
