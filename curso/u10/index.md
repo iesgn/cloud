@@ -7,8 +7,10 @@ menu:
 
 ### Objetivos
 
-* Ver las posibilidades didácticas del uso de tecnologías de cloud computing en
-  el aula
+* Conocer la evolución de las aplicaciones propiciada por las tecnologías de
+* cloud computing
+* Debatir sobre las posibilidades didácticas del uso de tecnologías de cloud
+  computing en el aula
 * Analizar las posibilidades reales de implantación de una nube privada en un
   centro educativo
 * Analizar las posiblidades de utilización de una nube pública gratuita o en
@@ -29,6 +31,7 @@ menu:
 
 ### Contenidos
 
+* [Evolución de las aplicaciones](presentacion_evol_aplicaciones.html)
 * [IaaS en los estudios de Informática](presentacion_iaas_educacion.html)
 
 ### Enlaces relacionados
