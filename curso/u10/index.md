@@ -36,7 +36,7 @@ menu:
 * [Implantación de una nube privada en un centro educativo](presentacion_implantacion.html)
 * [Alternativas al cloud privado de IaaS](presentacion_iaas_publico)
 
-### Enlaces relacionados
+<!-- ### Enlaces relacionados -->
 
-* [Cloud Computing en la formación TIC](http://www.gonzalonazareno.org/cloud/material/cloud_en_la_educacion.pdf)
+<!-- * [Cloud Computing en la formación TIC](http://www.gonzalonazareno.org/cloud/material/cloud_en_la_educacion.pdf) -->
 
