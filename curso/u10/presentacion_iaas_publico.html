@@ -1,0 +1,88 @@
+---
+layout: presentacion
+title: IaaS en educación
+tema: solarized
+---
+<section>
+  <h1>IaaS y PaaS públicos</h1>
+  <h2>Alternativas al cloud privado</h2>
+  <p>
+    <small><a href="http://albertomolina.wordpress.com">Alberto Molina
+	Coballes</a> / <a
+			  href="http://twitter.com/alberto_molina">@alberto_molina</a> y <a
+											    href="http://josedomingo.org">José Domingo Muñoz
+	Rodríguez</a> / <a
+			   href="http://twitter.com/Pledin_JD">@Pledin_JD</a> </small>
+  </p>
+  <p><small>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../../img/cc_by_sa.png"
+								    width="100px" border="0"/></a></small></p>
+  <p><small>
+      Theme
+      by <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
+    </small>
+  </p>
+</section>
+<section>
+<section>
+	<h3>Cloud Público PaaS</h3>
+	<ul>
+		<li>Muy adecuado para desarrollo</li>
+		<li>Existen diversos clouds públicos que ofrecen cuentas gratuitas o de bajo coste</li>
+		<li>Utilización de scm: git, svn, bazaar, etc.</li>
+		<li>Web Frameworks: Zend, Rails, Django, Spring,...</li>
+		<li>En algunos casos ofrecen entornos configurados para utilizar:</li>
+		<ul>
+			<li>Integración continua</li>
+			<li>NoSQL</li>
+			<li>Node.js</li>
+		</ul>
+	</ul>
+<section>
+	<h3>OpenShift</h3>
+	<ul>
+		<li>Multiples componentes:</li>
+		<ul>
+			<li>PHP, Python, Java, ruby o node.js</li>
+			<li>Zend, Django, Spring, RoR</li>
+			<li>Tomcat, JBoss o Glassfish</li>
+			<li>MySQL, MongoDB o PostgreSQL</li>
+			<li>jenkins, ssh, git,...</li>
+		</ul>
+		<li>Ofrece gratuitamente el uso de tres gears de tipo small</li>
+		<li>OpenShift Origin es software libre y se puede instalar localmente (https://github.com/openshift)</li>
+	</ul>
+</section>
+<section>
+	<h3>Clinker</h3>
+	<ul>
+		<li>Entorno completo de desarrollo para utilizar directamente en el Cloud (Clinker cloud) o en local (Clinker Virtual Appliance)</li>
+		<li>Repositorios: svn (externamente git)</li>
+		<li>Integración continua: jenkins</li>
+		<li>Inspección de código: Sonar</li>
+		<li>Gestión de repositorios: Nexus</li>
+		<li>Gestión de proyectos: Redmine o trac</li>
+		<li>Generación automática de documentación: maven</li>
+		<li>Single Sign On</li>
+		<li>Desarrollado por Klicap</li>
+	</ul>
+</section>
+</section>
+<section>
+	<h3>Cloud Público IaaS</h3>
+	<ul>
+		<li>Diversas opciones, algunas ofrecen uso limitado gratuito</li>
+		<li>No es necesario administración ni mantenimiento</li>
+		<li>Ejemplos de coste por instancia:</li>
+		<ul>
+			<li>Amazon EC2: m1.micro (0.02 €/h = 175 €/año)</li>
+			<li>Telefonica Instant Servers: XS (0,06 €/h = 525.6 €/año)</li>
+			<li>HP Cloud: XS (0.035 €/h = 306.6 €/año)</li>
+			<li>Joyent Cloud: XS (262.8 €/año)</li>
+		</ul>	
+		<li>Exige una conexión continua y con suficiente ancho de banda</li>
+	</ul>
+</section>
+
+
+
