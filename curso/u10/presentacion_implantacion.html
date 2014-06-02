@@ -5,7 +5,7 @@ tema: solarized
 ---
 <section>
   <h1>Implantación IaaS en un centro educativo</h1>
-  <h3>Implantación de una nube privada en un centro educativo</h3>
+  <h2>Implantación de una nube privada en un centro educativo</h2>
   <p>
     <small><a href="http://albertomolina.wordpress.com">Alberto Molina
 	Coballes</a> / <a
@@ -24,43 +24,50 @@ tema: solarized
   </p>
 </section>
 <section>
+<section>
 	<h3>Equipamiento incial</h3>
 	<ul>
 		<li>Al optar por software libre, la principal inversión son los servidores que formarán el cloud de infraestructura.</li>
 		<li>Configuración mínima: 3 servidores (1 gestión del cloud y 2 para ejecución de instancias).</li>
 		<li>Configuración recomendada: 2 servidores para gestión (en HA), 1 para almacenamiento y 4 o más para ejecución de instancias.</li>
 		<li>Para la gestión del cloud es suficiente un equipo de características mínimas.</li>
+	</ul>
+</section>
+
+
+</section>
+<section>
+	<h3>Equipamiento incial (2)</h3>
+	<ul>
 		<li>Para la ejecución de instancias es necesario procesadores potentes y mucha memoria RAM (entre 0,5 y 2 GiB por instancia).</li>
 		<li>El almacenamiento depende del número de imágenes, instantáneas y volúmenes que sea necesario guardar.</li>
 		<li>Sistema fácilmente escalable, se puede empezar por una configuración mínınima e ir añadiendo componentes año a año.</li>
 	</ul>
 </section>
+
 <section>
 	<h3>Equipamiento inicial: Ejemplo</h3>
-	<p>Supongamos que tenemos poco presupuesto y queremos construir un cloud IaaS poco a poco. Comenzaremos por elegir:</p>
+	<p>Supongamos que tenemos poco presupuesto y queremos construir un cloud IaaS poco a poco. Comenzaremos por elegir:</p><br/>
 	<ul>
 		<li>Dispositivos SATA convencionales en lugar de discos SATA enterprise. Descartamos SAS o SD inicialmente.</li>
 		<li>Memoria RAM DDR3 no registrada.</li>
 		<li>Procesadores normales con el mismo socket que procesadores de ultima generación.</li>
 		<li>Adquirimos una placa base multisocket.</li>
 	</ul>
-	<p>Posteriormente iremos cambiando componentes por otros de mayores prestaciones o ampliando el número de equipos. Es un sistema fácilmente ampliable.</p>
+	<br/><p>Posteriormente iremos cambiando componentes por otros de mayores prestaciones o ampliando el número de equipos. Es un sistema fácilmente ampliable.</p>
 
 </section>
 <section>
 	<h3>Equipamiento inicial: diferentes componentes</h3>
 	<table>
 	<tr>
-	<td>
-	Carcasa
-	Placa base Supermicro A+ H8DGU
-	16 GiB (4 x 4GiB) de RAM DDR3
-	4 TiB (2 x 2 TiB) HD convencional
-	1 procesador AMD Op-teron 6128 de 8 cores a 2GHz
-	Resto de componentes + montaje
-	</td>
-	<td>
-	200 $
+	<td>Carcasa</td>
+	<td>Placa base Supermicro A+ H8DGU</td>
+	<td>16 GiB (4 x 4GiB) de RAM DDR3</td>
+	<td>4 TiB (2 x 2 TiB) HD convencional</td>
+	<td>1 procesador AMD Op-teron 6128 de 8 cores a 2GHz</td>
+	<td>Resto de componentes + montaje</td>
+	
 	389 $
 	80$
 	200$
