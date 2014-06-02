@@ -33,6 +33,7 @@ menu:
 * [Evolución de las aplicaciones](presentacion_evol_aplicaciones.html)
 * [Cloud computing en el aula](presentacion_cloud_aula.html)
 * [IaaS en los estudios de Informática](presentacion_iaas_educacion.html)
+* [Implantación de una nube privada en un centro educativo](presentacion_implantacion.html)
 
 ### Enlaces relacionados
 
