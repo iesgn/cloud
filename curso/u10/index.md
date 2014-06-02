@@ -34,6 +34,7 @@ menu:
 * [Cloud computing en el aula](presentacion_cloud_aula.html)
 * [IaaS en los estudios de Informática](presentacion_iaas_educacion.html)
 * [Implantación de una nube privada en un centro educativo](presentacion_implantacion.html)
+* [Alternativas al cloud privado de IaaS](presentacion_iaas_publico)
 
 ### Enlaces relacionados
 
