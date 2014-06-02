@@ -5,7 +5,7 @@ tema: solarized
 ---
 <section>
   <h1>Cloud Computing en educación</h1>
-  <h3>IaaS en los estudios de informática</h3>
+  <h3>IaaS como herramienta didáctica</h3>
   <p>
     <small><a href="http://albertomolina.wordpress.com">Alberto Molina
 	Coballes</a> / <a
@@ -24,10 +24,10 @@ tema: solarized
   </p>
 </section>
 <section>
-  <h3>Evolución de las herramientas didácticas</h3>
-  <p>
-	A la par de la evolución tecnológica se ha producido una evolución en las herramientas didácticas para el aprendizaje de la informática, que podríamos de forma muy general clasificar en tres fases diferentes:
- </p>
+  <h2>Evolución de las herramientas didácticas</h2>
+  <p>A la par de la evolución tecnológica se ha producido una evolución en las
+	herramientas didácticas para el aprendizaje de la informática, que
+	podríamos de forma muy general clasificar en tres fases diferentes:</p>
   <ul>
 	<li>Primera fase: Utilización de equipos físicos</li>
 	<li>Segunda fase: Utilización de máquinas virtuales</li>
@@ -38,7 +38,7 @@ tema: solarized
 
 <section>
 <section>
-  <h3>Primera fase: Utilización de equipos físicos</h3>
+  <h2>Primera fase: Utilización de equipos físicos</h2>
   <img src="img/img1.png"/>
 </section>
 <section>
@@ -112,7 +112,7 @@ tema: solarized
 
 <section>
 <section>
-  <h3>Segunda fase: Utilización de IaaS</h3>
+  <h2>Tercera fase: Utilización de IaaS</h2>
   <img src="img/img3.png"/>
 </section>
 <section>
@@ -149,101 +149,106 @@ tema: solarized
 </section>
 </section>
 <section>
-	<h3>Simulación de entornos reales</h3>
+	<h2>Simulación de entornos reales</h2>
 	<p>Un entorno real es difícil de simular con MVs en un PC por sus propias limitaciones, pero en un cloud es asumible:</p>
 	<ul>
-		<li>Se puede simular una red con un número importante de equipos</li>
-		<li>Se puede utilizar la diversidad que se quiera de SOs</li>
-		<li>Este entorno real pueden utilizarlo conjuntamente todos los alumnos</li>
-		<li>Puede estar disponible durante todo el curso sin interferir con otras asignaturas</li>
-		<li>Con el tiempo y el uso irán apareciendo conflictos y problemas reales</li>
-
+	  <li>Se puede simular una red con un número importante de equipos</li>
+	  <li>Se puede utilizar la diversidad que se quiera de SOs</li>
+	  <li>Este entorno real pueden utilizarlo conjuntamente todos los alumnos</li>
+	  <li>Puede estar disponible durante todo el curso sin interferir con otras asignaturas</li>
+	  <li>Con el tiempo y el uso irán apareciendo conflictos y problemas reales</li>
 	</ul>
 </section>
 <section>
-	<h3>Nueva forma de aprendizaje</h3>
+	<h2>Nueva forma de aprendizaje</h2>
 	<ul>
-		<li>La utilización de IaaS en el ámbito académico proporciona una nueva forma de aprendizaje</li>
-		<li>Con el uso de MVs se ha impuesto una forma de aprender que no siempre es la mejor:</li>
-		<ul>
-			<li>Configurar una red en modo NAT cuando el alumno no sabe todavía qué ess enrutar</li>
-			<li>Instalar Tomcat (o mejor JBoss) para probar "Hola mundo!"</li>
-			<li>¿Hay mundo más allá de localhost?</li>
-		</ul>
-		<li>El uso de MVs es muy conveniente, pero no debería condicionar la forma de aprender.</li>
-		<li>Un cloud puede contar con gran cantidad de imágenes preconfiguradas de sistemas con muy diversas configuraciones ⇒ La forma de aprender no viene condicionada por la necesidad de una configuración previa.</li>
+	  <li>La utilización de IaaS en el ámbito académico proporciona una
+	  nueva forma de aprendizaje</li>
+	  <li>Con el uso de MVs se ha impuesto una forma de aprender que no
+	  siempre es la mejor:
+	  <ul>
+	    <li>Configurar una red en modo NAT cuando el alumno no sabe todavía
+	    qué es enrutar</li>
+	    <li>Instalar Tomcat (o mejor JBoss) para probar "Hola mundo!"</li>
+	    <li>¿Hay mundo más allá de localhost?</li>
+	  </ul></li>
+	  <li>El uso de MVs es muy conveniente, pero no debería condicionar la
+	  forma de aprender.</li>
+	  <li>Un cloud puede contar con gran cantidad de imágenes preconfiguradas de sistemas con muy diversas configuraciones ⇒ La forma de aprender no viene condicionada por la necesidad de una configuración previa.</li>
 	</ul>
 </section>
 <section>
+  <section>
+    <h2>Escenarios</h2>
+  </section>
 <section>
-	<h4>Escenario 1: Instalación y configuración de un servicio</h4>
-	<p>Los pasos típicos a seguir serían:</p>
-	<ul>
-		<li>Cada alumno inicia una instancia del SO en el que va a instalar el servicio (no es necesario que previamente sepa instalar ese SO).</li>
-		<li>Realiza la instalación del servicio.</li>
-		<li>Realiza la configuración del servicio. Si esta configuración dura más de una clase, suspende la instancia y la reinicia en la siguiente clase.</li>
-		<li>Una vez terminada la configuración puede crear una instantánea para utilizarla como base en posteriores prácticas.</li>
-		<li>Si algún alumno no ha podido realizar la configuración correctamente podría utilizar la instantánea de un compañero en clases posteriores.</li>
-	</ul>
-
+  <h2>Escenario 1: Instalación y configuración de un servicio</h2>
+  <p>Los pasos típicos a seguir serían:</p>
+  <ul>
+    <li>Cada alumno inicia una instancia del SO en el que va a instalar el servicio (no es necesario que previamente sepa instalar ese SO).</li>
+    <li>Realiza la instalación del servicio.</li>
+    <li>Realiza la configuración del servicio. Si esta configuración dura más de una clase, suspende la instancia y la reinicia en la siguiente clase.</li>
+    <li>Una vez terminada la configuración puede crear una instantánea para utilizarla como base en posteriores prácticas.</li>
+    <li>Si algún alumno no ha podido realizar la configuración correctamente podría utilizar la instantánea de un compañero en clases posteriores.</li>
+  </ul>  
 </section>
 <section>
-	<h3>Escenario 2: Despliegue de una aplicación web</h3>
-	<p>Los pasos típicos a seguir serían:</p>
-	<ul>
-		<li>Se prepara una imagen de un sistema en el que se configura de forma precisa un completo servidor web con todos los módulos necesarios. Se instala y configura un servidor git u otro scm.</li>
-		<li>Cada alumno inicia una instancia de la imagen anterior y transfiere la aplicación web desde su equipo.</li>
-		<li>Comprueba el funcionamiento en un servidor remoto (la instancia) con similares características que tendría en un servidor remoto real.</li>
-		<li>En caso de que tenga que utilizar la instancia durante más de una clase, suspende y reinicia cuando sea necesario.</li>
-		<li>En caso de fallos o errores, puede crear una nueva instancia a partir de la imagen inicial o de una instantánea guardada previamente.</li>
-
-	</ul>
-
-</section>
-
-<section>
-	<h3>Escenario 3: Test de intrusión</h3>
-	<p>Los pasos típicos a seguir serían:</p>
-	<ul>
-		<li>Se levanta una instancia y se configuran algunos servicios vulnerables. Se hace una instantánea y se almacena.</li>
-		<li>Cada alumno inicia una instancia de la imagen anterior sin conocer las características de las vulnerabilidades ni en los servicios en las que se producen.</li>
-		<li>Cada alumno tiene que realizar un test de intrusión tal como se haría en un escenario real.</li>
-
-
-	</ul>
-
+  <h2>Escenario 2: Despliegue de una aplicación web</h2>
+  <p>Los pasos típicos a seguir serían:</p>
+  <ul>
+    <li>Se prepara una imagen de un sistema en el que se configura de forma precisa un completo servidor web con todos los módulos necesarios. Se instala y configura un servidor git u otro scm.</li>
+    <li>Cada alumno inicia una instancia de la imagen anterior y transfiere la aplicación web desde su equipo.</li>
+    <li>Comprueba el funcionamiento en un servidor remoto (la instancia) con similares características que tendría en un servidor remoto real.</li>
+    <li>En caso de que tenga que utilizar la instancia durante más de una clase, suspende y reinicia cuando sea necesario.</li>
+    <li>En caso de fallos o errores, puede crear una nueva instancia a partir de la imagen inicial o de una instantánea guardada previamente.</li>
+  </ul>
 </section>
 <section>
-	<h3>Otros escenarios...</h3>
-	<ul>
-		<li>Prácticas de almacenamiento: particionado, LVM, raid, sistemas de archivos,...</li>
-		<li>Prácticas de redes: direccionamiento, enrutamiento, servicios, ...</li>
-		<li>Trabajo con aplicaciones: gestores de bases de datos, entrornos de desarrollo, ...</li>
-	</ul>
+  <h2>Escenario 3: Test de intrusión</h2>
+  <p>Los pasos típicos a seguir serían:</p>
+  <ul>
+    <li>Se levanta una instancia y se configuran algunos servicios vulnerables. Se hace una instantánea y se almacena.</li>
+    <li>Cada alumno inicia una instancia de la imagen anterior sin conocer las características de las vulnerabilidades ni en los servicios en las que se producen.</li>
+    <li>Cada alumno tiene que realizar un test de intrusión tal como se haría en un escenario real.</li>
+  </ul>
 </section>
 <section>
-	<h3>Escenarios. Resumen</h3>
+  <h2>Otros escenarios...</h2>
 	<ul>
-		<li>Esto no son más que algunos ejemplos suficientemente diversos para ver las enormes posibilidades que se abren.<li>
-		<li>En general, pueden plantearse pr ́cticas m ́s complejas, inviables en el esquema tradicional de uso de máquinas virtuales por la complejidad de configurar el escenario inicial y por los problemas que acarrea una equivocación del alumno durante el desarrollo de la práctica.<li>
-		<li>Además las prácticas no interfieren con otras asignaturas, parar la práctica y continuar otro día es tan simple como suspender la instancia y reanudarla cuando se precise.</li>
-	</ul>
-</section>
-</section>
-<section>
-	<h3>Aprendizaje transversal</h3>
-	<ul>
-		<li>El hecho de utilizar tecnología ́de cloud no como fin en sí mismo sino como herramienta en el aprendizaje de temas provoca que el alumno se familiarice fácilmente con la tecnología.</li>
-		<li>Este aprendizaje adquirido de forma continua es mucho más significativo que si se impartiera como un tema en una asignatura.</li>
-		<li>Esto no significa que no deban tratarse específicamente diversos aspectos del cloud computing en diferentes asignaturas.</li>
+	  <li>Prácticas de almacenamiento: particionado, LVM, RAID, sistemas de
+	  ficheros</li>
+	  <li>Prácticas de redes: direccionamiento, enrutamiento, servicios,
+	  switches configurables</li>
+	  <li>Trabajo con aplicaciones: gestores de bases de datos o entornos de
+	  desarrollo</li> 
 	</ul>
 </section>
 <section>
-	<h3>Administración del Cloud</h3>
-	<ul>
-		<li>La administración de los sistemas y en particular del cloud de una organización no siempre se valora adecuadamente.</li>
-		<li>La instalación, configuración y administración del cloud es una tarea compleja ⇒ exige personal cualificado y con suficiente
+  <h2>Escenarios. Resumen</h2>
+  <ul>
+    <li>Esto no son más que algunos ejemplos suficientemente diversos para ver las enormes posibilidades que se abren.</li>
+    <li>En general, pueden plantearse pr ́cticas m ́s complejas, inviables en el esquema tradicional de uso de máquinas virtuales por la complejidad de configurar el escenario inicial y por los problemas que acarrea una equivocación del alumno durante el desarrollo de la práctica.</li>
+    <li>Además las prácticas no interfieren con otras asignaturas, parar la práctica y continuar otro día es tan simple como suspender la instancia y reanudarla cuando se precise.</li>
+  </ul>
+</section>
+</section>
+<section>
+  <h2>Aprendizaje transversal</h2>
+  <ul>
+    <li>El hecho de utilizar tecnología de cloud no como fin en sí mismo sino
+    como herramienta en el aprendizaje de temas provoca que el alumno se
+    familiarice fácilmente con la tecnología.</li> 
+    <li>Este aprendizaje adquirido de forma continua es mucho más significativo
+    que si se impartiera como un tema en una asignatura.</li> 
+    <li>Esto no significa que no deban tratarse específicamente diversos aspectos del cloud computing en diferentes asignaturas.</li>
+  </ul>
+</section>
+<section>
+  <h2>Administración del Cloud</h2>
+  <ul>
+    <li>La administración de los sistemas y en particular del cloud de una organización no siempre se valora adecuadamente.</li>
+    <li>La instalación, configuración y administración del cloud es una tarea compleja ⇒ exige personal cualificado y con suficiente
 dedicación.</li>
-		<li>El cloud privado se convierte en el elemento fundamental para el desarrollo de prácticas, esto puede suponer un inconveniente en caso de errores y hay que planificar alternativas para momentos puntuales.</li>
-	</ul>
+    <li>El cloud privado se convierte en el elemento fundamental para el desarrollo de prácticas, esto puede suponer un inconveniente en caso de errores y hay que planificar alternativas para momentos puntuales.</li>
+  </ul>
 </section>
