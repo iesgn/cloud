@@ -66,6 +66,8 @@
     url: avanzado
 - nombre: Unidad 10
   items:
+  - name: Tareas
+    url: tareas
 
 - nombre: Unidades
   items:
