@@ -10,6 +10,6 @@ menu:
 **Luís gonzález López**
 
 * [Trabajo sobre OpenShift (pdf)](files/Luis González López - Tarea OpenShift.pdf)
-* [Trabajo sobre OpenShift (html)](files/Luis González López - Tarea OpenShift/OpenShift.htm)
+* [Trabajo sobre OpenShift (html)](files/Luis González López - Tarea OpenShift.rar)
 
 
