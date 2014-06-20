@@ -18,10 +18,16 @@ menu:
 
 **Francisco Martín**
 
-* [Trabajo sobre OpenStack: instancias (vídeo)](http://youtu.be/CQr59JisJeI)
+* [Trabajo sobre OpenStack (vídeo)](http://youtu.be/CQr59JisJeI)
 
 **Carlos Serrano**
 
 * [Trabajo sobre OpenShift (pdf)](files/OpenShift_Carlos_Serrano.pdf)
 
 **José Pablo Rueda Galán**
+
+* [Trabajo sobre OpenStack (pdf)](files/openstackdocumento_Jose_Pablo_Rueda.pdf)
+
+**José A. Gómez**
+
+* [Trabajo sobre OpenShift (pdf)](files/JAGA_TrabajoCursoCloud-v1.pdf)
