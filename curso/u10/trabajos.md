@@ -31,3 +31,15 @@ menu:
 **José A. Gómez**
 
 * [Trabajo sobre OpenShift (pdf)](files/JAGA_TrabajoCursoCloud-v1.pdf)
+
+**Jaime Canillas Galiano**
+
+* [Trabajo sobre OpenStack (pdf)]()
+
+**Isaías Fernández Lozano**
+
+* [Trabajo sobre OpenStack (vídeo)](https://www.youtube.com/watch?v=5gQBuET-jso)
+
+**Javier Maestre**
+
+* [Trabajo sobre OpenStack (vídeo)](https://www.dropbox.com/s/vnaa92z1leczvh1/TrabajoCloudCursoCep.mp4)
