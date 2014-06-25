@@ -7,6 +7,10 @@ menu:
 
 ### Trabajos finales
 
+**Armando Vallejo Contreras**
+
+* [Trabajo sobre OpenShift (pdf)](files/OpenStack_Armando_Vallejo.pdf)
+
 **Luís González López**
 
 * [Trabajo sobre OpenShift (pdf)](files/Luis González López - Tarea OpenShift.pdf)
@@ -43,3 +47,5 @@ menu:
 **Javier Maestre**
 
 * [Trabajo sobre OpenStack (vídeo)](https://www.dropbox.com/s/vnaa92z1leczvh1/TrabajoCloudCursoCep.mp4)
+
+
