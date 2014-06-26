@@ -48,4 +48,6 @@ menu:
 
 * [Trabajo sobre OpenStack (vídeo)](https://www.dropbox.com/s/vnaa92z1leczvh1/TrabajoCloudCursoCep.mp4)
 
+**Javier Gestevez**
 
+* [Trabajo sobre OpenStack (pdf)](files/OpenStack_Javier_Gestevez.pdf)
