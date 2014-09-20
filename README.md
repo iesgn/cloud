@@ -16,7 +16,7 @@ Los ponentes, José Domingo Muñoz Rodríguez y Alberto Molina Coballes, profeso
 * Utilizar algunas herramientas modernas como vagrant, ansible o github, utilizadas tanto en cloud computing como en otros entornos.
 * Plantear para cada centro las posibilidades económicas o técnicas de implantación o uso de tecnologías de cloud computing
 
-C##ontenidos
+##Contenidos
 
 * Cloud Computing. Conceptos.
 * IaaS con OpenStack. Conceptos. Utilización. Instalación.
