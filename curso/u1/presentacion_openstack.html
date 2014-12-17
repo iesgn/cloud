@@ -277,4 +277,34 @@ tema: solarized
 	      <li>Configurar automáticamente la instancia</li>
 	      <li>Y un largo etcétera</li>
 	  </section>
+	  <section>
+	    <h2>OpenStack en el IES Gonzalo Nazareno</h2>
+	    <ul>
+	      <il>Hardware
+		<ul>
+		  <li>1 nodo controlador</li>
+		  <li>1 nodo de red</li>
+		  <li>4 nodos de computación: 80 cores a 2.6 GHz y 192 GiB RAM</li>
+		  <li>1 nodo de almacenamiento: 12 TiB</li>
+		</ul>
+              </li>
+              <li>Software
+		<ul>
+		  <li>Actualmente OpenStack Icehouse (2014.1) sobre Debian Jessie. Anteriomente OpenStack Essex (2012.1) y OpenStack Grizzly (2013.1) sobre Debian Wheezy</li>
+		  <li>KVM como hipervisor</li>
+		  <li>Cinder con LVM para gestionar los volúmenes</li>
+		  <li>Neutron con OpenvSwitch para SDN</li>
+		</ul>
+	      </li>
+	      <li>Gestión
+		<ul>
+		  <li>Cada alumno o profesor tiene su propio proyecto para gestionar hasta 10 instancias, con 8 GiB de RAM y 10 GiB de almacenamiento extra en volúmenes</li>
+		</ul>
+	      </li>
+            </ul>
+          </section>
+	  <section>
+	    <h2>Esquema de la nube del IES Gonzalo Nazareno</h2>
+	    <img src="img/esquema_red_iesgn.png" alt="Esquema de red IES GN"/>
+
 
