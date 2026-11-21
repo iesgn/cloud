@@ -6,7 +6,7 @@ menu:
 ---
 ## Introducción a Git
 
-###Contenidos
+### Contenidos
 
 [Git](http://git-scm.com/) es un software de control de versiones distribuido diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. Git es uno de los sistemas de control de versiones más utilizado hoy en día por su rapidez y la gran cantidad de funcionalidades que ofrece. Es posible también que el éxito de Github esté propiciando la paulatina adopción de git en detrimento de otros sistemas como subversion.
 
@@ -19,7 +19,7 @@ Cuando se desarrolla utilizando git, lo habitual es ir creando **ramas
 denomina *master* y de ella suelen salir el resto de las ramas en un momento
 determinado y se fusionan (*merge*) cuando se termina.
 
-###Prácticas
+### Prácticas
 
 1. Instala el cliente git
 
@@ -40,7 +40,7 @@ determinado y se fusionan (*merge*) cuando se termina.
         $ git commit -m "Mensaje del commit"
         $ git push
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 * [Pro Git - Libro de referencia](http://git-scm.com/book)

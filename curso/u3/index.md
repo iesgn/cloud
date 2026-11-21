@@ -4,14 +4,14 @@ tittle: Entornos de pruebas para OpenStack
 menu:
   - Unidad 3
 ---
-###Objetivos
+### Objetivos
 
 * Estudiar las distintas formas para implantar OpenStack en un entorno de pruebas.
 * Implantar la infraestructura de openstack que vamos a usar durante el curso.
 * Conocer los pasos que se van a producir durante la instalación de OpenStack.
 * Debatir los posibles cambios que se pueden realizar a nuestra configuración para aumentar la funcionalidad.
 
-###Contenidos
+### Contenidos
 
 Vamos a presentar diferentes formas de instalar OpenStack en un entorno de pruebas en nuestro ordenador. Tendremos que discutir las ventajas e incovenientes de cada opción y decidir cúal puede ser la más válida para el curso. Las distintas opciones que tenemos disponibles son las siguientes:
 
@@ -20,7 +20,7 @@ Vamos a presentar diferentes formas de instalar OpenStack en un entorno de prueb
 * [OpenStack-ansible](openstack-ansible)
 
 
-###Resumen
+### Resumen
 
 Tenemos varias formas de hacer una instalación de OpenStack en un ordenador, veamos en resumen algunas de ellas:
 

@@ -5,7 +5,7 @@ menu:
   - Unidad 5
 ---
 
-###Objetivos
+### Objetivos
 
 * Conocer el origen del proyecto que ha permitido el despliegue de la
 * infraestructura de cloud computing en el IES Gonzalo Nazareno.
@@ -16,7 +16,7 @@ menu:
 
 ### Contenidos
 
-####OpenStack en el IES Gonzalo Nazareno
+#### OpenStack en el IES Gonzalo Nazareno
 
 En el año 2011 el IES Gonzalo Nazareno, junto a otros tres institutos
 desarrollan el proyecto de innovación aplicada y transferencia del conocimiento
@@ -44,7 +44,7 @@ Wheezy utilizando los paquetes oficiales. Posteriormente realizamos una
 actualización a OpenStack Grizzly (2013.1) utilizando los paquetes no oficiales
 de [GPLHost](http://www.gplhost.com/software-openstack.html).
 
-####Infraestructura para OpenStack
+#### Infraestructura para OpenStack
 
 [Componentes de OpenStack](componentes_openstack.html)
 

@@ -5,14 +5,14 @@ menu:
   - Unidad 4
 ---
 
-###Objetivos
+### Objetivos
 
 * Introducir los conceptos fundamentales para utilizar OpenStack.
 * Utilizar el cloud computing del IES Gonzalo Nazareno.
 
 ### Contenidos
 
-####OpenStack en el IES Gonzalo Nazareno
+#### OpenStack en el IES Gonzalo Nazareno
 
 En el año 2011 el IES Gonzalo Nazareno, junto a otros tres institutos desarrollan el proyecto de innovación aplicada y transferencia del conocimiento en la formación profesional del sistema educativo, con el título: **Implantación y puesta a punto de la infraestructura de un cloud computing privado para el despliegue de servicios en la nube**.
 El objetivo general de este proyecto es la inclusión de las tecnologías de cloud computing (IaaS) en el currículo de los ciclos formativos de la Familia Profesional de Informática y Comunicaciones. 
@@ -33,12 +33,12 @@ Horizon:
 
 * [Presentación: Introducción a OpenStack Horizon (Grizzly)](presentacion)
 
-###Prácticas
+### Prácticas
 
 * [Práctica: Trabajar con instancias GNU/Linux](practica_linux)
 * [Práctica: Trabajar con instancias Windows](practica_windows)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [Seminario impartido en eMadrid net](http://www.emadridnet.org/seminario-emadrid-aprender-software-libre-experiencias-todos-niveles/cloud-privado-iaas-fines-educativos-software-libre)
 * [Jornadas sobre Cloud Computing](http://www.josedomingo.org/web/course/view.php?id=70)

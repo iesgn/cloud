@@ -4,7 +4,7 @@ tittle: OpenStack. Instancias.
 menu:
   - Unidad 6
 ---
-###Objetivos
+### Objetivos
 
 * Recordar los conceptos fundamentales que entran en juego en el trabajo con OpenStack.
 * Trabajar con instancias, imágenes y snapshots desde la aplicación web Horizon.
@@ -15,11 +15,11 @@ menu:
 
 * [Presentación: Instancias](presentacion_instancias)
 
-###Video
+### Video
 
 [![Video](http://img.youtube.com/vi/XYOme2eNQTg/0.jpg)](https://www.youtube.com/watch?v=XYOme2eNQTg)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
 * [Get images - Openstack](http://docs.openstack.org/image-guide/content/ch_obtaining_images.html)

@@ -10,7 +10,7 @@ Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente
 [directorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/vagrant/)
 del repositorio del curso.
 
-###Práctica 1: Instalación de vagrant
+### Práctica 1: Instalación de vagrant
 
 1. Instalar virtualbox y vagrant
 
@@ -63,7 +63,7 @@ del repositorio del curso.
     	       
      
         
-###Práctica 4: Creación de varias máquinas virtuales
+### Práctica 4: Creación de varias máquinas virtuales
 
 En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:
 
@@ -91,7 +91,7 @@ nodo1 tendrá una red interna con ip 10.1.1.101, y nodo2 tendrá una interfaz de
 Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
 
-###Práctica 5: Añadir un dico duro adicional y modificar la RAM a una máquina virtual
+### Práctica 5: Añadir un dico duro adicional y modificar la RAM a una máquina virtual
 
 Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este contenido:
 

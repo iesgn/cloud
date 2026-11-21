@@ -4,7 +4,7 @@ tittle: OpenStack. Redes.
 menu:
   - Unidad 8
 ---
-###Objetivos
+### Objetivos
 
 * Utilizar routers desde Horizon. Puerta de enlace e interfaces adicionales
 * Utilizar redes y subredes desde Horizon.
@@ -18,7 +18,7 @@ menu:
 
 * [Presentación: Redes](presentacion_redes)
 
-###Vídeos
+### Vídeos
 
 [![Video](http://img.youtube.com/vi/-NAb8pp5E1g/0.jpg)](https://www.youtube.com/watch?v=-NAb8pp5E1g)
 
@@ -26,6 +26,6 @@ Creación automática de un escenario de red en OpenStack
 
 [![Video](http://img.youtube.com/vi/TBmaBkj0X7M/0.jpg)](https://www.youtube.com/watch?v=TBmaBkj0X7M)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)

@@ -6,7 +6,7 @@ menu:
 ---
 ## Prácticas
 
-###Los siguientes pasos... (Después de la instalación de OpenStack)
+### Los siguientes pasos... (Después de la instalación de OpenStack)
 
 * Crear sabores que se adapten mejor a nuestras necesidades:
 	* Si queremos instanciar máquinas cirros no es necesario 512 MB de RAM. Podemos crear un sabor **m1.enano** con 256 MB de RAM.
@@ -23,7 +23,7 @@ menu:
 * Solo se pueden acceder a las instancias desde la máquina en que hemos instalado el sistema.
 
 
-###Ejercicio
+### Ejercicio
 
 1. Modifica las reglas de seguridad como se ha explicado anteriormente
 2. Crea una instancia a partir de la imagen cirros

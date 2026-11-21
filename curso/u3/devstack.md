@@ -6,7 +6,7 @@ menu:
 ---
 ## DevStack
 
-###Contenidos
+### Contenidos
 
 DevStack es un conjunto de script bash que nos permiten instalar OpenStack de forma automática. Tenemos varias formas de realizar la instalación:
 
@@ -21,7 +21,7 @@ Para el presente curso hemos desarrollado un [repositorio GitHub](https://github
 
 * [Presentación: Implantación de la infraestructura de prueba OpenStack. DevStack](presentacion_devstack)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [Devstack](http://devstack.org/)
 * [Devstack en GitHub](https://github.com/openstack-dev/devstack)
@@ -29,7 +29,7 @@ Para el presente curso hemos desarrollado un [repositorio GitHub](https://github
 * [https://github.com/lorin/devstack-vm](https://github.com/lorin/devstack-vm)
 * [Instalando OpenStack en mi portátil (2ª parte): DevStack](http://www.josedomingo.org/pledin/2014/03/instalando-openstack-en-mi-portatil-2a-parte-devstack/)
 
-###Máquina virtual virtualbox con devstack
+### Máquina virtual virtualbox con devstack
 
 Si el proceso de instalación da algún problema, podemos probar OpenStack usando una máquina virtual de VirtualBox con devtack instalada. Es una máquina virtual con un interfaz de red tipo NAT, por lo tanto sólo se puede trabajar con openstack desde la misma máquina.
 

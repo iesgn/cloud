@@ -16,20 +16,20 @@ Profesional de Informática en el IES Gonzalo Nazareno, tienen amplia experienci
 en cloud computing y han participado hasta la fecha en varios seminarios y
 jornadas sobre el tema a nivel local y estatal.
 
-###Objetivos
+### Objetivos
 * Conocer las principales características del cloud computing y su aplicación en el aula, principalmente las capas de infraestructura (IaaS) y plataforma (PaaS)
 * Utilizar el software OpenStack (IaaS). Software libre que permite gestionar infraestructura en nubes privadas o públicas
 * Utilizar la aplicación OpenShift Online (PaaS). Nube pública de la empresa Red Hat para el despliegue ágil y elástico de aplicaciones web
 * Utilizar algunas herramientas modernas como vagrant, ansible o github, utilizadas tanto en cloud computing como en otros entornos.
 * Plantear para cada centro las posibilidades económicas o técnicas de implantación o uso de tecnologías de cloud computing
 
-###Contenidos
+### Contenidos
 * Cloud Computing. Conceptos.
 * IaaS con OpenStack. Conceptos. Utilización. Instalación.
 * PaaS con OpenShift. Conceptos. Utilización.
 * Opciones para la utilización de cloud computing en el aula
 
-###Calendario
+### Calendario
 
 |Fecha|Contenido|Lugar|
 |:---:|---------|-----|
@@ -42,7 +42,7 @@ jornadas sobre el tema a nivel local y estatal.
 |28/05/2014|**Sesión 7**<br/>Unidad 9:Introducción a PaaS. OpenShift|Webinar|
 |4/06/2014|**Sesión 8**|IES Romero Vargas|
 
-###Licencia
+### Licencia
 
 ![cc_by_sa](https://iesgn.github.io/cloud/img/cc_by_sa.png)
 

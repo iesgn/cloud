@@ -6,7 +6,7 @@ menu:
 ---
 ## Prácticas con Ansible
 
-###Práctica 1: Instalación de un servidor web apache en una máquina virtual
+### Práctica 1: Instalación de un servidor web apache en una máquina virtual
 
 Puedes encontrar los ficheros que vamos a usar en esta práctica en el siguiente
 [directorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica1)
@@ -43,7 +43,7 @@ del respositorio del curso.
         http://10.1.1.101
      
         
-###Práctica 2: Balanceador DNS
+### Práctica 2: Balanceador DNS
 
 Puedes encontrar los ficheros que vamos a usar en esta páctica en el siguiente [repositorio](https://github.com/iesgn/cloud/tree/gh-pages/curso/u2/practicas/ansible/practica2).
 

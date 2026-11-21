@@ -6,7 +6,7 @@ menu:
 ---
 ## Introducción a Ansible
 
-###Contenidos
+### Contenidos
 
 De forma general, se le llama gestores de configuración a las aplicaciones software que nos permiten la configuración y el mantenimiento de un sistema informático. En el caso específico de sistemas operativos se trata de gestionar automáticamente todas las tareas de configuración de un sistema, automatizando la edición de ficheros de configuración, instalación de software y configuración del mismo, creación de usuarios y autenticación, de forma que se pueda hacer de forma automática y masiva. 
 
@@ -16,11 +16,11 @@ En nuestro caso nos hemos decantado por mostrar ansible [Ansible](http://www.ans
 
 * [Presentación: Vagrant y ansible. Una combinación explosiva (2ª parte)](presentacion_ansible)
 
-###Prácticas
+### Prácticas
 
 * [Prácticas con Ansible](practica_ansible)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [Página oficial de Ansible](http://www.ansible.com/home)
 * [Deploying with vagrant and ansible](https://speakerdeck.com/yeukhon/deploying-with-vagrant-and-ansible)

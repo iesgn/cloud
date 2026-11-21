@@ -4,7 +4,7 @@ tittle: OpenStack. Almacenamiento.
 menu:
   - Unidad 7
 ---
-###Objetivos
+### Objetivos
 
 * Conocer y utilizar el almacenamiento de bloques y el almacenamiento de objetos en el cloud
 * Trabajar con volúmenes, asignación de volúmenes a instancias, instancias ejecutadas sobre volúmenes desde Horizon.
@@ -20,11 +20,11 @@ menu:
 * [Presentación: Volúmenes](presentacion_volumenes)
 * [Presentación: Objetos](presentacion_objetos)
 
-###Vídeo
+### Vídeo
 
 [![Video](http://img.youtube.com/vi/XT4elB1DRB4/0.jpg)](https://www.youtube.com/watch?v=XT4elB1DRB4)
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [OpenStack End User Guide](http://docs.openstack.org/user-guide/content/index.html)
 * [OpenStack Operations Guide - Storage Decisions](http://docs.openstack.org/trunk/openstack-ops/content/storage_decision.html)

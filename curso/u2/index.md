@@ -13,7 +13,7 @@ devops
 
 Esta unidad se puede considerar como un apéndice, un tema que por una parte nos puede ayudar a montar algunos de los entornos de prueba, pero que por otra parte nos introduce en algunas de las herramientas utilizadas habitualmente en nuevas tecnologías como el cloud computing. 
 
-###Objetivos
+### Objetivos
 
 * Conocer los principios y característivas de la metodología DevOps.
 * Conocer los distintos tipos de herramientas que nos permiten llevar a cabo la metodología DevOps.
@@ -21,7 +21,7 @@ Esta unidad se puede considerar como un apéndice, un tema que por una parte nos
 * Introducción al uso de un software para la creación de entornos de desarrollos ligeros y portables: vagrant.
 * Introducción al uso de un sofware de automatización de la configuración del sistema: ansible.
 
-###Contenidos
+### Contenidos
 
 **DevOps** es un acrónimo inglés de development (desarrollo) y operations
   (operaciones o sistemas), que se refiere a una metodología de trabajo que se
@@ -48,7 +48,7 @@ Algunas de las opciones de instalación de los entornos de pruebas de OpenStack,
 A lo largo del curso y siempre que sea posible intentaremos poner otros ejemplos
 de uso de estas herramientas y haremos énfasis en sus ventajas y aplicabilidad.
 
-###Enlaces interesantes
+### Enlaces interesantes
 
 * [Que demonios es eso de Devops (y porqué debería estar interesado). Jacobo García](http://www.slideshare.net/therobot/que-demonios-es-eso-de-devops-y-porquedebera-interesarme)
 
